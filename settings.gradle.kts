@@ -1,0 +1,1 @@
+rootProject.name = "tucil_3_stima"
