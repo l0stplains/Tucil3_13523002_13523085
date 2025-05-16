@@ -12,7 +12,7 @@ public class RushHourTest {
         // 6x6
         int rows=6, cols=6, exitR=2, exitC=5;
 
-        // another test
+        // another test (simple)
         /*
         Vehicle[] vehicles = new Vehicle[] {
                 new Vehicle(true, 2), // target car
@@ -24,6 +24,8 @@ public class RushHourTest {
         int[] pos = {2*cols+0, 0*cols+2, 4*cols+2, 3*cols+4, 4*cols+1};
         */
 
+        // normal
+        /*
         Vehicle[] vehicles = new Vehicle[] {
                 new Vehicle(true, 2), // target car
                 new Vehicle(true, 3),
@@ -35,16 +37,47 @@ public class RushHourTest {
                 new Vehicle(true, 2),
         };
         int[] pos = {2*cols+3, 0*cols+0, 1*cols+2, 3*cols+2, 3*cols+3, 0*cols+5, 5*cols+3, 3*cols+4};
+         */
+        // harder (argh)
+
+        Vehicle[] vehicles = new Vehicle[] {
+                new Vehicle(true, 2), // target car
+                new Vehicle(false, 3),
+                new Vehicle(true, 3),
+                new Vehicle(false, 2),
+                new Vehicle(false, 2),
+                new Vehicle(true, 2),
+                new Vehicle(true, 2),
+                new Vehicle(true, 2),
+                new Vehicle(true, 2),
+                new Vehicle(false, 2),
+                new Vehicle(false, 2),
+                new Vehicle(false, 2),
+                new Vehicle(false, 3),
+
+        };
+        int[] pos = {2*cols+3, 0*cols+0, 3*cols+0, 1*cols+1, 1*cols+2, 0*cols+1, 5*cols+0, 5*cols+3, 4*cols+4,
+        4*cols+2, 3*cols+3, 0*cols+4, 1*cols+5};
         Board board = new Board(rows,cols,exitR,exitC,vehicles);
         State start = new State(pos);
 
         SearchStrategy[] strategies = { new GBFS(), new UCS(), new AStar() };
         Heuristic h = new BlockingHeuristic();
         for (SearchStrategy s : strategies) {
-            System.out.println("Testing " + s.getClass().getSimpleName());
+            System.out.println("=== Testing " + s.getClass().getSimpleName() + " ===");
+
+            // ←────────── START TIMING ──────────
+            long t0 = System.nanoTime();
             State sol = s.solve(board, start, h);
+            long t1 = System.nanoTime();
+            // ←────────── END TIMING ────────────
+
             printBoardSequence(board, sol);
+
+            double elapsedMs = (t1 - t0) / 1_000_000.0;
+            System.out.printf("Time elapsed: %.3f ms%n%n", elapsedMs);
         }
+
     }
 
     private static void printBoardSequence(Board board, State end) {
