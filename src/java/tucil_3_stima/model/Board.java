@@ -8,6 +8,7 @@ public class Board {
     private final int exitRow, exitCol;
     private final Vehicle[] vehicles;
     private final List<Map<Integer, BitSet>> vehicleMasks;
+    private static final int[] DIRS = { -1, +1 };
 
     public Board(int rows, int cols, int exitRow, int exitCol, Vehicle[] vehicles) {
         this.rows = rows;
@@ -48,19 +49,13 @@ public class Board {
         return list;
     }
 
-    public int getRows() { return rows; }
-    public int getCols() { return cols; }
-    public int getExitRow() { return exitRow; }
-    public int getExitCol() { return exitCol; }
-    public Vehicle getVehicle(int i) { return vehicles[i]; }
-
     public boolean atExit(State state) {
         int[] pos = state.getPositions();
         int base = pos[0];
         Vehicle t = vehicles[0];
         int r = base / cols;
         int c = base % cols;
-        return r == exitRow && c + t.length() - 1 == exitCol;
+        return r == exitRow && (c + t.length() - 1 == exitCol || c == exitCol) || c == exitCol && r + t.length() - 1 == exitRow;
     }
 
     public BitSet occupancy(State state) {
@@ -78,32 +73,58 @@ public class Board {
     }
 
     public List<State> neighbors(State state, Heuristic h) {
-        List<State> list = new ArrayList<>();
+        // worst case each car can slide at most max(rows, cols) squares in one direction
+        int maxSlides = Math.max(rows, cols);
+        List<State> list = new ArrayList<>(vehicles.length * maxSlides);
+
         BitSet occ = occupancy(state);
         int[] pos = state.getPositions();
+
         for (int i = 0; i < vehicles.length; i++) {
             Vehicle v = vehicles[i];
-            BitSet orig = vehicleMasks.get(i).get(pos[i]);
+            int oldBase = pos[i];
+            Map<Integer, BitSet> masks = vehicleMasks.get(i);
+            BitSet orig = masks.get(oldBase);
+
+            // remove this car from the occupancy
             occ.xor(orig);
-            for (int dir : new int[]{-1,1}) {
-                int base = pos[i];
+
+            // sliding in both directions
+            for (int dir : DIRS) {
+                int base = oldBase;
                 while (true) {
-                    int next = v.isHorizontal() ? base + dir : base + dir * cols;
-                    BitSet mask = vehicleMasks.get(i).get(next);
-                    if (mask == null) break;
-                    BitSet tmp = (BitSet) mask.clone(); tmp.and(occ);
-                    if (!tmp.isEmpty()) break;
+                    int next = v.isHorizontal()
+                            ? base + dir
+                            : base + dir * cols;
+
+                    BitSet m = masks.get(next);
+                    if (m == null || m.intersects(occ)) {
+                        break;
+                    }
+
+                    // valid move then allocate state n cost
                     State ns = state.copy();
                     ns.setPosition(i, next);
                     ns.incrementG();
                     ns.setH(heuristic(ns, h));
                     ns.setParent(state);
                     list.add(ns);
+
                     base = next;
                 }
             }
+
+            // restore this car’s bits
             occ.or(orig);
         }
+
         return list;
     }
+
+
+    public int getRows() { return rows; }
+    public int getCols() { return cols; }
+    public int getExitRow() { return exitRow; }
+    public int getExitCol() { return exitCol; }
+    public Vehicle getVehicle(int i) { return vehicles[i]; }
 }

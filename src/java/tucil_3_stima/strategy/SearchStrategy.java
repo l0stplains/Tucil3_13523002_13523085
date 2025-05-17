@@ -4,5 +4,5 @@ import tucil_3_stima.model.Board;
 import tucil_3_stima.model.State;
 
 public interface SearchStrategy {
-    State solve(Board board, State start, Heuristic heuristic);
+    SearchResult solve(Board board, State start, Heuristic heuristic);
 }

@@ -14,16 +14,4 @@ public class Vehicle {
     public boolean isHorizontal() { return horizontal; }
     public int length() { return length; }
 
-    public BitSet maskAt(int baseIndex, int rows, int cols) {
-        BitSet mask = new BitSet(rows * cols);
-        int r = baseIndex / cols;
-        int c = baseIndex % cols;
-        for (int d = 0; d < length; d++) {
-            int rr = horizontal ? r : r + d;
-            int cc = horizontal ? c + d : c;
-            if (rr >= rows || cc >= cols) break;
-            mask.set(rr * cols + cc);
-        }
-        return mask;
-    }
 }

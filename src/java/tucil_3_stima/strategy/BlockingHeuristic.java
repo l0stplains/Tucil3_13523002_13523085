@@ -21,7 +21,6 @@ public class BlockingHeuristic implements Heuristic {
 
         int exitRow = board.getExitRow();
         int exitCol = board.getExitCol();
-        // occ.xor(vehicleMasks.get(0).get(pos[0]));
 
         if (red.isHorizontal()) {
             if (exitCol > col) {
