@@ -1,5 +1,6 @@
 package tucil_3_stima.gui;
 
+import javafx.animation.ScaleTransition;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
@@ -13,6 +14,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.AudioClip;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.io.IOException;
@@ -26,6 +28,8 @@ public class MainController {
     private Button btnExit;
     @FXML
     private ImageView backgroundImageView;
+
+    @FXML private Text mainTitle;
 
     private AudioClip clickSound;
     private AudioClip hoverSound;
@@ -63,6 +67,11 @@ public class MainController {
             applyButtonFonts(btnExit, impactedFont);
             applyButtonFonts(btnEnter, impactedFont);
         }
+        Font impactedFont60 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 60);
+        if(impactedFont60 != null) {
+            mainTitle.setFont(impactedFont60);
+        }
+
 
         // Apply the same hover/click effects to all buttons
         applyHoverEffects(btnAbout);
@@ -84,33 +93,29 @@ public class MainController {
             if (hoverSound != null) {
                 hoverSound.play();
             }
-            TranslateTransition translate = new TranslateTransition(Duration.millis(100), button);
-            translate.setToX(-30); // move 10px left
 
-//            ScaleTransition scale = new ScaleTransition(Duration.millis(200), button);
-//            scale.setToX(1.05);
-//            scale.setToY(1.05);
+            ScaleTransition scale = new ScaleTransition(Duration.millis(200), button);
+            scale.setToX(1.05);
+            scale.setToY(1.05);
 
             FadeTransition fade = new FadeTransition(Duration.millis(100), button);
             fade.setToValue(1.0); // fully opaque
 
-            ParallelTransition pt = new ParallelTransition(translate, fade);
+            ParallelTransition pt = new ParallelTransition(scale, fade);
             pt.play();
         });
 
         // Mouse Exit: reset translate, scale, and opacity
         button.setOnMouseExited(e -> {
-            TranslateTransition translate = new TranslateTransition(Duration.millis(200), button);
-            translate.setToX(0);
 
-//            ScaleTransition scale = new ScaleTransition(Duration.millis(200), button);
-//            scale.setToX(1.0);
-//            scale.setToY(1.0);
+            ScaleTransition scale = new ScaleTransition(Duration.millis(200), button);
+            scale.setToX(1.0);
+            scale.setToY(1.0);
 
             FadeTransition fade = new FadeTransition(Duration.millis(200), button);
             fade.setToValue(0.85); // back to default
 
-            ParallelTransition pt = new ParallelTransition(translate, fade);
+            ParallelTransition pt = new ParallelTransition(scale, fade);
             pt.play();
         });
 

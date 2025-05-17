@@ -124,6 +124,30 @@ public class RushHourTest {
             System.out.printf("Time elapsed   : %.2f ms%n", res.getDurationMillis());
         }
 
+        /*
+        System.out.println("\n\nHeuristic: zero");
+        Heuristic zero = new ZeroHeuristic();
+        for (SearchStrategy s : strategies) {
+            System.out.println("=== Testing " + s.getClass().getSimpleName() + " ===");
+
+            SearchResult res = s.solve(board, start, dist);
+
+            // printBoardSequence(board, res.getSolution());
+
+            System.out.printf("Solution found : %s%n",
+                    (res.getSolution() != null ? "YES" : "NO"));
+            System.out.printf("Solution depth : %d moves%n",
+                    res.getSolutionDepth());
+
+            // Performance stats
+            System.out.printf("Nodes expanded : %,d%n", res.getNodesExpanded());
+            System.out.printf("Nodes generated: %,d%n", res.getNodesGenerated());
+            System.out.printf("Max open size  : %,d%n", res.getMaxOpenSize());
+            System.out.printf("Time elapsed   : %.2f ms%n", res.getDurationMillis());
+        }
+
+         */
+
     }
 
     private static void printBoardSequence(Board board, State end) {

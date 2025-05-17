@@ -86,7 +86,7 @@ public class MainApp extends Application {
             double currentHeight = stage.getHeight();
             mainScene = new Scene(fxmlLoader.load(), currentWidth, currentHeight);
             mainScene.getStylesheets().add(getClass().getResource(STYLESHEET).toExternalForm());
-            stage.setTitle("IQ Puzzler Pro UwU");
+            stage.setTitle("Rush Hour Solver");
             stage.setScene(mainScene);
             stage.getScene().getWindow().setUserData(this); // for scene changing, keep same user data
 

@@ -89,7 +89,7 @@ public class AboutController {
         applyBackButtonEffects(backButton);
         aboutTitle.setOnMouseClicked(e -> miaw.play());
         aboutText.setWrappingWidth(800);
-        aboutText.setText("IQ Puzzler Pro UwU is my first project for ITB's Algorithm Strategy course\nFor this assignment, I'm solving the IQ Puzzler Pro game using Brute Force, meaning that the program will try all possible ways to place the puzzle pieces until it finds a solution (or confirms that no solution exists).\n\nIQ Puzzler Pro is a logic-based puzzle where the goal is to fill the entire board using a set of uniquely shaped pieces. Each piece can be rotated and flipped, making the search for a valid arrangement quite tricky. But hey, that's what makes it fun!\n\nThis project is an exciting challenge because it pushes me to explore beyond my usual comfort zone, especially with designing the GUI (this style is definitely something new for me :P).\n\nI hope you find it as interesting as I do UwU");
+        aboutText.setText("YO ini aplikasi ini dibikin oleh \nRefki Alfarizi 13523002 dan Muhammad Jibril Ibrahim 13523085\n\nKite kite ngerjain app ini buat menuhin spesifikasi tucil 3 stima jirr lah");
 
 
     }
