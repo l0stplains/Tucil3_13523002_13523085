@@ -104,6 +104,10 @@ public class Board {
 
                     // valid move then allocate state n cost
                     State ns = state.copy();
+                    int dist = v.isHorizontal()
+                            ? next - oldBase
+                            : (next - oldBase) / cols;
+                    ns.setLastMovement(i, dist);
                     ns.setPosition(i, next);
                     ns.incrementG();
                     ns.setH(heuristic(ns, h));

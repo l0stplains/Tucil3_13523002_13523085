@@ -33,7 +33,7 @@ public class MainApp extends Application {
     @Override
     public void start(Stage stage) {
         stage.initStyle(StageStyle.TRANSPARENT);
-        stage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/tucil_3_stima/gui/assets/UwU_logo.png")));
+        stage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/tucil_3_stima/gui/assets/rushhourlogo.png")));
         primaryStage = stage;
 
         // welcome text
@@ -41,7 +41,7 @@ public class MainApp extends Application {
 
         // Load custom font from resources
         Font customFont = Font.loadFont(
-                getClass().getResource("/tucil_3_stima/gui/assets/GenkiDesu.otf").toExternalForm(),
+                getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(),
                 48
         );
         if (customFont != null) {
@@ -111,7 +111,7 @@ public class MainApp extends Application {
             Media bgMedia = new Media(bgMusicPath);
             backgroundPlayer = new MediaPlayer(bgMedia);
             backgroundPlayer.setCycleCount(MediaPlayer.INDEFINITE);
-            backgroundPlayer.setVolume(0.2);
+            backgroundPlayer.setVolume(0.8);
             backgroundPlayer.play();
         } catch (Exception e) {
             System.out.println("Error loading background music: " + e.getMessage());

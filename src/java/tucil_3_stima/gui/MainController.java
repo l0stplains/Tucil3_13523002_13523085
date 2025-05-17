@@ -19,6 +19,8 @@ import java.io.IOException;
 
 public class MainController {
     @FXML
+    private Button btnEnter;
+    @FXML
     private Button btnAbout;
     @FXML
     private Button btnExit;
@@ -55,15 +57,17 @@ public class MainController {
         exitSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/aishiteru.wav").toExternalForm());
 
         // Load the custom font
-        Font genkiFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/GenkiDesu.otf").toExternalForm(), 24);
-        if(genkiFont != null) {
-            applyButtonFonts(btnAbout, genkiFont);
-            applyButtonFonts(btnExit, genkiFont);
+        Font impactedFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 24);
+        if(impactedFont != null) {
+            applyButtonFonts(btnAbout, impactedFont);
+            applyButtonFonts(btnExit, impactedFont);
+            applyButtonFonts(btnEnter, impactedFont);
         }
 
         // Apply the same hover/click effects to all buttons
         applyHoverEffects(btnAbout);
         applyHoverEffects(btnExit);
+        applyHoverEffects(btnEnter);
 
     }
     private void applyButtonFonts(Button button, Font font) {
@@ -131,6 +135,18 @@ public class MainController {
         }
     }
 
+    @FXML
+    private void handleEnter(MouseEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/tucil_3_stima/gui/init_menu.fxml"));
+            Scene aboutScene = new Scene(loader.load(), btnEnter.getScene().getWidth(), btnEnter.getScene().getHeight());
+            MainApp mainApp = (MainApp) btnEnter.getScene().getWindow().getUserData();
+            mainApp.backgroundPlayer.stop();
+            mainApp.switchScene(aboutScene);
+        } catch(IOException ex) {
+            ex.printStackTrace();
+        }
+    }
     @FXML
     private void handleExit(MouseEvent event) {
         MainApp mainApp = (MainApp) btnExit.getScene().getWindow().getUserData();

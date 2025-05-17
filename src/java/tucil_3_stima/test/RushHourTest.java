@@ -38,7 +38,6 @@ public class RushHourTest {
         };
         int[] pos = {2*cols+3, 0*cols+0, 1*cols+2, 3*cols+2, 3*cols+3, 0*cols+5, 5*cols+3, 3*cols+4};
          */
-        /*
         // harder (argh)
         Vehicle[] vehicles = new Vehicle[] {
                 new Vehicle(true, 2), // target car
@@ -58,8 +57,8 @@ public class RushHourTest {
         };
         int[] pos = {2*cols+3, 0*cols+0, 3*cols+0, 1*cols+1, 1*cols+2, 0*cols+1, 5*cols+0, 5*cols+3, 4*cols+4,
         4*cols+2, 3*cols+3, 0*cols+4, 1*cols+5};
-        */
 
+        /*
         // TC bimo
         Vehicle[] vehicles = new Vehicle[] {
                 new Vehicle(true, 2), // target car
@@ -76,7 +75,8 @@ public class RushHourTest {
 
         };
         int[] pos = {4*cols+4, 0*cols+2, 0*cols+5, 1*cols+4, 2*cols+2, 2*cols+0, 3*cols+1, 5*cols+0, 5*cols+4, 4*cols+2, 4*cols+3};
-        int exitR = 4, exitC = 0;
+         */
+        int exitR = 2, exitC = 5;
         Board board = new Board(rows,cols,exitR,exitC,vehicles);
         State start = new State(pos);
 
@@ -90,7 +90,7 @@ public class RushHourTest {
 
             SearchResult res = s.solve(board, start, h);
 
-            // printBoardSequence(board, res.getSolution());
+             printBoardSequence(board, res.getSolution());
 
             System.out.printf("Solution found : %s%n",
                     (res.getSolution() != null ? "YES" : "NO"));
@@ -135,6 +135,10 @@ public class RushHourTest {
         int step = 0;
         for (State s : path) {
             System.out.println("Step " + (step++) + ":");
+            if(s.getLastMovement() != null) {
+                int i = s.getLastMovement().getKey();
+                System.out.println("Movement: " + (i == 0 ? 'X' : (char) ('A' + (i - 1))) + " " + s.getLastMovement().getValue());
+            }
             render(board, s);
         }
     }

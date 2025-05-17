@@ -56,11 +56,11 @@ public class AboutController {
         fadeInTitle.play();
 
         // Fonts
-        Font genkiFont48 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/GenkiDesu.otf").toExternalForm(), 48);
-        Font genkiFont24 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/GenkiDesu.otf").toExternalForm(), 24);
-        backButton.setFont(genkiFont24);
-        aboutText.setFont(genkiFont24);
-        aboutTitle.setFont(genkiFont48);
+        Font impactedFont48 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 48);
+        Font impactedFont24 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 24);
+        backButton.setFont(impactedFont24);
+        aboutText.setFont(impactedFont24);
+        aboutTitle.setFont(impactedFont48);
 
 
         Media mediaBgm = new Media(getClass().getResource("/tucil_3_stima/gui/assets/slowBgm.mp3").toExternalForm());
