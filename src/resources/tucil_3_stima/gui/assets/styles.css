@@ -6,10 +6,16 @@
     -fx-text-fill: #ffffff;
 }
 
-.button, .menu-button, .toggle-button {
+.button, .menu-button, .toggle-button, .custom-menu-item {
     -fx-background-color: #333333;
     -fx-text-fill: #ffffff;
     -fx-border-color: #444444;
+}
+
+.context-menu {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-border-width: 0;
 }
 
 .label {

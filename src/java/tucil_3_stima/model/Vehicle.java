@@ -7,10 +7,10 @@ public class Vehicle {
     private final int length;
     private final char symbol;
 
-    public Vehicle(boolean horizontal, int length) {
+    public Vehicle(boolean horizontal, int length, char symbol) {
         this.horizontal = horizontal;
         this.length = length;
-        this.symbol = ' ';
+        this.symbol = symbol;
     }
 
     public boolean isHorizontal() { return horizontal; }

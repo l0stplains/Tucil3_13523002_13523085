@@ -131,4 +131,5 @@ public class Board {
     public int getExitRow() { return exitRow; }
     public int getExitCol() { return exitCol; }
     public Vehicle getVehicle(int i) { return vehicles[i]; }
+    public Vehicle[] getVehicles() { return vehicles; }
 }

@@ -67,7 +67,8 @@ public class AboutController {
             aboutText.setFont(impactedFont24);
         }
 
-
+        
+        // Audio Clip Init
         Media mediaBgm = new Media(getClass().getResource("/tucil_3_stima/gui/assets/slowBgm.mp3").toExternalForm());
         pageBgm = new MediaPlayer(mediaBgm);
         pageBgm.setCycleCount(MediaPlayer.INDEFINITE);
@@ -81,6 +82,8 @@ public class AboutController {
         hoverSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/hover.wav").toExternalForm());
         hoverSound.setVolume(0.03);
         miaw = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/miaw.wav").toExternalForm());
+        
+        // Button action
         backButton.setOnAction(e -> {
             if(clickSound != null) clickSound.play();
             if(pageBgm != null) pageBgm.stop();
@@ -98,8 +101,6 @@ public class AboutController {
         aboutTitle.setOnMouseClicked(e -> miaw.play());
         aboutText.setWrappingWidth(800);
         aboutText.setText("YO ini aplikasi ini dibikin oleh \nRefki Alfarizi (hitam) 13523002 dan Muhammad Jibril Ibrahim (putih) 13523085\n\nKite kite ngerjain app ini buat menuhin spesifikasi tucil 3 stima jirr lah");
-
-
     }
 
     private void applyBackButtonEffects(Button button) {

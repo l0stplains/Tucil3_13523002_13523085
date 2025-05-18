@@ -59,7 +59,7 @@ public class MainController {
         hoverSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/hover.wav").toExternalForm());
         hoverSound.setVolume(0.03);
         exitSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/exit.mp3").toExternalForm());
-        exitSound.setVolume(0.05);
+        
 
         // Load the custom font
         Font impactedFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 24);
@@ -160,12 +160,13 @@ public class MainController {
     private void handleExit(MouseEvent event) {
         MainApp mainApp = (MainApp) btnExit.getScene().getWindow().getUserData();
         mainApp.backgroundPlayer.stop();
-        FadeTransition fade = new FadeTransition(Duration.seconds(1.5), btnExit.getScene().getRoot());
+        FadeTransition fade = new FadeTransition(Duration.seconds(3), btnExit.getScene().getRoot());
         fade.setFromValue(1.0);
         fade.setToValue(0.0);
         fade.setOnFinished(e -> System.exit(0));
         if (exitSound != null) {
             exitSound.play();
+
         }
         fade.play();
     }
