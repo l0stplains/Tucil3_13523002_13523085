@@ -1,22 +1,23 @@
 package tucil_3_stima.gui;
 
+import java.io.IOException;
+
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.AudioClip;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-import java.io.IOException;
 
 public class AboutController {
     @FXML private Text aboutText;
@@ -58,9 +59,13 @@ public class AboutController {
         // Fonts
         Font impactedFont48 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 48);
         Font impactedFont24 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 24);
-        backButton.setFont(impactedFont24);
-        aboutText.setFont(impactedFont24);
-        aboutTitle.setFont(impactedFont48);
+        if (impactedFont48 != null) {
+            aboutTitle.setFont(impactedFont48);
+        }
+        if (impactedFont24 != null) {
+            backButton.setFont(impactedFont24);
+            aboutText.setFont(impactedFont24);
+        }
 
 
         Media mediaBgm = new Media(getClass().getResource("/tucil_3_stima/gui/assets/slowBgm.mp3").toExternalForm());
@@ -70,8 +75,11 @@ public class AboutController {
         pageBgm.play();
 
         clickSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/click.wav").toExternalForm());
+        clickSound.setVolume(0.05);
         backSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/back.wav").toExternalForm());
+        backSound.setVolume(0.05);
         hoverSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/hover.wav").toExternalForm());
+        hoverSound.setVolume(0.03);
         miaw = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/miaw.wav").toExternalForm());
         backButton.setOnAction(e -> {
             if(clickSound != null) clickSound.play();
@@ -89,7 +97,7 @@ public class AboutController {
         applyBackButtonEffects(backButton);
         aboutTitle.setOnMouseClicked(e -> miaw.play());
         aboutText.setWrappingWidth(800);
-        aboutText.setText("YO ini aplikasi ini dibikin oleh \nRefki Alfarizi 13523002 dan Muhammad Jibril Ibrahim 13523085\n\nKite kite ngerjain app ini buat menuhin spesifikasi tucil 3 stima jirr lah");
+        aboutText.setText("YO ini aplikasi ini dibikin oleh \nRefki Alfarizi (hitam) 13523002 dan Muhammad Jibril Ibrahim (putih) 13523085\n\nKite kite ngerjain app ini buat menuhin spesifikasi tucil 3 stima jirr lah");
 
 
     }

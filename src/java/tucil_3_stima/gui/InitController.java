@@ -1,39 +1,53 @@
 package tucil_3_stima.gui;
 
-import javafx.animation.*;
+import java.io.File;
+import java.io.IOException;
+
+import javafx.animation.FadeTransition;
+import javafx.animation.ParallelTransition;
+import javafx.animation.ScaleTransition;
+import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBase;
+import javafx.scene.control.Label;
+import javafx.scene.control.MenuButton;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.GridPane;
-import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
+import javafx.scene.layout.StackPane;
 import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.scene.control.Alert;
 import javafx.util.Duration;
 
-import java.io.File;
-import java.io.IOException;
-
 public class InitController {
-    @FXML private Button uploadButton;
+    // Buttons
     @FXML private Button backButton;
-    @FXML private Button exampleButton;
-    @FXML private ScrollPane boardScrollPane;
-    @FXML private GridPane boardGrid;
-    @FXML private ScrollPane blockScrollPane;
-    @FXML private VBox blockListVBox;
+    @FXML private Button solveButton, saveButton; // Output button
+    @FXML private MenuButton algorithmButton, heuristicButton; 
+    @FXML private Button uploadButton, exampleButton; // Input button
+    @FXML private Button prevButton, nextButton, speedButton; // Animation button
+    @FXML private ToggleButton playButton; 
+    
+    // Panes
+    @FXML private StackPane boardPane;
+    
+    // Labels
+    @FXML private Label timeLabel, expNodeLabel, genNodeLabel, stepsLabel;
+    
+    // Images
     @FXML private ImageView backgroundImageView;
-    @FXML private ListView<String> puzzleListView;  // puzzle file list on the left
 
-    private AudioClip clickSound, hoverSound, backSound, bakaSound, heheSound;
+    // Audioss
+    private AudioClip clickSound, hoverSound, backSound;
     private MediaPlayer pageBgm;
 
     @FXML
@@ -55,15 +69,34 @@ public class InitController {
                 });
             }
         });
+
         // Fonts
         Font impactedFont24 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 24);
-        backButton.setFont(impactedFont24);
-        exampleButton.setFont(impactedFont24);
-        uploadButton.setFont(impactedFont24);
+        if (impactedFont24 != null) {
+            backButton.setFont(impactedFont24);
+            exampleButton.setFont(impactedFont24);
+            uploadButton.setFont(impactedFont24);
+            solveButton.setFont(impactedFont24);
+            algorithmButton.setFont(impactedFont24);
+            heuristicButton.setFont(impactedFont24);
+            saveButton.setFont(impactedFont24);
+            prevButton.setFont(impactedFont24);
+            playButton.setFont(impactedFont24);
+            nextButton.setFont(impactedFont24);
+            speedButton.setFont(impactedFont24);
+        }
 
         // Effect
+        applyHoverEffects(solveButton);
+        applyHoverEffects(algorithmButton);
+        applyHoverEffects(heuristicButton);
+        applyHoverEffects(saveButton);
         applyHoverEffects(exampleButton);
         applyHoverEffects(uploadButton);
+        applyHoverEffects(prevButton);
+        applyHoverEffects(nextButton);
+        applyHoverEffects(speedButton);
+        applyHoverEffects(playButton);
 
         // BGM
         Media mediaBgm = new Media(getClass().getResource("/tucil_3_stima/gui/assets/slowBgm.mp3").toExternalForm());
@@ -73,19 +106,13 @@ public class InitController {
         pageBgm.play();
 
         clickSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/click.wav").toExternalForm());
+        clickSound.setVolume(0.05);
         hoverSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/hover.wav").toExternalForm());
+        hoverSound.setVolume(0.03);
         backSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/back.wav").toExternalForm());
-        bakaSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/baka.wav").toExternalForm());
-        heheSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/hehe.wav").toExternalForm());
+        backSound.setVolume(0.05);
         applyBackButtonEffects(backButton);
 
-
-        // On puzzleListView item click -> load that puzzle
-        puzzleListView.setOnMouseClicked(e -> {
-            String selected = puzzleListView.getSelectionModel().getSelectedItem();
-            if(selected != null) {
-            }
-        });
 
         // Upload button
         uploadButton.setOnAction(e -> {
@@ -188,21 +215,21 @@ public class InitController {
         });
     }
 
-    private void applyHoverEffects(Button button) {
+    private void applyHoverEffects(Node node) {
         // Set the default opacity
-        button.setOpacity(0.85);
+        node.setOpacity(0.85);
 
         // Mouse Enter: shift left, scale up, and fade to full opacity
-        button.setOnMouseEntered(e -> {
+        node.setOnMouseEntered(e -> {
             if (hoverSound != null) {
                 hoverSound.play();
             }
 
-            ScaleTransition scale = new ScaleTransition(Duration.millis(200), button);
+            ScaleTransition scale = new ScaleTransition(Duration.millis(200), node);
             scale.setToX(1.05);
             scale.setToY(1.05);
 
-            FadeTransition fade = new FadeTransition(Duration.millis(100), button);
+            FadeTransition fade = new FadeTransition(Duration.millis(100), node);
             fade.setToValue(1.0); // fully opaque
 
             ParallelTransition pt = new ParallelTransition(scale, fade);
@@ -210,23 +237,26 @@ public class InitController {
         });
 
         // Mouse Exit: reset translate, scale, and opacity
-        button.setOnMouseExited(e -> {
+        node.setOnMouseExited(e -> {
 
-            ScaleTransition scale = new ScaleTransition(Duration.millis(200), button);
+            ScaleTransition scale = new ScaleTransition(Duration.millis(200), node);
             scale.setToX(1.0);
             scale.setToY(1.0);
 
-            FadeTransition fade = new FadeTransition(Duration.millis(200), button);
+            FadeTransition fade = new FadeTransition(Duration.millis(200), node);
             fade.setToValue(0.85); // back to default
 
             ParallelTransition pt = new ParallelTransition(scale, fade);
             pt.play();
         });
 
-        button.setOnAction(e -> {
-            if (clickSound != null) {
-                clickSound.play();
-            }
-        });
+        if (node instanceof ButtonBase button) {
+            button.setOnAction(e -> {
+                if (clickSound != null) {
+                    clickSound.play();
+                }
+            });
+            
+        }
     }
 }

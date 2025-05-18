@@ -1,13 +1,13 @@
 package tucil_3_stima.gui;
 
-import javafx.animation.ScaleTransition;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+import java.io.IOException;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
-import javafx.animation.TranslateTransition;
+import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,8 +16,6 @@ import javafx.scene.media.AudioClip;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-
-import java.io.IOException;
 
 public class MainController {
     @FXML
@@ -57,8 +55,11 @@ public class MainController {
 
         // Initialize sound effects
         clickSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/click.wav").toExternalForm());
+        clickSound.setVolume(0.05); // so damn loud Fuck u
         hoverSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/hover.wav").toExternalForm());
-        exitSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/aishiteru.wav").toExternalForm());
+        hoverSound.setVolume(0.03);
+        exitSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/exit.mp3").toExternalForm());
+        exitSound.setVolume(0.05);
 
         // Load the custom font
         Font impactedFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 24);
@@ -79,11 +80,13 @@ public class MainController {
         applyHoverEffects(btnEnter);
 
     }
+
     private void applyButtonFonts(Button button, Font font) {
         String fontFamily = font.getName(); // Check what the font's family name is.
         button.setFont(font);
         button.setStyle("-fx-font-family: '" + fontFamily + "'; -fx-font-size: 24px;");
     }
+
     private void applyHoverEffects(Button button) {
         // Set the default opacity
         button.setOpacity(0.85);
@@ -152,6 +155,7 @@ public class MainController {
             ex.printStackTrace();
         }
     }
+    
     @FXML
     private void handleExit(MouseEvent event) {
         MainApp mainApp = (MainApp) btnExit.getScene().getWindow().getUserData();

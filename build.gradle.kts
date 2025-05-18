@@ -1,3 +1,11 @@
+import org.gradle.jvm.toolchain.JavaLanguageVersion
+
+java {
+  toolchain {
+    languageVersion = JavaLanguageVersion.of(23)
+  }
+}
+
 plugins {
     id("java")
     id("application")
@@ -17,6 +25,9 @@ application {
 
 tasks.named<JavaExec>("run") {
     standardInput = System.`in`
+    javaLauncher = javaToolchains.launcherFor {
+      languageVersion = JavaLanguageVersion.of(23)
+  }
 }
 
 javafx {
@@ -28,6 +39,7 @@ dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
     implementation("org.openjfx:javafx-controls:23")
+    implementation("org.openjfx:javafx-fxml:23")
     implementation("org.openjfx:javafx-media:23")
     implementation("org.openjfx:javafx-swing:23")
 }

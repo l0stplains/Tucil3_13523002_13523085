@@ -6,7 +6,7 @@
     -fx-text-fill: #ffffff;
 }
 
-.button {
+.button, .menu-button, .toggle-button {
     -fx-background-color: #333333;
     -fx-text-fill: #ffffff;
     -fx-border-color: #444444;
