@@ -50,7 +50,7 @@ public class InputHandler {
         }
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
-            // Parse the first line: board dimensions and number of blocks.
+            // Parse the first line: board dimensions.
             String[] variables = reader.readLine().split(" ");
             if (variables.length != 2) {
                 throw new IllegalArgumentException("Wrong number of variables on the first line of file: " + filename);
@@ -67,10 +67,23 @@ public class InputHandler {
                 throw new IllegalArgumentException("Invalid variable value on the first line of file: " + filename);
             }
 
+            int N;
+            String variable = reader.readLine();
+            try {       
+                N = Integer.parseInt(variable);
+            } catch (NumberFormatException e) {
+                throw new IllegalArgumentException("Variable not parseable on the Second line of file: " + filename);
+            }
+            // Validate that the number of blocks read matches P, just in case.
+            if (N < 1) {
+                throw new IllegalArgumentException("Invalid variable value on the Second line of file: " + filename);
+            }
+
             // Read all remaining non-empty lines.
             int exitR = -1;
             int exitC = -1;
             List<String> allLines = new ArrayList<>();
+            List<String> allLinesRaw = new ArrayList<>();
             String line;
             String lineTrim;
             int row = 0;
@@ -78,22 +91,25 @@ public class InputHandler {
             // Parse the board itself and find K
             while ((line = reader.readLine()) != null) {
                 lineTrim = line.trim();
-                // check if the board is aligned to left (no empty space to the left)
-                if (line.charAt(0) == ' ') {
-                    throw new IllegalArgumentException("Empty space to left side of the board of file: " + filename);
-                }
 
-                if (lineTrim.isEmpty() && row < A) { 
+                if (lineTrim.isBlank() && row < A) { 
                     throw new IllegalArgumentException("Empty line on the board of file: " + filename);
                 }
 
-                if (row < A) {
+                if (row <= A) {
+                    // check if lastrow exist even though exit already found
+                    if (row == A && exitC != -1 && exitR != -1 && !line.isBlank()) {
+                        throw new IllegalArgumentException("(4) Board size and the given board size doesn't match at file: " + filename);
+                    }
+
                     // normal
                     if (lineTrim.length() == B) {
-                        allLines.add(line);
+                        allLines.add(lineTrim);
+                        allLinesRaw.add(line);
                     }
                     // K inline
                     else if (lineTrim.length() == B + 1) {
+                        // K on the left side
                         if (line.charAt(0) == 'K') {
                             if (exitR != -1 && exitC != -1) {
                                 throw new IllegalArgumentException("Duplicate exit on the board of file: " + filename);
@@ -101,8 +117,10 @@ public class InputHandler {
                             exitR = row;
                             exitC = 0;
 
-                            allLines.add(line.substring(1, B));
+                            allLines.add(lineTrim.substring(1, B + 1));
+                            allLinesRaw.add(line);
                         }
+                        // K on the right side
                         else if (line.charAt(line.length() - 1) == 'K') {
                             if (exitR != -1 && exitC != -1) {
                                 throw new IllegalArgumentException("Duplicate exit on the board of file: " + filename);
@@ -111,17 +129,18 @@ public class InputHandler {
                             exitR = row;
                             exitC = line.length() - 2;
 
-                            allLines.add(line.substring(0, B - 1));
+                            allLines.add(lineTrim.substring(0, B));
+                            allLinesRaw.add(line);
                         }
                         else {
-                            throw new IllegalArgumentException("Board size and the given custom board doesn't match at file: " + filename);
+                            throw new IllegalArgumentException("(1) Board size and the given board size doesn't match at file: " + filename);
                         }
 
                     }
                     // K Alone
                     else if (lineTrim.length() == 1) {
                         // Not in board vertical range
-                        if (row != 0 && row != A - 1) {
+                        if (row != 0 && row != A) {
                             throw new IllegalArgumentException("Invalid exit position on the board of file: " + filename);
                         }
                         if (lineTrim.charAt(0) == 'K') {
@@ -143,13 +162,18 @@ public class InputHandler {
                                 row--;
                             }
                         }
+                        else {
+                            throw new IllegalArgumentException("(5) Board size and the given board size doesn't match at file: " + filename);
+                        }
                     }
                     else {
-                        throw new IllegalArgumentException("Board size and the given custom board doesn't match at file: " + filename);
+                        System.out.println("at Row: " + row + "\nline: " + line + "\nlineTrim: " + lineTrim);
+                        throw new IllegalArgumentException("(2) Board size and the given board size doesn't match at file: " + filename);
                     }
                 }
+                else if (row > A && line.isBlank()) continue;
                 else {
-                    throw new IllegalArgumentException("Board size and the given custom board doesn't match at file: " + filename);
+                    throw new IllegalArgumentException("(3) Board size and the given board size doesn't match at file: " + filename);
                 }
 
                 row++;
@@ -167,7 +191,10 @@ public class InputHandler {
             Set<Character> uniqueSymbols = new HashSet<>();
             boolean[][] visited = new boolean[A][B];
             
-            
+            System.out.println("Board: ");
+            for (String line1 : allLines) {
+                System.out.println(line1);
+            }
 
             // Asumsi udh size AxB (harusnya udh sih, di verif di bagian sebelumnya)
             for (int i = 0; i < A; i++) {
@@ -182,6 +209,8 @@ public class InputHandler {
                             throw new IllegalArgumentException("Duplicate symbol found: " + c);
                         }
 
+                        System.out.println("Current symbol: " + c + "\nfound at (" + i + ", " + j + ")");
+
                         // traverse vehicle
                         // make sure its a valid 1xN or Nx1
                         int vehicleLength = 0;
@@ -189,8 +218,8 @@ public class InputHandler {
 
                         
                         // check if size is 1x1 and get vehicle orientation
-                        if (allLines.get(i).charAt(j + 1) == c) isHorizontal = true;
-                        else if (allLines.get(i + 1).charAt(j) == c) isHorizontal = false;
+                        if (j + 1 < B && allLines.get(i).charAt(j + 1) == c) isHorizontal = true;
+                        else if (i + 1 < A && allLines.get(i + 1).charAt(j) == c) isHorizontal = false;
                         else {
                             throw new IllegalArgumentException("1x1 sized vehicle found at file: " + filename);
                         }
@@ -222,6 +251,7 @@ public class InputHandler {
 
                                 cur_i++;
                             }
+                            System.out.println("cur_i: " + cur_i + "\ncur_j: " + cur_j + "\n---------");
                         }
 
                         if (c == 'P') {
@@ -248,6 +278,23 @@ public class InputHandler {
                     }
                     else {
                         throw new IllegalArgumentException("Invalid symbol on the board of file: " + filename);
+                    }
+                }
+            }
+
+            // check if the board is aligned to left (no empty space to the left) except if K on the left
+            if (!(exitC == 0 && vehicles.get(0).isHorizontal())) {
+                for (String lineTest : allLinesRaw) {
+                    if (!validSymbol(lineTest.charAt(0))) {
+                        throw new IllegalArgumentException("Empty space to left side of the board of file: " + filename);
+                    }
+                }
+            }
+            // if K is on the left 
+            else {
+                for (String lineTest : allLinesRaw) {
+                    if (!validSymbol(lineTest.charAt(1))) {
+                        throw new IllegalArgumentException("Empty space to left side of the board of file: " + filename);
                     }
                 }
             }
@@ -283,7 +330,6 @@ public class InputHandler {
                 }
             }
 
-            // 
             for (int carPos : potentialRiskyPos) {
                 int carBound;
                 if (carOrientation) carBound = carPos % B;
@@ -294,10 +340,17 @@ public class InputHandler {
                 }
             }
 
+            // check if amount of vehicles the same as the given N 
+            if (N != vehicles.size() - 1) {
+                throw new IllegalArgumentException("Number of vehicles is not the same as the given N at file: " + filename);
+            }
+
+
             Vehicle[] vehiclesArr = new Vehicle[vehicles.size()];
             vehiclesArr = vehicles.toArray(vehiclesArr);
             int[] posArr = pos.stream().mapToInt(i -> i).toArray();
 
+            System.out.println("Done Parsing");
             return new Pair<>(new Board(A, B, exitR, exitC, vehiclesArr), new State(posArr));
         } catch (IOException e) {
             throw new IOException("Error reading file: " + filename, e);
@@ -305,6 +358,6 @@ public class InputHandler {
     }
 
     private static boolean validSymbol(char c) {
-        return c == '.' || (c >= 'A' && c <= 'Z' && c != 'K' && c != 'P');
+        return c == '.' || (c >= 'A' && c <= 'Z' && c != 'K');
     }
 }
