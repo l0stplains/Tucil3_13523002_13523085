@@ -1,5 +1,6 @@
 package tucil_3_stima.gui;
 
+import javafx.animation.ScaleTransition;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 
@@ -13,17 +14,22 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.media.AudioClip;
 import javafx.scene.text.Font;
+import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import java.io.IOException;
 
 public class MainController {
     @FXML
+    private Button btnEnter;
+    @FXML
     private Button btnAbout;
     @FXML
     private Button btnExit;
     @FXML
     private ImageView backgroundImageView;
+
+    @FXML private Text mainTitle;
 
     private AudioClip clickSound;
     private AudioClip hoverSound;
@@ -55,15 +61,22 @@ public class MainController {
         exitSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/aishiteru.wav").toExternalForm());
 
         // Load the custom font
-        Font genkiFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/GenkiDesu.otf").toExternalForm(), 24);
-        if(genkiFont != null) {
-            applyButtonFonts(btnAbout, genkiFont);
-            applyButtonFonts(btnExit, genkiFont);
+        Font impactedFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 24);
+        if(impactedFont != null) {
+            applyButtonFonts(btnAbout, impactedFont);
+            applyButtonFonts(btnExit, impactedFont);
+            applyButtonFonts(btnEnter, impactedFont);
         }
+        Font impactedFont60 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 60);
+        if(impactedFont60 != null) {
+            mainTitle.setFont(impactedFont60);
+        }
+
 
         // Apply the same hover/click effects to all buttons
         applyHoverEffects(btnAbout);
         applyHoverEffects(btnExit);
+        applyHoverEffects(btnEnter);
 
     }
     private void applyButtonFonts(Button button, Font font) {
@@ -80,33 +93,29 @@ public class MainController {
             if (hoverSound != null) {
                 hoverSound.play();
             }
-            TranslateTransition translate = new TranslateTransition(Duration.millis(100), button);
-            translate.setToX(-30); // move 10px left
 
-//            ScaleTransition scale = new ScaleTransition(Duration.millis(200), button);
-//            scale.setToX(1.05);
-//            scale.setToY(1.05);
+            ScaleTransition scale = new ScaleTransition(Duration.millis(200), button);
+            scale.setToX(1.05);
+            scale.setToY(1.05);
 
             FadeTransition fade = new FadeTransition(Duration.millis(100), button);
             fade.setToValue(1.0); // fully opaque
 
-            ParallelTransition pt = new ParallelTransition(translate, fade);
+            ParallelTransition pt = new ParallelTransition(scale, fade);
             pt.play();
         });
 
         // Mouse Exit: reset translate, scale, and opacity
         button.setOnMouseExited(e -> {
-            TranslateTransition translate = new TranslateTransition(Duration.millis(200), button);
-            translate.setToX(0);
 
-//            ScaleTransition scale = new ScaleTransition(Duration.millis(200), button);
-//            scale.setToX(1.0);
-//            scale.setToY(1.0);
+            ScaleTransition scale = new ScaleTransition(Duration.millis(200), button);
+            scale.setToX(1.0);
+            scale.setToY(1.0);
 
             FadeTransition fade = new FadeTransition(Duration.millis(200), button);
             fade.setToValue(0.85); // back to default
 
-            ParallelTransition pt = new ParallelTransition(translate, fade);
+            ParallelTransition pt = new ParallelTransition(scale, fade);
             pt.play();
         });
 
@@ -131,6 +140,18 @@ public class MainController {
         }
     }
 
+    @FXML
+    private void handleEnter(MouseEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/tucil_3_stima/gui/init_menu.fxml"));
+            Scene aboutScene = new Scene(loader.load(), btnEnter.getScene().getWidth(), btnEnter.getScene().getHeight());
+            MainApp mainApp = (MainApp) btnEnter.getScene().getWindow().getUserData();
+            mainApp.backgroundPlayer.stop();
+            mainApp.switchScene(aboutScene);
+        } catch(IOException ex) {
+            ex.printStackTrace();
+        }
+    }
     @FXML
     private void handleExit(MouseEvent event) {
         MainApp mainApp = (MainApp) btnExit.getScene().getWindow().getUserData();
