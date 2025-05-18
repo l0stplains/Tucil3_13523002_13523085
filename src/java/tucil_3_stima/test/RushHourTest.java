@@ -1,8 +1,20 @@
 package tucil_3_stima.test;
 
-import tucil_3_stima.model.*;
-import tucil_3_stima.strategy.*;
-import java.util.*;
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Deque;
+
+import tucil_3_stima.model.Board;
+import tucil_3_stima.model.State;
+import tucil_3_stima.model.Vehicle;
+import tucil_3_stima.strategy.AStar;
+import tucil_3_stima.strategy.BlockingHeuristic;
+import tucil_3_stima.strategy.DistanceHeuristic;
+import tucil_3_stima.strategy.GBFS;
+import tucil_3_stima.strategy.Heuristic;
+import tucil_3_stima.strategy.SearchResult;
+import tucil_3_stima.strategy.SearchStrategy;
+import tucil_3_stima.strategy.UCS;
 
 public class RushHourTest {
     private static final String RESET = "\u001B[0m";
