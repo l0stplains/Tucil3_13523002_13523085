@@ -19,10 +19,23 @@
         <ImageView fx:id="backgroundImageView" fitHeight="675" fitWidth="1200" preserveRatio="false" />
         <BorderPane>
             <top>
-                <Button fx:id="backButton" prefHeight="60.0" prefWidth="175.0" text="Back" BorderPane.alignment="TOP_LEFT">
+            <StackPane alignment="BOTTOM_CENTER" prefHeight="60.0" prefWidth="1166.0" BorderPane.alignment="CENTER_LEFT">
                <BorderPane.margin>
                   <Insets left="-10.0" />
-               </BorderPane.margin></Button>
+               </BorderPane.margin>
+               <children>
+                  <StackPane alignment="TOP_LEFT" prefHeight="150.0" prefWidth="200.0">
+                     <children>
+                            <Button fx:id="backButton" prefHeight="60.0" prefWidth="175.0" styleClass="font-title-l" text="Back" />
+                     </children>
+                  </StackPane>
+                  <Label fx:id="stepLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="151.0" text="Step 0 of 0" textAlignment="CENTER" visible="false">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
             </top>
 
             <center>
@@ -37,25 +50,33 @@
                   </StackPane>
                   <HBox alignment="CENTER" prefHeight="123.0" prefWidth="700.0">
                      <children>
-                        <Button fx:id="prevButton" disable="true" mnemonicParsing="false" prefHeight="33.0" prefWidth="150.0" text="prev">
+                        <Button fx:id="resetButton" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="79.0" styleClass="font-normal" text="Reset">
                            <HBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <ToggleButton fx:id="playButton" disable="true" mnemonicParsing="false" prefHeight="33.0" prefWidth="150.0" text="Play/Stop">
+                        <Button fx:id="prevButton" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" styleClass="font-normal" text="Prev">
+                           <HBox.margin>
+                              <Insets left="10.0" right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <ToggleButton fx:id="playButton" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" styleClass="font-normal" text="Play/Stop">
                            <HBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </HBox.margin>
                         </ToggleButton>
-                        <Button fx:id="nextButton" disable="true" mnemonicParsing="false" prefHeight="33.0" prefWidth="150.0" text="Next">
+                        <Button fx:id="nextButton" disable="true" mnemonicParsing="false" prefHeight="40.0" prefWidth="130.0" styleClass="font-normal" text="Next">
                            <HBox.margin>
                               <Insets left="10.0" right="10.0" />
                            </HBox.margin>
                         </Button>
-                        <Button fx:id="speedButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" prefHeight="35.0" prefWidth="35.0" style="-fx-background-radius: 50%;" text="1x">
+                        <Button fx:id="speedButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" prefHeight="45.0" prefWidth="45.0" style="-fx-background-radius: 50%; -fx-border-color: transparent;" styleClass="font-small" text="1x">
                            <HBox.margin>
-                              <Insets left="10.0" />
+                              <Insets left="10.0" right="10.0" />
                            </HBox.margin>
+                           <font>
+                              <Font size="11.0" />
+                           </font>
                         </Button>
                      </children>
                   </HBox>
@@ -66,7 +87,7 @@
             <right>
             <VBox alignment="TOP_CENTER" prefHeight="655.0" prefWidth="250.0">
                <children>
-                  <Label fx:id="statsTitleText" text="STATS">
+                  <Label fx:id="statsTitleText" styleClass="font-title-l" text="STATS">
                      <VBox.margin>
                         <Insets bottom="15.0" top="10.0" />
                      </VBox.margin>
@@ -74,7 +95,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Label fx:id="timeTitleText" prefHeight="25.0" prefWidth="235.0" text="Time (Ms):">
+                  <Label fx:id="timeTitleLabel" prefHeight="25.0" prefWidth="235.0" styleClass="font-normal-l" text="Time (Ms):">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -85,7 +106,7 @@
                         <Insets bottom="5.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="timeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="235.0" text="-" textAlignment="RIGHT">
+                  <Label fx:id="timeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="235.0" styleClass="font-normal-l" text="-" textAlignment="RIGHT">
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding>
@@ -96,7 +117,7 @@
                         <Font size="16.0" />
                      </font>
                   </Label>
-                  <Label fx:id="expNodeTitleText" prefHeight="25.0" prefWidth="235.0" text="Expanded Node:">
+                  <Label fx:id="expNodeTitleLabel" prefHeight="25.0" prefWidth="235.0" styleClass="font-normal-l" text="Expanded Node:">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -107,7 +128,7 @@
                         <Insets bottom="5.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="expNodeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="235.0" text="-" textAlignment="RIGHT">
+                  <Label fx:id="expNodeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="235.0" styleClass="font-normal-l" text="-" textAlignment="RIGHT">
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding>
@@ -118,7 +139,7 @@
                         <Insets bottom="10.0" top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="genNodeTitleText" prefHeight="25.0" prefWidth="235.0" text="Generated Node:">
+                  <Label fx:id="genNodeTitleLabel" prefHeight="25.0" prefWidth="235.0" styleClass="font-normal-l" text="Generated Node:">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -129,7 +150,7 @@
                         <Insets bottom="5.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="genNodeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="235.0" text="-" textAlignment="RIGHT">
+                  <Label fx:id="genNodeLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="235.0" styleClass="font-normal-l" text="-" textAlignment="RIGHT">
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding>
@@ -140,7 +161,7 @@
                         <Insets bottom="10.0" top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="stepsTitleText" prefHeight="25.0" prefWidth="235.0" text="Steps to Finish:">
+                  <Label fx:id="stepsTitleLabel" prefHeight="25.0" prefWidth="235.0" styleClass="font-normal-l" text="Steps to Finish:">
                      <font>
                         <Font size="16.0" />
                      </font>
@@ -151,7 +172,7 @@
                         <Insets bottom="5.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <Label fx:id="stepsLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="235.0" text="-" textAlignment="RIGHT">
+                  <Label fx:id="stepsLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" prefHeight="25.0" prefWidth="235.0" styleClass="font-normal-l" text="-" textAlignment="RIGHT">
                      <padding>
                         <Insets left="10.0" right="10.0" />
                      </padding>
@@ -172,9 +193,9 @@
          <left>
             <VBox alignment="TOP_CENTER" prefHeight="625.0" prefWidth="300.0" BorderPane.alignment="CENTER">
                <children>
-                  <VBox alignment="TOP_CENTER" prefHeight="329.0" prefWidth="300.0">
+                  <VBox alignment="TOP_CENTER" prefHeight="363.0" prefWidth="300.0">
                      <children>
-                        <Label fx:id="outputTitleText" text="OUTPUT">
+                        <Label fx:id="outputTitleText" styleClass="font-title" text="OUTPUT">
                            <VBox.margin>
                               <Insets bottom="15.0" top="10.0" />
                            </VBox.margin>
@@ -182,7 +203,7 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
-                             <Button fx:id="solveButton" disable="true" prefHeight="25.0" prefWidth="200.0" text="Solve">
+                             <Button fx:id="solveButton" disable="true" prefHeight="25.0" prefWidth="200.0" styleClass="font-normal" text="Solve">
                            <VBox.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </VBox.margin>
@@ -190,7 +211,7 @@
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
                         </Button>
-                        <MenuButton fx:id="algorithmButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" text="Algorithm" textAlignment="CENTER">
+                        <MenuButton fx:id="algorithmButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="font-normal" text="Algorithm" textAlignment="CENTER">
                            <VBox.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </VBox.margin>
@@ -198,7 +219,7 @@
                               <Insets bottom="5.0" left="10.0" top="5.0" />
                            </padding>
                         </MenuButton>
-                        <MenuButton fx:id="heuristicButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" text="Heuristic" textAlignment="CENTER">
+                        <MenuButton fx:id="heuristicButton" alignment="CENTER" contentDisplay="CENTER" disable="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="200.0" styleClass="font-normal" text="Heuristic" textAlignment="CENTER">
                            <VBox.margin>
                               <Insets bottom="10.0" top="10.0" />
                            </VBox.margin>
@@ -206,7 +227,7 @@
                               <Insets bottom="5.0" left="10.0" top="5.0" />
                            </padding>
                         </MenuButton>
-                        <Button fx:id="saveButton" disable="true" prefHeight="25.0" prefWidth="200.0" text="Save to txt">
+                        <Button fx:id="saveButton" disable="true" prefHeight="25.0" prefWidth="200.0" styleClass="font-normal" text="Save to txt">
                            <padding>
                               <Insets bottom="10.0" top="10.0" />
                            </padding>
@@ -217,7 +238,7 @@
                      </children>
                   </VBox>
                   <Separator prefWidth="200.0" />
-                  <Label fx:id="inputTitleText" text="INPUT">
+                  <Label fx:id="inputTitleText" styleClass="font-title" text="INPUT">
                      <VBox.margin>
                         <Insets bottom="15.0" top="10.0" />
                      </VBox.margin>
@@ -225,7 +246,7 @@
                         <Font size="18.0" />
                      </font>
                   </Label>
-                  <Button fx:id="uploadButton" prefHeight="25.0" prefWidth="200.0" text="Upload Test Case">
+                  <Button fx:id="uploadButton" prefHeight="25.0" prefWidth="200.0" styleClass="font-normal" text="Upload Test Case">
                      <padding>
                         <Insets bottom="10.0" top="10.0" />
                      </padding>
@@ -233,7 +254,7 @@
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>
                   </Button>
-                       <Button fx:id="exampleButton" prefHeight="25.0" prefWidth="200.0" text="Example Format">
+                       <Button fx:id="exampleButton" prefHeight="25.0" prefWidth="200.0" styleClass="font-normal" text="Example Format">
                      <VBox.margin>
                         <Insets bottom="10.0" top="10.0" />
                      </VBox.margin>

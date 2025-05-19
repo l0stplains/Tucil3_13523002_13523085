@@ -11,6 +11,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
+import javafx.util.Pair;
 import tucil_3_stima.model.Board;
 import tucil_3_stima.model.State;
 import tucil_3_stima.model.Vehicle;
@@ -20,32 +21,33 @@ public class BoardViewBuilder {
 
     private static Map<Character, Color> createColorMap() {
         Map<Character, Color> map = new HashMap<>();
-        map.put('A', Color.web("#FFB74D")); // Orange
-        map.put('B', Color.web("#4DB6AC")); // Teal
-        map.put('C', Color.web("#64B5F6")); // Light Blue
-        map.put('D', Color.web("#81C784")); // Green
-        map.put('E', Color.web("#BA68C8")); // Purple
-        map.put('F', Color.web("#F06292")); // Pink
-        map.put('G', Color.web("#7986CB")); // Indigo
-        map.put('H', Color.web("#AED581")); // Light Green
-        map.put('I', Color.web("#E57373")); // Red
-        map.put('J', Color.web("#4DD0E1")); // Cyan
-        map.put('K', Color.web("#FFD54F")); // Yellow
-        map.put('L', Color.web("#A1887F")); // Brown
-        map.put('M', Color.web("#90A4AE")); // Blue Gray
-        map.put('N', Color.web("#FF8A65"));
-        map.put('O', Color.web("#D4E157"));
-        map.put('P', Color.web("#F48FB1"));
-        map.put('Q', Color.web("#7986CB"));
-        map.put('R', Color.web("#A5D6A7"));
-        map.put('S', Color.web("#CE93D8"));
-        map.put('T', Color.web("#FFF176"));
-        map.put('U', Color.web("#81D4FA"));
-        map.put('V', Color.web("#FFAB91"));
-        map.put('W', Color.web("#B0BEC5"));
-        map.put('X', Color.web("#DCEDC8"));
-        map.put('Y', Color.web("#B39DDB"));
-        map.put('Z', Color.web("#FFCCBC"));
+        map.put('A', Color.STEELBLUE);           // Primary piece (P); // Bright Yellow
+        map.put('B', Color.ROYALBLUE); // Bright Cyan
+        map.put('C', Color.LIMEGREEN); // Sky Blue
+        map.put('D', Color.CORAL); // Lime Green
+        map.put('E', Color.DARKORANGE); // Lavender Purple
+        map.put('F', Color.MEDIUMPURPLE); // Hot Pink
+        map.put('G', Color.DEEPSKYBLUE); // Indigo
+        map.put('H', Color.HOTPINK); // Light Lime
+        map.put('I', Color.FORESTGREEN); // Coral Red
+        map.put('J', Color.CHOCOLATE); // Baby Blue
+        map.put('K', Color.SLATEBLUE); // Light Yellow
+        map.put('L', Color.TOMATO); // Soft Brown
+        map.put('M', Color.TEAL); // Light Sky Blue
+        map.put('N', Color.INDIANRED); // Light Orange
+        map.put('O', Color.MEDIUMSEAGREEN); // Light Lime
+        map.put('P', Color.CRIMSON); // Bright Red
+        map.put('Q', Color.DARKVIOLET); // Light Purple
+        map.put('R', Color.SANDYBROWN); // Bright Mint
+        map.put('S', Color.CORAL); // Soft Pink
+        map.put('T', Color.DARKORANGE); // Bright Amber
+        map.put('U', Color.DARKCYAN); // Bright Sky Blue
+        map.put('V', Color.MEDIUMORCHID); // Bright Orange
+        map.put('W', Color.LIGHTCORAL); // Soft Aqua
+        map.put('X', Color.LIGHTSEAGREEN); // Mint Green
+        map.put('Y', Color.LIGHTSLATEGRAY); // Light Lavender
+        map.put('Z', Color.LIGHTSTEELBLUE); // Light Red
+
         return map;
     }
 
@@ -54,6 +56,8 @@ public class BoardViewBuilder {
         int rows = board.getRows();
         int cols = board.getCols();
         Vehicle[] vehicles = board.getVehicles();
+
+        Pair<Integer, Integer> lastMovement = state.getLastMovement();
         int[] pos = state.getPositions();
 
         // Each cell is sized so that the entire board fits into 600x600
@@ -66,10 +70,6 @@ public class BoardViewBuilder {
 
         for (int r = 0; r < rows; r++) {
             for (int c = 0; c < cols; c++) {
-                // Coordinates for center of this cell
-                // double centerX = c * cellSize + cellSize / 2.0;
-                // double centerY = r * cellSize + cellSize / 2.0;
-                
                 Rectangle cell = new Rectangle(cellSize, cellSize);
                 cell.setLayoutX(c * cellSize);
                 cell.setLayoutY(r * cellSize);
@@ -97,6 +97,10 @@ public class BoardViewBuilder {
             rect.setArcWidth(15); // Rounded corners
             rect.setArcHeight(15);
             rect.setFill(VEHICLE_COLOR_MAP.get(v.getSymbol()));
+            if (lastMovement != null && i == lastMovement.getKey()) {
+                rect.setStroke(Color.GOLD);
+                rect.setStrokeWidth(5);
+            }
 
             // Position of the vehicle
             double x = curC * cellSize + (cellSize * (isHorizontal ? length : 1) - width) / 2.0;
@@ -104,6 +108,9 @@ public class BoardViewBuilder {
 
             // Add a label (like 'F', 'Z') on top
             Text label = new Text(String.valueOf(v.getSymbol()));
+            if (v.getSymbol() == 'P') {
+                label.setText("Player");
+            }
             label.setFont(Font.font(20));
             label.setFill(Color.WHITE);
 
@@ -117,6 +124,39 @@ public class BoardViewBuilder {
             vehicleGroup.setLayoutY(y);
 
             root.getChildren().add(vehicleGroup);
+        }
+
+        // draw exit door
+        int exitR = board.getExitRow();
+        int exitC = board.getExitCol();
+        
+        Color exitColor = Color.rgb(105, 216, 88, 0.3);
+
+        // left - right
+        if (board.getExitHorizontal()) {
+            Rectangle exitRect = new Rectangle(cellSize * 0.1, cellSize);
+            exitRect.setStroke(exitColor);
+            exitRect.setFill(exitColor);
+            exitRect.setStrokeWidth(0.5);
+
+            if (exitC == 0) exitRect.setLayoutX(exitC * cellSize);
+            else exitRect.setLayoutX((exitC + 1) * cellSize);
+
+            exitRect.setLayoutY(exitR * cellSize);
+            root.getChildren().add(exitRect);
+        }  
+        else {
+            Rectangle exitRect = new Rectangle(cellSize, cellSize * 0.1);
+            
+            exitRect.setStroke(exitColor);
+            exitRect.setFill(exitColor);
+            exitRect.setStrokeWidth(0.5);
+
+            if (exitR == 0) exitRect.setLayoutY(exitR * cellSize);
+            else exitRect.setLayoutY((exitR + 1) * cellSize);
+            
+            exitRect.setLayoutX(exitC * cellSize);
+            root.getChildren().add(exitRect);
         }
         
         StackPane.setAlignment(root, Pos.CENTER);            

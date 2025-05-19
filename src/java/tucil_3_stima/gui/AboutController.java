@@ -15,7 +15,6 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
@@ -55,18 +54,6 @@ public class AboutController {
         fadeInTitle.setFromValue(0);
         fadeInTitle.setToValue(1);
         fadeInTitle.play();
-
-        // Fonts
-        Font impactedFont48 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 48);
-        Font impactedFont24 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 24);
-        if (impactedFont48 != null) {
-            aboutTitle.setFont(impactedFont48);
-        }
-        if (impactedFont24 != null) {
-            backButton.setFont(impactedFont24);
-            aboutText.setFont(impactedFont24);
-        }
-
         
         // Audio Clip Init
         Media mediaBgm = new Media(getClass().getResource("/tucil_3_stima/gui/assets/slowBgm.mp3").toExternalForm());
@@ -97,9 +84,12 @@ public class AboutController {
                 ex.printStackTrace();
             }
         });
+
         applyBackButtonEffects(backButton);
         aboutTitle.setOnMouseClicked(e -> miaw.play());
+        aboutTitle.getStyleClass().add("my-text");
         aboutText.setWrappingWidth(800);
+        aboutText.getStyleClass().add("my-text");
         aboutText.setText("YO ini aplikasi ini dibikin oleh \nRefki Alfarizi (hitam) 13523002 dan Muhammad Jibril Ibrahim (putih) 13523085\n\nKite kite ngerjain app ini buat menuhin spesifikasi tucil 3 stima jirr lah");
     }
 

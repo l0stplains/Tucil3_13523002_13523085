@@ -89,7 +89,7 @@ public class RushHourTest {
         int[] pos = {4*cols+4, 0*cols+2, 0*cols+5, 1*cols+4, 2*cols+2, 2*cols+0, 3*cols+1, 5*cols+0, 5*cols+4, 4*cols+2, 4*cols+3};
          */
         int exitR = 2, exitC = 5;
-        Board board = new Board(rows,cols,exitR,exitC,vehicles);
+        Board board = new Board(rows,cols,exitR,exitC, true,vehicles);
         State start = new State(pos);
 
         render(board,start);

@@ -41,19 +41,15 @@ public class MainApp extends Application {
         startSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/start.mp3").toExternalForm());
         startSound.setVolume(200);
 
+        // Load custom font from resources
+        Font customFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(),48);
+
+
         // welcome text
         Text splashText = new Text("Welcome to\n" + "Rush Hour Puzzle Solver");
+        splashText.setFont(customFont);
+        splashText.getStyleClass().add("my-text");
 
-        // Load custom font from resources
-        Font customFont = Font.loadFont(
-                getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(),
-                48
-        );
-        if (customFont != null) {
-            splashText.setFont(customFont);
-        } else {
-            splashText.setFont(Font.font("System", 48));
-        }
         splashText.setStyle("-fx-fill: white;");
         splashText.setTextAlignment(TextAlignment.CENTER);
         splashText.setOpacity(0); // Start fully transparent

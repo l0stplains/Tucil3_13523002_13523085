@@ -192,17 +192,16 @@ public class InputHandler {
                 throw new IllegalArgumentException("No exit found on the board of file: " + filename);
             }
             
+            if (allLines.size() != A) {
+                throw new IllegalArgumentException("(6) Board size and the given board size doesn't match at file: " + filename);
+            }
+
             // Parse the vehicles
             List<Vehicle> vehicles = new ArrayList<>();
             List<Integer> pos = new ArrayList<>();
             List<Integer> potentialRiskyPos = new ArrayList<>();
             Set<Character> uniqueSymbols = new HashSet<>();
             boolean[][] visited = new boolean[A][B];
-            
-            System.out.println("Board: ");
-            for (String line1 : allLines) {
-                System.out.println(line1);
-            }
 
             // Asumsi udh size AxB (harusnya udh sih, di verif di bagian sebelumnya)
             for (int i = 0; i < A; i++) {
@@ -217,7 +216,7 @@ public class InputHandler {
                             throw new IllegalArgumentException("Duplicate symbol found: " + c);
                         }
 
-                        System.out.println("Current symbol: " + c + "\nfound at (" + i + ", " + j + ")");
+                        // System.out.println("Current symbol: " + c + "\nfound at (" + i + ", " + j + ")");
 
                         // traverse vehicle
                         // make sure its a valid 1xN or Nx1
@@ -368,10 +367,7 @@ public class InputHandler {
             Vehicle[] vehiclesArr = new Vehicle[vehicles.size()];
             vehiclesArr = vehicles.toArray(vehiclesArr);
             int[] posArr = pos.stream().mapToInt(i -> i).toArray();
-
-            System.out.println("exit horizontal: " + exitHorizontal);
-            System.out.println("Done Parsing");
-            return new Pair<>(new Board(A, B, exitR, exitC, vehiclesArr), new State(posArr));
+            return new Pair<>(new Board(A, B, exitR, exitC, exitHorizontal, vehiclesArr), new State(posArr));
         } catch (IOException e) {
             throw new IOException("Error reading file: " + filename, e);
         }

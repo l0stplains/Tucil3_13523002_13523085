@@ -1,20 +1,27 @@
 package tucil_3_stima.model;
 
+import java.util.ArrayList;
+import java.util.BitSet;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import tucil_3_stima.strategy.Heuristic;
-import java.util.*;
 
 public class Board {
     private final int rows, cols;
     private final int exitRow, exitCol;
+    private final boolean exitHorizontal;
     private final Vehicle[] vehicles;
     private final List<Map<Integer, BitSet>> vehicleMasks;
     private static final int[] DIRS = { -1, +1 };
 
-    public Board(int rows, int cols, int exitRow, int exitCol, Vehicle[] vehicles) {
+    public Board(int rows, int cols, int exitRow, int exitCol, boolean exitHorizontal, Vehicle[] vehicles) {
         this.rows = rows;
         this.cols = cols;
         this.exitRow = exitRow;
         this.exitCol = exitCol;
+        this.exitHorizontal = exitHorizontal;
         this.vehicles = vehicles.clone();
         this.vehicleMasks = precomputeMasks();
     }
@@ -130,6 +137,7 @@ public class Board {
     public int getCols() { return cols; }
     public int getExitRow() { return exitRow; }
     public int getExitCol() { return exitCol; }
+    public boolean getExitHorizontal() { return exitHorizontal; }
     public Vehicle getVehicle(int i) { return vehicles[i]; }
     public Vehicle[] getVehicles() { return vehicles; }
 }

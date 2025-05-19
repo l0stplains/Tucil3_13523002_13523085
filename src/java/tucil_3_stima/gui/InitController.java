@@ -1,8 +1,13 @@
 package tucil_3_stima.gui;
 
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.atomic.AtomicBoolean;
+import java.util.concurrent.atomic.AtomicInteger;
+import java.util.concurrent.atomic.AtomicReference;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
@@ -27,25 +32,24 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
-import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
-import javafx.scene.text.Font;
 import javafx.stage.FileChooser;
 import javafx.util.Duration;
 import javafx.util.Pair;
 import tucil_3_stima.model.Board;
 import tucil_3_stima.model.State;
+import tucil_3_stima.model.Vehicle;
 import tucil_3_stima.strategy.AStar;
-import tucil_3_stima.strategy.Heuristic;
-import tucil_3_stima.strategy.SearchResult;
-import tucil_3_stima.strategy.UCS;
 import tucil_3_stima.strategy.AbstractSearch;
 import tucil_3_stima.strategy.BlockingHeuristic;
 import tucil_3_stima.strategy.DistanceHeuristic;
 import tucil_3_stima.strategy.GBFS;
+import tucil_3_stima.strategy.Heuristic;
+import tucil_3_stima.strategy.SearchResult;
+import tucil_3_stima.strategy.UCS;
 import tucil_3_stima.utils.InputHandler;
 
 public class InitController {
@@ -54,14 +58,15 @@ public class InitController {
     @FXML private Button solveButton, saveButton; // Output button
     @FXML private MenuButton algorithmButton, heuristicButton; 
     @FXML private Button uploadButton, exampleButton; // Input button
-    @FXML private Button prevButton, nextButton, speedButton; // Animation button
+    @FXML private Button resetButton, prevButton, nextButton, speedButton; // Animation button
     @FXML private ToggleButton playButton; 
     
     // Panes
     @FXML private StackPane boardPane;
     
     // Labels
-    @FXML private Label timeLabel, expNodeLabel, genNodeLabel, stepsLabel, loadingLabel;
+    @FXML private Label timeLabel, expNodeLabel, genNodeLabel, stepsLabel, loadingLabel, stepLabel;
+    @FXML private Label timeTitleLabel, expNodeTitleLabel, genNodeTitleLabel, stepsTitleLabel;
 
     // Indicator
     @FXML private ProgressIndicator loadingIndicator;
@@ -79,7 +84,9 @@ public class InitController {
     private Board board;
     private State startState;
     private SearchResult searchRes;
-    private int curStep = 0;
+    AtomicInteger curStep = new AtomicInteger(0);
+    AtomicBoolean animationRunning = new AtomicBoolean(false);
+    AtomicReference<Double> stepSpeed = new AtomicReference<>(1.0);
     private ArrayList<State> steps = new ArrayList<>();
 
     @FXML
@@ -102,22 +109,6 @@ public class InitController {
             }
         });
 
-        // Fonts
-        Font impactedFont24 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 24);
-        if (impactedFont24 != null) {
-            backButton.setFont(impactedFont24);
-            exampleButton.setFont(impactedFont24);
-            uploadButton.setFont(impactedFont24);
-            solveButton.setFont(impactedFont24);
-            algorithmButton.setFont(impactedFont24);
-            heuristicButton.setFont(impactedFont24);
-            saveButton.setFont(impactedFont24);
-            prevButton.setFont(impactedFont24);
-            playButton.setFont(impactedFont24);
-            nextButton.setFont(impactedFont24);
-            speedButton.setFont(impactedFont24);
-        }
-
         // Effect
         applyHoverEffects(solveButton);
         applyHoverEffects(algorithmButton);
@@ -125,6 +116,7 @@ public class InitController {
         applyHoverEffects(saveButton);
         applyHoverEffects(exampleButton);
         applyHoverEffects(uploadButton);
+        applyHoverEffects(resetButton);
         applyHoverEffects(prevButton);
         applyHoverEffects(nextButton);
         applyHoverEffects(speedButton);
@@ -143,13 +135,14 @@ public class InitController {
         hoverSound.setVolume(0.01);
         backSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/back.wav").toExternalForm());
         backSound.setVolume(0.05);
-        applyBackButtonEffects(backButton);
-
+        
         // Buttons
+        applyBackButtonEffects(backButton);
         uploadButton.setOnAction(e -> { uploadBtnAction(); });
         exampleButton.setOnAction(e -> { exampleBtnAction(); });
         solveButton.setOnAction(e -> { solveBtnAction(); });
         saveButton.setOnAction(e -> { saveBtnAction(); });
+        resetButton.setOnAction(e -> { resetBtnAction(); });
         prevButton.setOnAction(e -> { prevBtnAction(); });
         nextButton.setOnAction(e -> { nextBtnAction(); });
         speedButton.setOnAction(e -> { speedBtnAction(); });
@@ -334,9 +327,9 @@ public class InitController {
         if (file != null) {
             try {
                 Pair<Board, State> parseRes = InputHandler.inputTestCaseFromFile(file.getPath());
-                board = parseRes.getKey();
-                startState = parseRes.getValue();
-                if (board != null && startState != null) {
+                if (parseRes.getKey() != null && parseRes.getValue() != null) {
+                    board = parseRes.getKey();
+                    startState = parseRes.getValue();
                     
                     StackPane boardView = BoardViewBuilder.buildBoardView(board, startState);
                     boardPane.getChildren().clear();
@@ -345,23 +338,22 @@ public class InitController {
                     
                     // set 
                     solveButton.setDisable(false);
-                    saveButton.setDisable(false);
                     algorithmButton .setDisable(false);
                     heuristicButton.setDisable(false);
+                    stepLabel.setVisible(false);
+                    saveButton.setDisable(true);
                     
                 } 
-            }   catch (IOException ex) {
+            } catch (IOException ex) {
                 Alert alert = new Alert(Alert.AlertType.ERROR, "Failed to load configuration: " + ex.getMessage());
                 alert.showAndWait();
                 solveButton.setDisable(true);
-                saveButton.setDisable(true);
                 algorithmButton .setDisable(true);
                 heuristicButton.setDisable(true);
             } catch (IllegalArgumentException ex) {
                 Alert alert = new Alert(Alert.AlertType.ERROR, ex.getMessage());
                 alert.showAndWait();
                 solveButton.setDisable(true);
-                saveButton.setDisable(true);
                 algorithmButton .setDisable(true);
                 heuristicButton.setDisable(true);
             } 
@@ -374,7 +366,7 @@ public class InitController {
     private void exampleBtnAction() {
         if (clickSound != null) clickSound.play();
         // heck yeah i type it manually
-        Alert alert = new Alert(Alert.AlertType.INFORMATION,"Example Format:\n\nBoard size and block amount: (rows cols amount)\nThen format specifier (DEFAULT or CUSTOM).\nIf custom, then followed by each row.\n\nThen each block\n\nSample:\n6 6\n11\nGBB.L.\nGHI.LM\nGHIPPMK\nCCCZ.M\n..JZDD\nEEJFF.\n");
+        Alert alert = new Alert(Alert.AlertType.INFORMATION,"Example Format:\n\nBoard size: (rows cols)\nThen number of vehicle (not counting the player's).\n\nThen each block\n\nSample:\n6 6\n11\nGBB.L.\nGHI.LM\nGHIPPMK\nCCCZ.M\n..JZDD\nEEJFF.\n");
         alert.setTitle("Example Configuration Format");
         alert.showAndWait();
     }
@@ -398,7 +390,7 @@ public class InitController {
                         while (curState.getParent() != null) {
                             steps.add(0, curState);
                             curState = curState.getParent();
-                            curStep = 0;
+                            curStep.set(0);
                         }
                         steps.add(0, curState);
                     }
@@ -415,25 +407,29 @@ public class InitController {
                 loadingIndicator.setVisible(false);
                 loadingLabel.setVisible(false);
 
-                SequentialTransition seq = new SequentialTransition();
                 if (solveTask.getValue()) {
                     playButton.setDisable(false);
+                    resetButton.setDisable(false);
                     prevButton.setDisable(false);
                     nextButton.setDisable(false);
                     speedButton.setDisable(false);
-
+                    saveButton.setDisable(false);
+                    stepLabel.setVisible(true);
+                    stepLabel.setText("Steps " + curStep.get() + " of " + (steps.size() - 1));
 
                     
                 } else {
                     playButton.setDisable(true);
+                    resetButton.setDisable(true);
                     prevButton.setDisable(true);
                     nextButton.setDisable(true);
                     speedButton.setDisable(true);
+                    stepLabel.setVisible(false);
+                    saveButton.setDisable(true);
 
                     Alert alert = new Alert(Alert.AlertType.ERROR, "No Solution Found");
                     alert.showAndWait();   
                 }
-                seq.play();
             });
             new Thread(solveTask).start();
         }
@@ -444,14 +440,122 @@ public class InitController {
     }
 
     private void saveBtnAction() {
+        try {
+            FileChooser fileChooser = new FileChooser();
+            fileChooser.setTitle("Save Solution as txt");
+            fileChooser.getExtensionFilters().add(new FileChooser.ExtensionFilter("Txt Files", "*.txt"));
+            
+            if (steps.isEmpty()|| board == null || startState == null) {
+                Alert alert = new Alert(Alert.AlertType.ERROR, "No solution to save into txt");
+                alert.showAndWait();
+                return;
+            }
+
+            File file = fileChooser.showSaveDialog(boardPane.getScene().getWindow());
+            if (file != null) {
+                try (BufferedWriter writer = new BufferedWriter(new FileWriter(file))) {
+                    writer.write("Solution Stats\n");
+                    writer.write("Time           : " + searchRes.getDurationMillis() + "\n");
+                    writer.write("Expanded Node  : " + searchRes.getNodesExpanded() + "\n");
+                    writer.write("Generated Node : " + searchRes.getNodesGenerated() + "\n");                    
+                    writer.write("Solution Depth : " + searchRes.getSolutionDepth() + "\n\n");                    
+
+                    writer.write("Initial Board\n");
+                    writer.write(drawBoardTxt(board, startState.getPositions()));
+                    writer.write("\n");
+                    
+                    for (int i = 1; i < steps.size(); i++) {
+                        State s = steps.get(i);
+                        Pair<Integer, Integer> lastMovement = s.getLastMovement();
+                        if (lastMovement != null) {
+                            Vehicle v = board.getVehicle(lastMovement.getKey());
+                            String gerakan;
+    
+                            if (v.isHorizontal()) {
+                                if (lastMovement.getValue() > 0) gerakan = "right";
+                                else gerakan = "left";
+                            }
+                            else {
+                                if (lastMovement.getValue() > 0) gerakan = "down";
+                                else gerakan = "up";
+                            }
+    
+                            writer.write("Step " + i + ": " + v.getSymbol() + "-" + gerakan + '\n');
+                        }
+
+                        writer.write(drawBoardTxt(board, s.getPositions()));
+                        writer.write("\n");
+                    }
+
+                    
+                }
+            }
+        } catch (IOException ex) {
+            Alert alert = new Alert(Alert.AlertType.ERROR, "Failed to save txt: " + ex.getMessage());
+            alert.showAndWait();
+        }
+    }
+
+    private String drawBoardTxt(Board board, int[] pos) {
+        int row = board.getRows();
+        int col = board.getCols();
+        char[][] grid = new char[row][col];
+
+        // init grid
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                grid[i][j] = '.';
+            }
+        }
         
+        // fill with vehicles
+        Vehicle[] vehicles = board.getVehicles();
+        for (int i = 0; i < vehicles.length; i++) {
+            Vehicle v = vehicles[i];
+            int vRow = pos[i] / col;
+            int vCol = pos[i] % col;
+
+            for (int j = 0; j < v.length(); j++) {
+                if (v.isHorizontal()) {
+                    grid[vRow][vCol + j] = v.getSymbol();
+                }
+                else {
+                    grid[vRow + j][vCol] = v.getSymbol();
+                }
+            }
+        }
+
+        // char grid to string
+        String res = "";
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                res += grid[i][j];
+            }
+            res += "\n";
+        }
+
+        return res;
+    }
+
+    private void resetBtnAction() {
+        if (steps != null) {
+            curStep.set(0);
+            
+            stepLabel.setText("Steps " + curStep.get() + " of " + (steps.size() - 1));
+            StackPane boardView = BoardViewBuilder.buildBoardView(board, steps.get(curStep.get()));
+            boardPane.getChildren().clear();
+            boardPane.getChildren().add(boardView);
+            StackPane.setAlignment(boardPane, Pos.CENTER);
+        }
     }
 
     private void prevBtnAction() {
         if (steps != null) {
-            curStep = curStep - 1 >= 0 ? curStep - 1 : curStep;
+            int newStep = curStep.get() - 1 >= 0 ? curStep.get() - 1 : curStep.get();
+            curStep.set(newStep);
 
-            StackPane boardView = BoardViewBuilder.buildBoardView(board, steps.get(curStep));
+            stepLabel.setText("Steps " + curStep.get() + " of " + (steps.size() - 1));
+            StackPane boardView = BoardViewBuilder.buildBoardView(board, steps.get(curStep.get()));
             boardPane.getChildren().clear();
             boardPane.getChildren().add(boardView);
             StackPane.setAlignment(boardPane, Pos.CENTER);
@@ -460,9 +564,11 @@ public class InitController {
 
     private void nextBtnAction() {
         if (steps != null) {
-            curStep = curStep + 1 < steps.size() ? curStep + 1 : curStep;
+            int newStep = curStep.get() + 1 < steps.size() ? curStep.get() + 1 : curStep.get();
+            curStep.set(newStep);
 
-            StackPane boardView = BoardViewBuilder.buildBoardView(board, steps.get(curStep));
+            stepLabel.setText("Steps " + curStep.get() + " of " + (steps.size() - 1));
+            StackPane boardView = BoardViewBuilder.buildBoardView(board, steps.get(curStep.get()));
             boardPane.getChildren().clear();
             boardPane.getChildren().add(boardView);
             StackPane.setAlignment(boardPane, Pos.CENTER);
@@ -470,11 +576,73 @@ public class InitController {
     }
 
     private void speedBtnAction() {
+        if (stepSpeed.get() == 1.0) stepSpeed.set(2.0);
+        else if (stepSpeed.get() == 2.0) stepSpeed.set(4.0);
+        else if (stepSpeed.get() == 4.0) stepSpeed.set(.25);
+        else if (stepSpeed.get() == .25) stepSpeed.set(0.5);
+        else if (stepSpeed.get() == 0.5) stepSpeed.set(1.0);
 
+        speedButton.setText(String.valueOf(stepSpeed.get()) + "x");
     }
 
     private void playBtnAction() {
+        if (animationRunning.get()) {
+            animationRunning.set(false);
+            resetButton.setDisable(false);
+            prevButton.setDisable(false);
+            nextButton.setDisable(false);
+            solveButton.setDisable(false);
+            uploadButton.setDisable(false);
 
+            return;
+        }
+        animationRunning.set(true);
+        resetButton.setDisable(true);
+        prevButton.setDisable(true);
+        nextButton.setDisable(true);
+        solveButton.setDisable(true);
+        uploadButton.setDisable(true);
+        
+
+        int baseTime = 1000;
+        Task<Boolean> solveTask = new Task<>() {
+            @Override
+            protected Boolean call() {
+                try {
+                    for (int i = curStep.get(); i < steps.size(); i++) {
+                        if (!animationRunning.get() || isCancelled()) break;
+
+                        tucil_3_stima.model.State state = steps.get(i); 
+
+                        Platform.runLater(() -> {
+                            stepLabel.setText("Steps " + curStep.get() + " of " + (steps.size() - 1));
+                            StackPane boardView = BoardViewBuilder.buildBoardView(board, state);
+                            boardPane.getChildren().setAll(boardView);
+                            StackPane.setAlignment(boardPane, Pos.CENTER);
+                        });
+
+                        curStep.set(i);
+                        Thread.sleep((long) (baseTime / stepSpeed.get()));
+                    }
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    return false;
+                }
+
+                return true;
+            }
+        };
+
+        solveTask.setOnSucceeded(e -> {
+            animationRunning.set(false);
+            resetButton.setDisable(false);
+            prevButton.setDisable(false);
+            nextButton.setDisable(false);
+            solveButton.setDisable(false);
+            uploadButton.setDisable(false);
+        });
+
+        new Thread(solveTask).start();
     }
 
 }

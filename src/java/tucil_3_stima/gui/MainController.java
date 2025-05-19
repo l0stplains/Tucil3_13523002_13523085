@@ -61,30 +61,17 @@ public class MainController {
         exitSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/exit.mp3").toExternalForm());
         
 
-        // Load the custom font
-        Font impactedFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 24);
-        if(impactedFont != null) {
-            applyButtonFonts(btnAbout, impactedFont);
-            applyButtonFonts(btnExit, impactedFont);
-            applyButtonFonts(btnEnter, impactedFont);
-        }
-        Font impactedFont60 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 60);
-        if(impactedFont60 != null) {
-            mainTitle.setFont(impactedFont60);
-        }
-
-
         // Apply the same hover/click effects to all buttons
         applyHoverEffects(btnAbout);
         applyHoverEffects(btnExit);
         applyHoverEffects(btnEnter);
 
-    }
+        Font customFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(),36);
+        btnAbout.setFont(customFont);
+        btnExit.setFont(customFont);
+        btnEnter.setFont(customFont);
 
-    private void applyButtonFonts(Button button, Font font) {
-        String fontFamily = font.getName(); // Check what the font's family name is.
-        button.setFont(font);
-        button.setStyle("-fx-font-family: '" + fontFamily + "'; -fx-font-size: 24px;");
+        mainTitle.getStyleClass().add("my-text");
     }
 
     private void applyHoverEffects(Button button) {
