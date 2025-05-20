@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.ToggleButton?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -30,9 +32,29 @@
                             <Button fx:id="backButton" prefHeight="60.0" prefWidth="175.0" styleClass="font-title-l" text="Back" />
                      </children>
                   </StackPane>
-                  <Label fx:id="stepLabel" alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="36.0" prefWidth="151.0" text="Step 0 of 0" textAlignment="CENTER" visible="false">
+                  <Label fx:id="stepLabelLeft" alignment="BOTTOM_CENTER" contentDisplay="CENTER" prefHeight="50.0" prefWidth="151.0" styleClass="font-normal-l" text="Step" textAlignment="CENTER" translateX="-60.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="stepNumberField" alignment="CENTER" maxWidth="50.0" prefHeight="0.0" prefWidth="634.0" visible="false">
+                     <StackPane.margin>
+                        <Insets bottom="5.0" />
+                     </StackPane.margin>
+                     <styleClass>
+                        <String fx:value="stepNumberField" />
+                        <String fx:value="font-normal" />
+                     </styleClass>
                      <font>
                         <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="-1.0" />
+                     </padding>
+                  </TextField>
+                  <Label fx:id="stepLabelRight" alignment="BOTTOM_LEFT" contentDisplay="CENTER" prefHeight="50.0" prefWidth="151.0" styleClass="font-normal-l" text="of" translateX="110.0" visible="false">
+                     <font>
+                        <Font size="20.0" />
                      </font>
                   </Label>
                </children>
