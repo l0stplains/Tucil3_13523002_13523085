@@ -158,6 +158,9 @@ public class InputHandler {
                             exitR = row;
                             exitC = col;
 
+                            if (row == A){
+                                exitR--;
+                            }
                             if (row == 0) {
                                 row--;
                             }
