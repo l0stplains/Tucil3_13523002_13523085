@@ -4,11 +4,14 @@ import java.io.IOException;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
+import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonBase;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
@@ -21,11 +24,13 @@ import javafx.util.Duration;
 public class AboutController {
     @FXML private Text aboutText;
     @FXML private Text aboutTitle;
-    @FXML private Button backButton;
+    @FXML private Button backButton, muteButton;
     @FXML private ImageView backgroundImageView;
 
     private AudioClip clickSound, hoverSound, backSound, miaw;
     private MediaPlayer pageBgm;
+    private ImageView muteImageView, unmuteImageView;
+    private boolean muted = false;
 
     @FXML
     public void initialize() {
@@ -46,6 +51,18 @@ public class AboutController {
                 });
             }
         });
+
+        Image muteImage = new Image(getClass().getResource("/tucil_3_stima/gui/assets/music-icon.png").toExternalForm());
+        muteImageView = new ImageView(muteImage);
+        muteImageView.setFitWidth(30);
+        muteImageView.setFitHeight(30);
+
+        Image unmuteImage = new Image(getClass().getResource("/tucil_3_stima/gui/assets/music-off-icon.png").toExternalForm());
+        unmuteImageView = new ImageView(unmuteImage);
+        unmuteImageView.setFitWidth(30);
+        unmuteImageView.setFitHeight(30);
+        muteButton.setGraphic(muteImageView);
+
         FadeTransition fadeIn = new FadeTransition(Duration.seconds(2), aboutText);
         fadeIn.setFromValue(0);
         fadeIn.setToValue(1);
@@ -86,6 +103,8 @@ public class AboutController {
         });
 
         applyBackButtonEffects(backButton);
+        applyHoverEffects(muteButton);
+        muteButton.setOnAction(e -> { muteButtonEffect(); });
         aboutTitle.setOnMouseClicked(e -> miaw.play());
         aboutTitle.getStyleClass().add("my-text");
         aboutText.setWrappingWidth(800);
@@ -149,4 +168,64 @@ public class AboutController {
             }
         });
     }
+
+    private void muteButtonEffect() {
+        if (muted) {
+            muteButton.setGraphic(muteImageView);
+            muted = false;
+            pageBgm.play();
+
+        }
+        else {
+            muteButton.setGraphic(unmuteImageView);
+            muted = true;
+            pageBgm.stop();
+        }
+    }
+
+    private void applyHoverEffects(Node node) {
+        // Set the default opacity
+        node.setOpacity(0.85);
+
+        // Mouse Enter: shift left, scale up, and fade to full opacity
+        node.setOnMouseEntered(e -> {
+            if (hoverSound != null) {
+                hoverSound.play();
+            }
+
+            ScaleTransition scale = new ScaleTransition(Duration.millis(200), node);
+            scale.setToX(1.05);
+            scale.setToY(1.05);
+
+            FadeTransition fade = new FadeTransition(Duration.millis(100), node);
+            fade.setToValue(1.0); // fully opaque
+
+            ParallelTransition pt = new ParallelTransition(scale, fade);
+            pt.play();
+        });
+
+        // Mouse Exit: reset translate, scale, and opacity
+        node.setOnMouseExited(e -> {
+
+            ScaleTransition scale = new ScaleTransition(Duration.millis(200), node);
+            scale.setToX(1.0);
+            scale.setToY(1.0);
+
+            FadeTransition fade = new FadeTransition(Duration.millis(200), node);
+            fade.setToValue(0.85); // back to default
+
+            ParallelTransition pt = new ParallelTransition(scale, fade);
+            pt.play();
+        });
+
+        if (node instanceof ButtonBase button) {
+            button.setOnAction(e -> {
+                if (clickSound != null) {
+                    clickSound.play();
+                }
+            });
+            
+        }
+    }
+
 }

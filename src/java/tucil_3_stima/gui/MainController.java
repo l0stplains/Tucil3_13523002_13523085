@@ -25,6 +25,8 @@ public class MainController {
     @FXML
     private Button btnExit;
     @FXML
+    private Button muteButton;
+    @FXML
     private ImageView backgroundImageView;
 
     @FXML private Text mainTitle;
@@ -32,6 +34,8 @@ public class MainController {
     private AudioClip clickSound;
     private AudioClip hoverSound;
     private AudioClip exitSound;
+    private ImageView muteImageView, unmuteImageView;
+    private boolean muted = false;
 
     @FXML
     public void initialize() {
@@ -53,6 +57,18 @@ public class MainController {
             }
         });
 
+        // load mute unmute png
+        Image muteImage = new Image(getClass().getResource("/tucil_3_stima/gui/assets/music-icon.png").toExternalForm());
+        muteImageView = new ImageView(muteImage);
+        muteImageView.setFitWidth(30);
+        muteImageView.setFitHeight(30);
+
+        Image unmuteImage = new Image(getClass().getResource("/tucil_3_stima/gui/assets/music-off-icon.png").toExternalForm());
+        unmuteImageView = new ImageView(unmuteImage);
+        unmuteImageView.setFitWidth(30);
+        unmuteImageView.setFitHeight(30);
+        muteButton.setGraphic(muteImageView);
+
         // Initialize sound effects
         clickSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/click.wav").toExternalForm());
         clickSound.setVolume(0.05); // so damn loud Fuck u
@@ -65,6 +81,9 @@ public class MainController {
         applyHoverEffects(btnAbout);
         applyHoverEffects(btnExit);
         applyHoverEffects(btnEnter);
+        applyHoverEffects(muteButton);
+
+        muteButton.setOnAction(e -> { muteButtonEffect(); });
 
         Font customFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(),36);
         btnAbout.setFont(customFont);
@@ -115,6 +134,23 @@ public class MainController {
                 clickSound.play();
             }
         });
+    }
+
+
+    private void muteButtonEffect() {
+        if (muted) {
+            muteButton.setGraphic(muteImageView);
+            muted = false;
+            MainApp mainApp = (MainApp) btnExit.getScene().getWindow().getUserData();
+            mainApp.backgroundPlayer.play();
+
+        }
+        else {
+            muteButton.setGraphic(unmuteImageView);
+            muted = true;
+            MainApp mainApp = (MainApp) btnExit.getScene().getWindow().getUserData();
+            mainApp.backgroundPlayer.stop();
+        }
     }
 
     @FXML

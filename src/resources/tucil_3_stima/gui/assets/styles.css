@@ -17,6 +17,12 @@
     -fx-opacity: 0.5;
 }
 
+.muteButton {
+    -fx-background-color: transparent;
+    -fx-text-fill: transparent;
+    -fx-border-color: transparent;
+}
+
 .context-menu {
     -fx-background-color: transparent;
     -fx-border-color: transparent;

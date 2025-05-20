@@ -12,7 +12,6 @@ import java.util.concurrent.atomic.AtomicReference;
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;
-import javafx.animation.SequentialTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
 import javafx.concurrent.Task;
@@ -77,6 +76,9 @@ public class InitController {
     // Audioss
     private AudioClip clickSound, hoverSound, backSound;
     private MediaPlayer pageBgm;
+    private ImageView muteImageView, unmuteImageView;
+    private boolean muted = false;
+    @FXML private Button muteButton;
 
     // datas
     private AbstractSearch strategy = null;
@@ -109,6 +111,17 @@ public class InitController {
             }
         });
 
+        Image muteImage = new Image(getClass().getResource("/tucil_3_stima/gui/assets/music-icon.png").toExternalForm());
+        muteImageView = new ImageView(muteImage);
+        muteImageView.setFitWidth(30);
+        muteImageView.setFitHeight(30);
+
+        Image unmuteImage = new Image(getClass().getResource("/tucil_3_stima/gui/assets/music-off-icon.png").toExternalForm());
+        unmuteImageView = new ImageView(unmuteImage);
+        unmuteImageView.setFitWidth(30);
+        unmuteImageView.setFitHeight(30);
+        muteButton.setGraphic(muteImageView);
+
         // Effect
         applyHoverEffects(solveButton);
         applyHoverEffects(algorithmButton);
@@ -121,6 +134,7 @@ public class InitController {
         applyHoverEffects(nextButton);
         applyHoverEffects(speedButton);
         applyHoverEffects(playButton);
+        applyHoverEffects(muteButton);
 
         // BGM & Audio
         Media mediaBgm = new Media(getClass().getResource("/tucil_3_stima/gui/assets/slowBgm.mp3").toExternalForm());
@@ -147,6 +161,7 @@ public class InitController {
         nextButton.setOnAction(e -> { nextBtnAction(); });
         speedButton.setOnAction(e -> { speedBtnAction(); });
         playButton.setOnAction(e -> { playBtnAction(); });
+        muteButton.setOnAction(e -> { muteButtonEffect(); });
 
         // Init buttons options (heuristic & algo buttons)
         // Algorithm button
@@ -645,4 +660,16 @@ public class InitController {
         new Thread(solveTask).start();
     }
 
+    private void muteButtonEffect() {
+        if (muted) {
+            muteButton.setGraphic(muteImageView);
+            muted = false;
+            pageBgm.play();
+        }
+        else {
+            muteButton.setGraphic(unmuteImageView);
+            muted = true;
+            pageBgm.stop();
+        }
+    }
 }
