@@ -35,12 +35,10 @@ public abstract class AbstractSearch implements SearchStrategy {
 
             for (State nxt : board.neighbors(cur, heuristic)) {
                 nodesGenerated++;
-                int prevG = best.getOrDefault(nxt, Integer.MAX_VALUE);
-                if (nxt.getG() < prevG) {
+                if (shouldAdd(cur, nxt, best)) {
                     best.put(nxt, nxt.getG());
                     open.add(nxt);
-                    if (open.size() > maxOpenSize)
-                        maxOpenSize = open.size();
+                    maxOpenSize = open.size();
                 }
             }
         }
@@ -54,4 +52,5 @@ public abstract class AbstractSearch implements SearchStrategy {
     }
 
     protected abstract int priority(State s);
+    protected abstract boolean shouldAdd(State cur, State nxt, Map<State, Integer> best);
 }

@@ -168,11 +168,12 @@ public class InputHandler {
                             
                             exitR = row;
                             exitC = col;
+
                             exitHorizontal = false;
                             
                             if (row == 0) row--;
                             if (row == A) exitR--;
-                            
+
                         }
                         else {
                             throw new IllegalArgumentException("(2) Board width and the given board width doesn't match at file: " + filename);

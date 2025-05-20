@@ -12,7 +12,7 @@ public class BlockingHeuristic implements Heuristic {
         BitSet occ = board.occupancy(state);
         int[] pos = state.getPositions();
         int base = pos[0];
-        Vehicle red = board.getVehicle(0);
+        Vehicle primary = board.getVehicle(0);
         int count = 0;
 
         int cols = board.getCols();
@@ -22,9 +22,9 @@ public class BlockingHeuristic implements Heuristic {
         int exitRow = board.getExitRow();
         int exitCol = board.getExitCol();
 
-        if (red.isHorizontal()) {
+        if (primary.isHorizontal()) {
             if (exitCol > col) {
-                for (int x = col + red.length(); x <= exitCol; x++) {
+                for (int x = col + primary.length(); x <= exitCol; x++) {
                     if (occ.get(row * cols + x)) count++;
                 }
             } else {
@@ -34,7 +34,7 @@ public class BlockingHeuristic implements Heuristic {
             }
         } else {
             if (exitRow > row) {
-                for (int y = row + red.length(); y <= exitRow; y++) {
+                for (int y = row + primary.length(); y <= exitRow; y++) {
                     if (occ.get(y * cols + col)) count++;
                 }
             } else {

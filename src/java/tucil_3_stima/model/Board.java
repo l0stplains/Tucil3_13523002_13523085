@@ -57,12 +57,22 @@ public class Board {
     }
 
     public boolean atExit(State state) {
-        int[] pos = state.getPositions();
-        int base = pos[0];
-        Vehicle t = vehicles[0];
-        int r = base / cols;
-        int c = base % cols;
-        return r == exitRow && (c + t.length() - 1 == exitCol || c == exitCol) || c == exitCol && r + t.length() - 1 == exitRow;
+        int[] pos     = state.getPositions();
+        int base      = pos[0];
+        Vehicle primary   = vehicles[0];
+        int row       = base / cols;
+        int col       = base % cols;
+
+        boolean horiz = primary.isHorizontal();
+        int frontRow  = horiz ? row : (row + primary.length() - 1);
+        int frontCol  = horiz ? (col + primary.length() - 1) : col;
+
+        if (horiz) {
+            return row == exitRow && (frontCol == exitCol || col == exitCol);
+        }
+        else {
+            return col == exitCol && (frontRow == exitRow || row == exitRow);
+        }
     }
 
     public BitSet occupancy(State state) {
@@ -132,6 +142,9 @@ public class Board {
         return list;
     }
 
+    public BitSet getVehicleMask(int vehicleIdx, int base) {
+        return vehicleMasks.get(vehicleIdx).get(base);
+    }
 
     public int getRows() { return rows; }
     public int getCols() { return cols; }

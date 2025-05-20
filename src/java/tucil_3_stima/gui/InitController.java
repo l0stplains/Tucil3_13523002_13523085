@@ -41,14 +41,7 @@ import javafx.util.Pair;
 import tucil_3_stima.model.Board;
 import tucil_3_stima.model.State;
 import tucil_3_stima.model.Vehicle;
-import tucil_3_stima.strategy.AStar;
-import tucil_3_stima.strategy.AbstractSearch;
-import tucil_3_stima.strategy.BlockingHeuristic;
-import tucil_3_stima.strategy.DistanceHeuristic;
-import tucil_3_stima.strategy.GBFS;
-import tucil_3_stima.strategy.Heuristic;
-import tucil_3_stima.strategy.SearchResult;
-import tucil_3_stima.strategy.UCS;
+import tucil_3_stima.strategy.*;
 import tucil_3_stima.utils.InputHandler;
 
 public class InitController {
@@ -81,7 +74,7 @@ public class InitController {
     @FXML private Button muteButton;
 
     // datas
-    private AbstractSearch strategy = null;
+    private SearchStrategy strategy = null;
     private Heuristic heuristic = null;
     private Board board;
     private State startState;
@@ -165,7 +158,7 @@ public class InitController {
 
         // Init buttons options (heuristic & algo buttons)
         // Algorithm button
-        String[] algorithms = {"A*", "UCS", "GBFS"};
+        String[] algorithms = {"A*", "UCS", "GBFS", "Beam"};
         for (String algo : algorithms) {
             Label label = new Label(algo);
 
@@ -178,11 +171,12 @@ public class InitController {
 
             label.setOnMouseClicked(e -> {
                 algorithmButton.setText(algo);
-                AbstractSearch s = null;
+                SearchStrategy s = null;
 
                 if ("A*".equals(algo)) s = new AStar();
                 else if ("UCS".equals(algo)) s = new UCS();
                 else if ("GBFS".equals(algo)) s = new GBFS();
+                else if ("Beam".equals(algo)) s = new BeamSearch(100);
 
                 if (s != null) {
                     strategy = s;
@@ -197,7 +191,7 @@ public class InitController {
         }
 
         // Heuristic button
-        String[] heuristics = {"Blocking", "Distance"};
+        String[] heuristics = {"Blocking", "Recursive Blocking", "Distance"};
         for (String heur : heuristics) {
             Label label = new Label(heur);
 
@@ -212,6 +206,7 @@ public class InitController {
                 Heuristic s = null;
 
                 if ("Blocking".equals(heur)) s = new BlockingHeuristic();
+                else if ("Recursive Blocking".equals(heur)) s = new RecursiveBlockingHeuristic();
                 else if ("Distance".equals(heur)) s = new DistanceHeuristic();
 
                 if (s != null) {
