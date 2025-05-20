@@ -1,0 +1,2 @@
+tc 1 = tc ghana solvable
+tc 1 = tc ghana unsolvable

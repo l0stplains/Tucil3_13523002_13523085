@@ -74,6 +74,9 @@ public class InputHandler {
             int N;
             String variable = reader.readLine();
             try {       
+                if (variable != null && variable.charAt(0) != ' ') {
+                    variable = variable.trim();
+                }
                 N = Integer.parseInt(variable);
             } catch (NumberFormatException e) {
                 throw new IllegalArgumentException("Variable not parseable on the Second line of file: " + filename);
@@ -104,7 +107,7 @@ public class InputHandler {
                 if (row <= A) {
                     // check if lastrow exist even though exit already found
                     if (row == A && exitC != -1 && exitR != -1 && !line.isBlank()) {
-                        throw new IllegalArgumentException("(4) Board size and the given board size doesn't match at file: " + filename);
+                        throw new IllegalArgumentException("(1) Board height and the given board height doesn't match at file: " + filename);
                     }
 
                     // normal
@@ -140,7 +143,7 @@ public class InputHandler {
                             allLinesRaw.add(line);
                         }
                         else {
-                            throw new IllegalArgumentException("(1) Board size and the given board size doesn't match at file: " + filename);
+                            throw new IllegalArgumentException("(1) Board width and the given board width doesn't match at file: " + filename);
                         }
 
                     }
@@ -172,17 +175,16 @@ public class InputHandler {
                             
                         }
                         else {
-                            throw new IllegalArgumentException("(5) Board size and the given board size doesn't match at file: " + filename);
+                            throw new IllegalArgumentException("(2) Board width and the given board width doesn't match at file: " + filename);
                         }
                     }
                     else {
-                        System.out.println("at Row: " + row + "\nline: " + line + "\nlineTrim: " + lineTrim);
-                        throw new IllegalArgumentException("(2) Board size and the given board size doesn't match at file: " + filename);
+                        throw new IllegalArgumentException("(3) Board width and the given board width doesn't match at file: " + filename);
                     }
                 }
                 else if (row > A && line.isBlank()) continue;
                 else {
-                    throw new IllegalArgumentException("(3) Board size and the given board size doesn't match at file: " + filename);
+                    throw new IllegalArgumentException("(2) Board height and the given board height doesn't match at file: " + filename);
                 }
 
                 row++;
@@ -193,7 +195,7 @@ public class InputHandler {
             }
             
             if (allLines.size() != A) {
-                throw new IllegalArgumentException("(6) Board size and the given board size doesn't match at file: " + filename);
+                throw new IllegalArgumentException("(3) Board height and the given board height doesn't match at file: " + filename);
             }
 
             // Parse the vehicles
@@ -277,7 +279,6 @@ public class InputHandler {
                             // may be an unsolvable obstacle to the exit
                             if (exitHorizontal == isHorizontal) {
                                 if ((isHorizontal && exitR == i) || (!isHorizontal && exitC == j)) {
-                                    System.out.println("risky position of: " + c);
                                     potentialRiskyPos.add(i * B + j);
                                 }
                             }
@@ -350,8 +351,6 @@ public class InputHandler {
                 int carBound;
                 if (carHorizontal) carBound = carPos % B;
                 else carBound = carPos / B;
-
-                System.out.println("risky position at: " + (carPos / B) + "-" + (carPos % B));
 
                 if (carBound >= lbound && carBound <= rbound) {
                     throw new IllegalArgumentException("Unsolvable board of file: " + filename);
