@@ -7,307 +7,113 @@ import tucil_3_stima.model.Vehicle;
 import java.util.*;
 
 public class RecursiveBlockingHeuristic implements Heuristic {
-    private Board board;
-    private Set<Integer> seenVehicles;
 
     @Override
     public int evaluate(Board board, State state) {
-        this.board = board;
-        this.seenVehicles = new HashSet<>();
+        Set<Integer> visited      = new HashSet<>();
+        Set<Integer> blockingCars = new HashSet<>();
+        BitSet occ                = board.occupancy(state);
 
-        if (isAtExit(state)) {
-            return 0;
-        }
+        int[] pos     = state.getPositions();
+        Vehicle red   = board.getVehicle(0);
+        int base      = pos[0];
+        int cols      = board.getCols();
+        int row       = base / cols;
+        int col       = base % cols;
 
-        return calcMinMoves(state);
-    }
+        boolean horiz = red.isHorizontal();
+        int exitCoord = horiz ? board.getExitCol() : board.getExitRow();
+        int currCoord = horiz ? col : row;
+        int dir       = exitCoord >= currCoord ? +1 : -1;
 
-    private boolean isAtExit(State state) {
-        Vehicle primary = board.getVehicle(0);
-        int pos = state.getPositions()[0];
-        int cols = board.getCols();
-        int row = pos / cols;
-        int col = pos % cols;
+        // start just beyond the “front” of the red car in the correct direction
+        int front = (dir > 0 ? currCoord + red.length()
+                : currCoord - 1);
 
-        boolean horizontal = primary.isHorizontal();
-        int exitPos = horizontal ? board.getExitCol() : board.getExitRow();
-
-        if (horizontal) {
-            return col + primary.length() - 1 == exitPos;
+        // build path of cells from that front to the exit
+        List<Integer> path = new ArrayList<>();
+        if (horiz) {
+            for (int c = front; dir > 0 ? c <= exitCoord : c >= exitCoord; c += dir) {
+                path.add(row * cols + c);
+            }
         } else {
-            return row + primary.length() - 1 == exitPos;
-        }
-    }
-
-    private int calcMinMoves(State state) {
-        seenVehicles.add(0);
-
-        int moveCount = 1;
-
-        for (Integer blockingVehicle : findBlockers(state)) {
-            int frontSpace = calcSpaceNeeded(0, blockingVehicle, 0, true, state);
-            int backSpace = calcSpaceNeeded(0, blockingVehicle, 0, false, state);
-
-            moveCount += calcObstructionValue(blockingVehicle, frontSpace, backSpace, state);
-        }
-
-        return moveCount;
-    }
-
-    private List<Integer> findBlockers(State state) {
-        List<Integer> blockers = new ArrayList<>();
-
-        Vehicle primary = board.getVehicle(0);
-        boolean isRedHorizontal = primary.isHorizontal();
-        int[] vehiclePositions = state.getPositions();
-        int redPos = vehiclePositions[0];
-        int cols = board.getCols();
-        int redRow = redPos / cols;
-        int redCol = redPos % cols;
-
-        int exitPos = isRedHorizontal ? board.getExitCol() : board.getExitRow();
-        int fixedAxis = isRedHorizontal ? redRow : redCol;
-        int redLength = primary.length();
-
-        for (int i = 1; i < vehiclePositions.length; i++) {
-            Vehicle vehicle = board.getVehicle(i);
-
-            if (isRedHorizontal == vehicle.isHorizontal()) {
-                continue;
+            for (int r = front; dir > 0 ? r <= exitCoord : r >= exitCoord; r += dir) {
+                path.add(r * cols + col);
             }
+        }
 
-            int vehPos = vehiclePositions[i];
-            int vehRow = vehPos / cols;
-            int vehCol = vehPos % cols;
-
-            int crossAxis = isRedHorizontal ? vehCol : vehRow;
-            int vehAxisVal = isRedHorizontal ? vehRow : vehCol;
-
-            // skip if vehicle is behind red car's front
-            if (isRedHorizontal) {
-                if (crossAxis < redCol + redLength) {
-                    continue;
-                }
-            } else {
-                if (crossAxis < redRow + redLength) {
-                    continue;
+        // identify direct blockers
+        for (int cell : path) {
+            if (occ.get(cell)) {
+                int blocker = findVehicleAtCell(board, state, cell);
+                if (blocker >= 0 && visited.add(blocker)) {
+                    blockingCars.add(blocker);
+                    evaluateBlocker(board, state, blocker, visited, blockingCars, occ);
                 }
             }
-
-            // check if vehicle blocks red car's path
-            int vehLength = vehicle.length();
-            if (fixedAxis >= vehAxisVal && fixedAxis < vehAxisVal + vehLength) {
-                blockers.add(i);
-            }
         }
-
-        return blockers;
+        return blockingCars.size();
     }
 
-    private int calcObstructionValue(int vehicleIdx, int frontSpaceNeeded, int backSpaceNeeded, State state) {
-        seenVehicles.add(vehicleIdx);
+    private void evaluateBlocker(Board board,
+                                 State state,
+                                 int blockerIdx,
+                                 Set<Integer> visited,
+                                 Set<Integer> blockingCars,
+                                 BitSet occ) {
+        Vehicle blocker = board.getVehicle(blockerIdx);
+        int base        = state.getPositions()[blockerIdx];
+        int cols        = board.getCols();
 
-        int moveVal = 1;
-        int[] vehiclePositions = state.getPositions();
+        for (int dir : new int[]{ -1, +1 }) {
+            int step     = blocker.isHorizontal() ? dir : dir * cols;
+            int nextBase = base + step;
 
-        for (int nextVehicle = 0; nextVehicle < vehiclePositions.length; nextVehicle++) {
-            if (nextVehicle == vehicleIdx || seenVehicles.contains(nextVehicle)) {
-                continue;
+            while (isWithinBounds(nextBase, blocker, board)) {
+                BitSet mask = board.getVehicleMask(blockerIdx, nextBase);
+                if (mask == null) {
+                    break;
+                }
+                if (mask.intersects(occ)) {
+                    // whoever sits on the first overlapping cell
+                    int frontMovement = nextBase;
+                    if(blocker.isHorizontal()){
+                        frontMovement = dir > 0 ? nextBase + blocker.length() - 1 : nextBase;
+                    } else {
+                        frontMovement = dir > 0 ? nextBase + (blocker.length() - 1) * cols : nextBase;
+                    }
+                    int other = findVehicleAtCell(board, state, frontMovement);
+                    // System.out.println("current blocker: " + blocker.getSymbol() + ", cell: " + cell);
+                    if(other != -1) {
+                        Vehicle otherCar = board.getVehicle(other);
+                        // System.out.println("blocked by: " + otherCar.getSymbol());
+                    }
+                    if (other >= 0 && !visited.contains(other) && visited.add(other)) {
+                        blockingCars.add(other);
+                        evaluateBlocker(board, state, other, visited, blockingCars, occ);
+                    }
+                }
+                nextBase += step;
             }
-
-            if (!doVehiclesOverlap(vehicleIdx, nextVehicle, state)) {
-                continue;
-            }
-
-            int forwardVal = 0, backwardVal = 0;
-
-            boolean canMoveForward = checkMovement(vehicleIdx, nextVehicle, frontSpaceNeeded, true, state);
-            boolean canMoveBackward = checkMovement(vehicleIdx, nextVehicle, backSpaceNeeded, false, state);
-
-            int forwardSpaceNeeded = calcSpaceNeeded(vehicleIdx, nextVehicle, frontSpaceNeeded, true, state);
-            int backwardSpaceNeeded = calcSpaceNeeded(vehicleIdx, nextVehicle, backSpaceNeeded, false, state);
-
-            if (!canMoveForward) {
-                forwardVal = calcObstructionValue(nextVehicle, forwardSpaceNeeded, backwardSpaceNeeded, state);
-            } else if (isEdgeBlocking(vehicleIdx, frontSpaceNeeded, true, state)) {
-                forwardVal = Integer.MAX_VALUE;
-            }
-
-            if (!canMoveBackward) {
-                backwardVal = calcObstructionValue(nextVehicle, forwardSpaceNeeded, backwardSpaceNeeded, state);
-            } else if (isEdgeBlocking(vehicleIdx, backSpaceNeeded, false, state)) {
-                backwardVal = Integer.MAX_VALUE;
-            }
-
-            moveVal += Math.min(forwardVal, backwardVal);
         }
-
-        return moveVal;
     }
 
-    private boolean checkMovement(int vehicleIdx, int nextVehicle, int spaceNeeded, boolean isForward, State state) {
-        boolean isBlockerBehind = isPositionedBehind(vehicleIdx, nextVehicle, state);
-
-        if ((isBlockerBehind && isForward) || (!isBlockerBehind && !isForward)) {
-            return true;
-        }
-
-        int availableSpace = getAvailableSpace(vehicleIdx, nextVehicle, isForward, state);
-        return availableSpace >= spaceNeeded;
-    }
-
-    private int calcSpaceNeeded(int vehicleIdx, int nextVehicle, int baseSpaceNeeded, boolean isForward, State state) {
-        Vehicle vehicle = board.getVehicle(vehicleIdx);
-        Vehicle nextVeh = board.getVehicle(nextVehicle);
-
-        // if same orientation, use diff calculation
-        if (vehicle.isHorizontal() == nextVeh.isHorizontal()) {
-            int availSpace = getAvailableSpace(vehicleIdx, nextVehicle, isForward, state);
-            return baseSpaceNeeded - availSpace;
-        }
-
-        int[] positions = state.getPositions();
-        int cols = board.getCols();
-
-        int vehPos = positions[vehicleIdx];
-        int nextPos = positions[nextVehicle];
-
-        int vehRow = vehPos / cols;
-        int vehCol = vehPos % cols;
-        int nextRow = nextPos / cols;
-        int nextCol = nextPos % cols;
-
-        int vehFixed = vehicle.isHorizontal() ? vehRow : vehCol;
-        int nextVar = nextVeh.isHorizontal() ? nextCol : nextRow;
-
-        if (isForward) {
-            return Math.abs(vehFixed - nextVar) + 1;
-        }
-
-        int nextLength = nextVeh.length();
-        return Math.abs(vehFixed - (nextVar + nextLength));
-    }
-
-    private int getAvailableSpace(int vehicleIdx, int nextVehicle, boolean isForward, State state) {
-        Vehicle vehicle = board.getVehicle(vehicleIdx);
-        Vehicle nextVeh = board.getVehicle(nextVehicle);
-        int[] positions = state.getPositions();
-        int cols = board.getCols();
-
-        int vehPos = positions[vehicleIdx];
-        int nextPos = positions[nextVehicle];
-
-        int vehRow = vehPos / cols;
-        int vehCol = vehPos % cols;
-        int nextRow = nextPos / cols;
-        int nextCol = nextPos % cols;
-
-        int vehVar = vehicle.isHorizontal() ? vehCol : vehRow;
-        int vehEnd = vehVar + vehicle.length();
-
-        // different orientation logic
-        if (vehicle.isHorizontal() != nextVeh.isHorizontal()) {
-            int nextFixed = nextVeh.isHorizontal() ? nextRow : nextCol;
-
-            if (isForward) {
-                return Math.abs(vehEnd - nextFixed);
-            }
-
-            return Math.abs(vehVar - nextFixed) + 1;
-        }
-
-        // same orientation logic
-        int nextVar = nextVeh.isHorizontal() ? nextCol : nextRow;
-
-        if (isForward) {
-            return Math.abs(vehEnd - nextVar);
-        }
-
-        int nextEnd = nextVar + nextVeh.length();
-        return Math.abs(vehVar - nextEnd);
-    }
-
-    private boolean isEdgeBlocking(int vehicleIdx, int spaceNeeded, boolean isForward, State state) {
-        Vehicle vehicle = board.getVehicle(vehicleIdx);
-        int[] positions = state.getPositions();
+    private boolean isWithinBounds(int base, Vehicle v, Board board) {
         int cols = board.getCols();
         int rows = board.getRows();
-
-        int vehPos = positions[vehicleIdx];
-        int vehRow = vehPos / cols;
-        int vehCol = vehPos % cols;
-
-        int vehVar = vehicle.isHorizontal() ? vehCol : vehRow;
-        int vehEnd = vehVar + vehicle.length();
-        int boardSize = vehicle.isHorizontal() ? cols : rows;
-
-        if (isForward && (vehEnd + spaceNeeded > boardSize)) {
-            return true;
-        }
-
-        if (!isForward && (vehVar - spaceNeeded < 0)) {
-            return true;
-        }
-
-        return false;
+        int r = base / cols;
+        int c = base % cols;
+        return v.isHorizontal()
+                ? (c >= 0 && c + v.length() <= cols)
+                : (r >= 0 && r + v.length() <= rows);
     }
 
-    private boolean doVehiclesOverlap(int vehicleIdx, int nextVehicle, State state) {
-        Vehicle vehicle = board.getVehicle(vehicleIdx);
-        Vehicle nextVeh = board.getVehicle(nextVehicle);
-        int[] positions = state.getPositions();
-        int cols = board.getCols();
-
-        int vehPos = positions[vehicleIdx];
-        int nextPos = positions[nextVehicle];
-
-        int vehRow = vehPos / cols;
-        int vehCol = vehPos % cols;
-        int nextRow = nextPos / cols;
-        int nextCol = nextPos % cols;
-
-        int vehFixed = vehicle.isHorizontal() ? vehRow : vehCol;
-        int nextFixed = nextVeh.isHorizontal() ? nextRow : nextCol;
-
-        // same orientation check - need same fixed coordinate
-        if (vehicle.isHorizontal() == nextVeh.isHorizontal()) {
-            return vehFixed == nextFixed;
+    private int findVehicleAtCell(Board board, State state, int cell) {
+        int[] pos = state.getPositions();
+        for (int i = 0; i < pos.length; i++) {
+            BitSet m = board.getVehicleMask(i, pos[i]);
+            if (m != null && m.get(cell)) return i;
         }
-
-        // different orientation - check overlap
-        int nextVar = nextVeh.isHorizontal() ? nextCol : nextRow;
-        int nextEnd = nextVar + nextVeh.length();
-
-        return vehFixed >= nextVar && vehFixed < nextEnd;
-    }
-
-    private boolean isPositionedBehind(int vehicleIdx, int nextVehicle, State state) {
-        Vehicle vehicle = board.getVehicle(vehicleIdx);
-        Vehicle nextVeh = board.getVehicle(nextVehicle);
-        int[] positions = state.getPositions();
-        int cols = board.getCols();
-
-        int vehPos = positions[vehicleIdx];
-        int nextPos = positions[nextVehicle];
-
-        int vehRow = vehPos / cols;
-        int vehCol = vehPos % cols;
-        int nextRow = nextPos / cols;
-        int nextCol = nextPos % cols;
-
-        int vehVar = vehicle.isHorizontal() ? vehCol : vehRow;
-        int nextVar = nextVeh.isHorizontal() ? nextCol : nextRow;
-
-        // same orientation check
-        if (vehicle.isHorizontal() == nextVeh.isHorizontal()) {
-            int nextEnd = nextVar + nextVeh.length();
-            return nextEnd <= vehVar;
-        }
-
-        // different orientation check
-        int vehEnd = vehVar + vehicle.length();
-        int nextFixed = nextVeh.isHorizontal() ? nextRow : nextCol;
-
-        return nextFixed < vehEnd;
+        return -1;
     }
 }
