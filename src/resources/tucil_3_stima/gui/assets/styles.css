@@ -23,10 +23,19 @@
     -fx-border-color: transparent;
 }
 
+.stepNumberField {
+    -fx-font-family: "impacted";
+    -fx-background-color: #333333;
+    -fx-text-fill: #ffffff;
+    -fx-border-color: #444444;
+    -fx-border-radius: 0 0 18 18;
+}
+
 .context-menu {
     -fx-background-color: transparent;
     -fx-border-color: transparent;
     -fx-border-width: 0;
+    -fx-opacity: 0.8;
 }
 
 .label, .my-text, text {

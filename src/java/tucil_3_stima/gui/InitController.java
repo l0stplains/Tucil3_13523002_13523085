@@ -14,6 +14,8 @@ import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;
 import javafx.animation.TranslateTransition;
 import javafx.application.Platform;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -27,6 +29,7 @@ import javafx.scene.control.CustomMenuItem;
 import javafx.scene.control.Label;
 import javafx.scene.control.MenuButton;
 import javafx.scene.control.ProgressIndicator;
+import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -41,7 +44,16 @@ import javafx.util.Pair;
 import tucil_3_stima.model.Board;
 import tucil_3_stima.model.State;
 import tucil_3_stima.model.Vehicle;
-import tucil_3_stima.strategy.*;
+import tucil_3_stima.strategy.AStar;
+import tucil_3_stima.strategy.BeamSearch;
+import tucil_3_stima.strategy.BlockingHeuristic;
+import tucil_3_stima.strategy.DistanceHeuristic;
+import tucil_3_stima.strategy.GBFS;
+import tucil_3_stima.strategy.Heuristic;
+import tucil_3_stima.strategy.RecursiveBlockingHeuristic;
+import tucil_3_stima.strategy.SearchResult;
+import tucil_3_stima.strategy.SearchStrategy;
+import tucil_3_stima.strategy.UCS;
 import tucil_3_stima.utils.InputHandler;
 
 public class InitController {
@@ -57,8 +69,12 @@ public class InitController {
     @FXML private StackPane boardPane;
     
     // Labels
-    @FXML private Label timeLabel, expNodeLabel, genNodeLabel, stepsLabel, loadingLabel, stepLabel;
+    @FXML private Label timeLabel, expNodeLabel, genNodeLabel, stepsLabel, loadingLabel;
     @FXML private Label timeTitleLabel, expNodeTitleLabel, genNodeTitleLabel, stepsTitleLabel;
+    @FXML private Label stepLabelLeft, stepLabelRight;
+
+    // Text Field
+    @FXML private TextField stepNumberField;
 
     // Indicator
     @FXML private ProgressIndicator loadingIndicator;
@@ -220,6 +236,39 @@ public class InitController {
             item.setHideOnClick(true);
             heuristicButton.getItems().add(item);
         }
+    
+        stepNumberField.textProperty().addListener(new ChangeListener<String>() {
+            @Override
+            public void changed(ObservableValue<? extends String> observable, String oldValue, 
+                String newValue) {
+                if (!newValue.matches("\\d*")) {
+                    newValue = newValue.replaceAll("[^\\d]", "");
+                }
+            
+                try {
+                    int n = Integer.parseInt(newValue);
+                    if (n < 0) {
+                        stepNumberField.setText("0");
+                        curStep.set(0);
+                    }
+                    else if (n >= steps.size()) {
+                        stepNumberField.setText("" + (steps.size() - 1));
+                        curStep.set(steps.size() - 1);
+                    }
+                    else {
+                        stepNumberField.setText("" + n);
+                        curStep.set(n);
+                    }
+                }
+                catch (Exception e) {
+                    stepNumberField.setText("0");
+                    curStep.set(0);
+                }
+
+                drawBoard();
+            }
+        });
+        
     }
 
     private void applyBackButtonEffects(Button button) {
@@ -350,7 +399,9 @@ public class InitController {
                     solveButton.setDisable(false);
                     algorithmButton .setDisable(false);
                     heuristicButton.setDisable(false);
-                    stepLabel.setVisible(false);
+                    stepLabelLeft.setVisible(false);
+                    stepLabelRight.setVisible(false);
+                    stepNumberField.setVisible(false);
                     saveButton.setDisable(true);
                     
                 } 
@@ -417,6 +468,7 @@ public class InitController {
                 loadingIndicator.setVisible(false);
                 loadingLabel.setVisible(false);
 
+                // succ seed
                 if (solveTask.getValue()) {
                     playButton.setDisable(false);
                     resetButton.setDisable(false);
@@ -424,8 +476,17 @@ public class InitController {
                     nextButton.setDisable(false);
                     speedButton.setDisable(false);
                     saveButton.setDisable(false);
-                    stepLabel.setVisible(true);
-                    stepLabel.setText("Steps " + curStep.get() + " of " + (steps.size() - 1));
+                    stepLabelLeft.setVisible(true);
+                    stepLabelRight.setVisible(true);
+                    stepNumberField.setVisible(true);
+                    stepNumberField.setText("" + curStep.get());
+                    stepLabelRight.setText("of " + (steps.size() - 1));
+
+                    // reset board to the start state
+                    StackPane boardView = BoardViewBuilder.buildBoardView(board, startState);
+                    boardPane.getChildren().clear();
+                    boardPane.getChildren().add(boardView);
+                    StackPane.setAlignment(boardPane, Pos.CENTER);
 
                     
                 } else {
@@ -434,7 +495,9 @@ public class InitController {
                     prevButton.setDisable(true);
                     nextButton.setDisable(true);
                     speedButton.setDisable(true);
-                    stepLabel.setVisible(false);
+                    stepLabelLeft.setVisible(false);
+                    stepLabelRight.setVisible(false);
+                    stepNumberField.setVisible(false);
                     saveButton.setDisable(true);
 
                     Alert alert = new Alert(Alert.AlertType.ERROR, "No Solution Found");
@@ -551,11 +614,8 @@ public class InitController {
         if (steps != null) {
             curStep.set(0);
             
-            stepLabel.setText("Steps " + curStep.get() + " of " + (steps.size() - 1));
-            StackPane boardView = BoardViewBuilder.buildBoardView(board, steps.get(curStep.get()));
-            boardPane.getChildren().clear();
-            boardPane.getChildren().add(boardView);
-            StackPane.setAlignment(boardPane, Pos.CENTER);
+            stepNumberField.setText("" + curStep.get());
+            stepLabelRight.setText("of " + (steps.size() - 1));
         }
     }
 
@@ -564,11 +624,8 @@ public class InitController {
             int newStep = curStep.get() - 1 >= 0 ? curStep.get() - 1 : curStep.get();
             curStep.set(newStep);
 
-            stepLabel.setText("Steps " + curStep.get() + " of " + (steps.size() - 1));
-            StackPane boardView = BoardViewBuilder.buildBoardView(board, steps.get(curStep.get()));
-            boardPane.getChildren().clear();
-            boardPane.getChildren().add(boardView);
-            StackPane.setAlignment(boardPane, Pos.CENTER);
+            stepNumberField.setText("" + curStep.get());
+            stepLabelRight.setText("of " + (steps.size() - 1));
         }
     }
 
@@ -577,11 +634,8 @@ public class InitController {
             int newStep = curStep.get() + 1 < steps.size() ? curStep.get() + 1 : curStep.get();
             curStep.set(newStep);
 
-            stepLabel.setText("Steps " + curStep.get() + " of " + (steps.size() - 1));
-            StackPane boardView = BoardViewBuilder.buildBoardView(board, steps.get(curStep.get()));
-            boardPane.getChildren().clear();
-            boardPane.getChildren().add(boardView);
-            StackPane.setAlignment(boardPane, Pos.CENTER);
+            stepNumberField.setText("" + curStep.get());
+            stepLabelRight.setText("of " + (steps.size() - 1));
         }
     }
 
@@ -603,15 +657,18 @@ public class InitController {
             nextButton.setDisable(false);
             solveButton.setDisable(false);
             uploadButton.setDisable(false);
+            stepNumberField.setDisable(false);
 
             return;
         }
+
         animationRunning.set(true);
         resetButton.setDisable(true);
         prevButton.setDisable(true);
         nextButton.setDisable(true);
         solveButton.setDisable(true);
         uploadButton.setDisable(true);
+        stepNumberField.setDisable(true);
         
 
         int baseTime = 1000;
@@ -625,10 +682,8 @@ public class InitController {
                         tucil_3_stima.model.State state = steps.get(i); 
 
                         Platform.runLater(() -> {
-                            stepLabel.setText("Steps " + curStep.get() + " of " + (steps.size() - 1));
-                            StackPane boardView = BoardViewBuilder.buildBoardView(board, state);
-                            boardPane.getChildren().setAll(boardView);
-                            StackPane.setAlignment(boardPane, Pos.CENTER);
+                            stepNumberField.setText("" + curStep.get());
+                            stepLabelRight.setText("of " + (steps.size() - 1));
                         });
 
                         curStep.set(i);
@@ -650,6 +705,7 @@ public class InitController {
             nextButton.setDisable(false);
             solveButton.setDisable(false);
             uploadButton.setDisable(false);
+            stepNumberField.setDisable(false);
         });
 
         new Thread(solveTask).start();
@@ -666,5 +722,12 @@ public class InitController {
             muted = true;
             pageBgm.stop();
         }
+    }
+
+    private void drawBoard() {
+            StackPane boardView = BoardViewBuilder.buildBoardView(board, steps.get(curStep.get()));
+            boardPane.getChildren().clear();
+            boardPane.getChildren().add(boardView);
+            StackPane.setAlignment(boardPane, Pos.CENTER);
     }
 }
