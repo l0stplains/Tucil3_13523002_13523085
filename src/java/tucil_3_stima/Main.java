@@ -1,30 +1,56 @@
 package tucil_3_stima;
 
 import tucil_3_stima.gui.MainApp;
+import tucil_3_stima.utils.BenchmarkRunner;
 
 public class Main {
-
     public static void main(String[] args) {
-        System.out.println("Starting Main");
-        // try {
-        //     System.out.println("Parsing Test");
-        //     String path = "./test/resources/parsing/";
-        //     InputHandler.inputTestCaseFromFile(path + "tc" + args[0] + ".txt");          
-        //     System.out.println("Done Testing");
-        // } 
-        // catch (IOException e) {
-        //     System.out.println("IO error: \n" + e.getMessage());
-        // }
-        // catch (IllegalArgumentException e) {
-        //     System.out.println("IA error: \n" + e.getMessage());
-        // }
-        // catch (IndexOutOfBoundsException e) {
-        //     System.out.println("No arguments given");
-        // }
+        if (args.length == 0) {
+            System.err.println("Error: No arguments provided. Use -b <input-folder> -o <output-file.csv> or no flags for GUI mode.");
+            System.exit(1);
+        }
 
+        boolean benchmarkMode = false;
+        String inputFolder = null;
+        String outputFile = null;
 
-        MainApp.show();
-        
+        for (int i = 0; i < args.length; i++) {
+            switch (args[i]) {
+                case "-b":
+                    benchmarkMode = true;
+                    if (i + 1 < args.length) {
+                        inputFolder = args[++i];
+                    } else {
+                        System.err.println("Error: Missing input folder after -b");
+                        System.exit(1);
+                    }
+                    break;
+                case "-o":
+                    if (i + 1 < args.length) {
+                        outputFile = args[++i];
+                        if (!outputFile.toLowerCase().endsWith(".csv")) {
+                            System.err.println("Error: Output file must have .csv extension");
+                            System.exit(1);
+                        }
+                    } else {
+                        System.err.println("Error: Missing output file after -o");
+                        System.exit(1);
+                    }
+                    break;
+                default:
+                    // ignore unrecognized flags
+                    break;
+            }
+        }
+
+        if (benchmarkMode) {
+            if (inputFolder == null) {
+                System.err.println("Error: No input folder specified for benchmarking");
+                System.exit(1);
+            }
+            BenchmarkRunner.run(inputFolder, outputFile);
+        } else {
+            MainApp.show();
+        }
     }
-
 }
