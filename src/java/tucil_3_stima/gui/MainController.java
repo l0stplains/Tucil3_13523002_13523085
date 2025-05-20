@@ -1,13 +1,13 @@
 package tucil_3_stima.gui;
 
-import javafx.animation.ScaleTransition;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
+import java.io.IOException;
 
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
-import javafx.animation.TranslateTransition;
+import javafx.animation.ScaleTransition;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -16,8 +16,6 @@ import javafx.scene.media.AudioClip;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
-
-import java.io.IOException;
 
 public class MainController {
     @FXML
@@ -57,33 +55,25 @@ public class MainController {
 
         // Initialize sound effects
         clickSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/click.wav").toExternalForm());
+        clickSound.setVolume(0.05); // so damn loud Fuck u
         hoverSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/hover.wav").toExternalForm());
-        exitSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/aishiteru.wav").toExternalForm());
-
-        // Load the custom font
-        Font impactedFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 24);
-        if(impactedFont != null) {
-            applyButtonFonts(btnAbout, impactedFont);
-            applyButtonFonts(btnExit, impactedFont);
-            applyButtonFonts(btnEnter, impactedFont);
-        }
-        Font impactedFont60 = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(), 60);
-        if(impactedFont60 != null) {
-            mainTitle.setFont(impactedFont60);
-        }
-
+        hoverSound.setVolume(0.03);
+        exitSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/exit.mp3").toExternalForm());
+        
 
         // Apply the same hover/click effects to all buttons
         applyHoverEffects(btnAbout);
         applyHoverEffects(btnExit);
         applyHoverEffects(btnEnter);
 
+        Font customFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(),36);
+        btnAbout.setFont(customFont);
+        btnExit.setFont(customFont);
+        btnEnter.setFont(customFont);
+
+        mainTitle.getStyleClass().add("my-text");
     }
-    private void applyButtonFonts(Button button, Font font) {
-        String fontFamily = font.getName(); // Check what the font's family name is.
-        button.setFont(font);
-        button.setStyle("-fx-font-family: '" + fontFamily + "'; -fx-font-size: 24px;");
-    }
+
     private void applyHoverEffects(Button button) {
         // Set the default opacity
         button.setOpacity(0.85);
@@ -152,16 +142,18 @@ public class MainController {
             ex.printStackTrace();
         }
     }
+    
     @FXML
     private void handleExit(MouseEvent event) {
         MainApp mainApp = (MainApp) btnExit.getScene().getWindow().getUserData();
         mainApp.backgroundPlayer.stop();
-        FadeTransition fade = new FadeTransition(Duration.seconds(1.5), btnExit.getScene().getRoot());
+        FadeTransition fade = new FadeTransition(Duration.seconds(3), btnExit.getScene().getRoot());
         fade.setFromValue(1.0);
         fade.setToValue(0.0);
         fade.setOnFinished(e -> System.exit(0));
         if (exitSound != null) {
             exitSound.play();
+
         }
         fade.play();
     }

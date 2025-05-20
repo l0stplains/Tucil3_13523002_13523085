@@ -1,22 +1,23 @@
 package tucil_3_stima.gui;
 
+import java.io.IOException;
+
 import javafx.animation.FadeTransition;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.layout.StackPane;
+import javafx.scene.media.AudioClip;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.text.Font;
-import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import javafx.util.Duration;
-
-import java.io.IOException;
 
 /**
  * This GUI app is heavily inspired by Tetr.io and osu!
@@ -28,6 +29,7 @@ public class MainApp extends Application {
     private Stage primaryStage;
     private Scene mainScene;
     public MediaPlayer backgroundPlayer;
+    private AudioClip startSound;
     private static final String STYLESHEET = "/tucil_3_stima/gui/assets/styles.css";
 
     @Override
@@ -36,19 +38,18 @@ public class MainApp extends Application {
         stage.getIcons().add(new Image(MainApp.class.getResourceAsStream("/tucil_3_stima/gui/assets/rushhourlogo.png")));
         primaryStage = stage;
 
-        // welcome text
-        Text splashText = new Text("Welcome to\n" + "IQ Puzzler Pro UwU");
+        startSound = new AudioClip(getClass().getResource("/tucil_3_stima/gui/assets/start.mp3").toExternalForm());
+        startSound.setVolume(200);
 
         // Load custom font from resources
-        Font customFont = Font.loadFont(
-                getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(),
-                48
-        );
-        if (customFont != null) {
-            splashText.setFont(customFont);
-        } else {
-            splashText.setFont(Font.font("System", 48));
-        }
+        Font customFont = Font.loadFont(getClass().getResource("/tucil_3_stima/gui/assets/impacted.ttf").toExternalForm(),48);
+
+
+        // welcome text
+        Text splashText = new Text("Welcome to\n" + "Rush Hour Puzzle Solver");
+        splashText.setFont(customFont);
+        splashText.getStyleClass().add("my-text");
+
         splashText.setStyle("-fx-fill: white;");
         splashText.setTextAlignment(TextAlignment.CENTER);
         splashText.setOpacity(0); // Start fully transparent
@@ -64,17 +65,20 @@ public class MainApp extends Application {
         stage.setTitle("Loading...");
         stage.show();
 
-        FadeTransition fadeIn = new FadeTransition(Duration.seconds(1.5), splashText);
+        FadeTransition fadeIn = new FadeTransition(Duration.seconds(1), splashText);
         fadeIn.setFromValue(0);
         fadeIn.setToValue(1);
 
-        FadeTransition fadeOut = new FadeTransition(Duration.seconds(1.5), splashText);
+        FadeTransition fadeOut = new FadeTransition(Duration.seconds(1), splashText);
         fadeOut.setFromValue(1);
         fadeOut.setToValue(0);
         fadeOut.setDelay(Duration.seconds(2)); // Hold for 2 seconds before fading out
 
         fadeIn.setOnFinished(e -> fadeOut.play());
         fadeOut.setOnFinished(e -> loadMainScene(stage));
+
+        if (startSound != null) startSound.play();
+
         fadeIn.play();
     }
 
@@ -111,7 +115,7 @@ public class MainApp extends Application {
             Media bgMedia = new Media(bgMusicPath);
             backgroundPlayer = new MediaPlayer(bgMedia);
             backgroundPlayer.setCycleCount(MediaPlayer.INDEFINITE);
-            backgroundPlayer.setVolume(0.8);
+            backgroundPlayer.setVolume(0.15);
             backgroundPlayer.play();
         } catch (Exception e) {
             System.out.println("Error loading background music: " + e.getMessage());

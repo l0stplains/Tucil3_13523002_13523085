@@ -52,19 +52,19 @@ public class RushHourTest {
          */
         // harder (argh)
         Vehicle[] vehicles = new Vehicle[] {
-                new Vehicle(true, 2), // target car
-                new Vehicle(false, 3),
-                new Vehicle(true, 3),
-                new Vehicle(false, 2),
-                new Vehicle(false, 2),
-                new Vehicle(true, 2),
-                new Vehicle(true, 2),
-                new Vehicle(true, 2),
-                new Vehicle(true, 2),
-                new Vehicle(false, 2),
-                new Vehicle(false, 2),
-                new Vehicle(false, 2),
-                new Vehicle(false, 3),
+                new Vehicle(true, 2, 'A'), // target car
+                new Vehicle(false, 3, 'B'),
+                new Vehicle(true, 3, 'C'),
+                new Vehicle(false, 2, 'D'),
+                new Vehicle(false, 2, 'E'),
+                new Vehicle(true, 2, 'F'),
+                new Vehicle(true, 2, 'G'),
+                new Vehicle(true, 2, 'H'),
+                new Vehicle(true, 2, 'I'),
+                new Vehicle(false, 2, 'J'),
+                new Vehicle(false, 2, 'K'),
+                new Vehicle(false, 2, 'L'),
+                new Vehicle(false, 3, 'M'),
 
         };
         int[] pos = {2*cols+3, 0*cols+0, 3*cols+0, 1*cols+1, 1*cols+2, 0*cols+1, 5*cols+0, 5*cols+3, 4*cols+4,
@@ -89,7 +89,7 @@ public class RushHourTest {
         int[] pos = {4*cols+4, 0*cols+2, 0*cols+5, 1*cols+4, 2*cols+2, 2*cols+0, 3*cols+1, 5*cols+0, 5*cols+4, 4*cols+2, 4*cols+3};
          */
         int exitR = 2, exitC = 5;
-        Board board = new Board(rows,cols,exitR,exitC,vehicles);
+        Board board = new Board(rows,cols,exitR,exitC, true,vehicles);
         State start = new State(pos);
 
         render(board,start);

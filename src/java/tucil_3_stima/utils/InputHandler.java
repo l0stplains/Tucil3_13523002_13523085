@@ -51,7 +51,11 @@ public class InputHandler {
 
         try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
             // Parse the first line: board dimensions.
-            String[] variables = reader.readLine().split(" ");
+            String firstLine;
+            if ((firstLine = reader.readLine()) == null) {
+                throw new IllegalArgumentException("Empty file at: " + filename);
+            }
+            String[] variables = firstLine.split(" ");
             if (variables.length != 2) {
                 throw new IllegalArgumentException("Wrong number of variables on the first line of file: " + filename);
             }
@@ -70,6 +74,9 @@ public class InputHandler {
             int N;
             String variable = reader.readLine();
             try {       
+                if (variable != null && variable.charAt(0) != ' ') {
+                    variable = variable.trim();
+                }
                 N = Integer.parseInt(variable);
             } catch (NumberFormatException e) {
                 throw new IllegalArgumentException("Variable not parseable on the Second line of file: " + filename);
@@ -82,6 +89,7 @@ public class InputHandler {
             // Read all remaining non-empty lines.
             int exitR = -1;
             int exitC = -1;
+            boolean exitHorizontal = false;
             List<String> allLines = new ArrayList<>();
             List<String> allLinesRaw = new ArrayList<>();
             String line;
@@ -99,7 +107,7 @@ public class InputHandler {
                 if (row <= A) {
                     // check if lastrow exist even though exit already found
                     if (row == A && exitC != -1 && exitR != -1 && !line.isBlank()) {
-                        throw new IllegalArgumentException("(4) Board size and the given board size doesn't match at file: " + filename);
+                        throw new IllegalArgumentException("(1) Board height and the given board height doesn't match at file: " + filename);
                     }
 
                     // normal
@@ -116,6 +124,7 @@ public class InputHandler {
                             }
                             exitR = row;
                             exitC = 0;
+                            exitHorizontal = true;
 
                             allLines.add(lineTrim.substring(1, B + 1));
                             allLinesRaw.add(line);
@@ -128,12 +137,13 @@ public class InputHandler {
 
                             exitR = row;
                             exitC = line.length() - 2;
+                            exitHorizontal = true;
 
                             allLines.add(lineTrim.substring(0, B));
                             allLinesRaw.add(line);
                         }
                         else {
-                            throw new IllegalArgumentException("(1) Board size and the given board size doesn't match at file: " + filename);
+                            throw new IllegalArgumentException("(1) Board width and the given board width doesn't match at file: " + filename);
                         }
 
                     }
@@ -155,28 +165,27 @@ public class InputHandler {
                                 throw new IllegalArgumentException("Invalid exit position on the board of file: " + filename);
                             }
 
+                            
                             exitR = row;
                             exitC = col;
 
-                            if (row == A){
-                                exitR--;
-                            }
-                            if (row == 0) {
-                                row--;
-                            }
+                            exitHorizontal = false;
+                            
+                            if (row == 0) row--;
+                            if (row == A) exitR--;
+
                         }
                         else {
-                            throw new IllegalArgumentException("(5) Board size and the given board size doesn't match at file: " + filename);
+                            throw new IllegalArgumentException("(2) Board width and the given board width doesn't match at file: " + filename);
                         }
                     }
                     else {
-                        System.out.println("at Row: " + row + "\nline: " + line + "\nlineTrim: " + lineTrim);
-                        throw new IllegalArgumentException("(2) Board size and the given board size doesn't match at file: " + filename);
+                        throw new IllegalArgumentException("(3) Board width and the given board width doesn't match at file: " + filename);
                     }
                 }
                 else if (row > A && line.isBlank()) continue;
                 else {
-                    throw new IllegalArgumentException("(3) Board size and the given board size doesn't match at file: " + filename);
+                    throw new IllegalArgumentException("(2) Board height and the given board height doesn't match at file: " + filename);
                 }
 
                 row++;
@@ -186,18 +195,16 @@ public class InputHandler {
                 throw new IllegalArgumentException("No exit found on the board of file: " + filename);
             }
             
+            if (allLines.size() != A) {
+                throw new IllegalArgumentException("(3) Board height and the given board height doesn't match at file: " + filename);
+            }
+
             // Parse the vehicles
             List<Vehicle> vehicles = new ArrayList<>();
-            List<Vehicle> potentialRiskyVehicles = new ArrayList<>();
             List<Integer> pos = new ArrayList<>();
             List<Integer> potentialRiskyPos = new ArrayList<>();
             Set<Character> uniqueSymbols = new HashSet<>();
             boolean[][] visited = new boolean[A][B];
-            
-            System.out.println("Board: ");
-            for (String line1 : allLines) {
-                System.out.println(line1);
-            }
 
             // Asumsi udh size AxB (harusnya udh sih, di verif di bagian sebelumnya)
             for (int i = 0; i < A; i++) {
@@ -212,7 +219,7 @@ public class InputHandler {
                             throw new IllegalArgumentException("Duplicate symbol found: " + c);
                         }
 
-                        System.out.println("Current symbol: " + c + "\nfound at (" + i + ", " + j + ")");
+                        // System.out.println("Current symbol: " + c + "\nfound at (" + i + ", " + j + ")");
 
                         // traverse vehicle
                         // make sure its a valid 1xN or Nx1
@@ -254,25 +261,27 @@ public class InputHandler {
 
                                 cur_i++;
                             }
-                            System.out.println("cur_i: " + cur_i + "\ncur_j: " + cur_j + "\n---------");
+                            // System.out.println("cur_i: " + cur_i + "\ncur_j: " + cur_j + "\n---------");
                         }
 
                         if (c == 'P') {
                             // check if exit in parallel to the player car
-                            if ((isHorizontal && exitR != i) || (!isHorizontal && exitC != j)) {
+                            if ((exitHorizontal != isHorizontal) || (isHorizontal && exitR != i) || 
+                                (!isHorizontal && exitC != j)) {
                                 throw new IllegalArgumentException("Vehicle and exit not inline to each other at file: " + filename);
                             }
 
-                            vehicles.add(0, new Vehicle(isHorizontal, vehicleLength));
+                            vehicles.add(0, new Vehicle(isHorizontal, vehicleLength, c));
                             pos.add(0, i * B + j);
                         }                         
                         else {
-                            Vehicle v = new Vehicle(isHorizontal, vehicleLength);
+                            Vehicle v = new Vehicle(isHorizontal, vehicleLength, c);
                             
                             // may be an unsolvable obstacle to the exit
-                            if ((isHorizontal && exitR == i) || (!isHorizontal && exitC == j)) {
-                                potentialRiskyVehicles.add(v);
-                                potentialRiskyPos.add(i * B + j);
+                            if (exitHorizontal == isHorizontal) {
+                                if ((isHorizontal && exitR == i) || (!isHorizontal && exitC == j)) {
+                                    potentialRiskyPos.add(i * B + j);
+                                }
                             }
 
                             vehicles.add(v);
@@ -286,18 +295,24 @@ public class InputHandler {
             }
 
             // check if the board is aligned to left (no empty space to the left) except if K on the left
-            if (!(exitC == 0 && vehicles.get(0).isHorizontal())) {
-                for (String lineTest : allLinesRaw) {
-                    if (!validSymbol(lineTest.charAt(0))) {
-                        throw new IllegalArgumentException("Empty space to left side of the board of file: " + filename);
+            if (exitHorizontal) {
+                if (!(exitC == 0)) {
+                    for (String lineTest : allLinesRaw) {
+                        if (!validSymbol(lineTest.charAt(0))) {
+                            throw new IllegalArgumentException("Empty space to left side of the board of file: " + filename);
+                        }
                     }
                 }
-            }
-            // if K is on the left 
-            else {
-                for (String lineTest : allLinesRaw) {
-                    if (!validSymbol(lineTest.charAt(1))) {
-                        throw new IllegalArgumentException("Empty space to left side of the board of file: " + filename);
+                // if K is on the left 
+                else {
+                    for (String lineTest : allLinesRaw) {
+                        if (lineTest.charAt(0) != 'K' && lineTest.charAt(0) != ' ') {
+                            System.out.println(lineTest);
+                            throw new IllegalArgumentException("Invalid format of the board: No single space to the leftside of the board when the exit is on the left \nError at file: " + filename);
+                        }
+                        if (!validSymbol(lineTest.charAt(1))) {
+                            throw new IllegalArgumentException("Empty space to left side of the board of file: " + filename);
+                        }
                     }
                 }
             }
@@ -305,14 +320,14 @@ public class InputHandler {
             // check if there is another vehicle between the player's and exit 
             // that has the same orientation to the player's
             int playerPos = pos.get(0); 
-            int playerR = playerPos / A;
+            int playerR = playerPos / B;
             int playerC = playerPos % B;
             int lbound;
             int rbound;
-            boolean carOrientation = vehicles.get(0).isHorizontal();
+            boolean carHorizontal = vehicles.get(0).isHorizontal();
 
             // get left and right bound
-            if (carOrientation) {
+            if (carHorizontal) {
                 if (exitC > playerC) {
                     lbound = playerC;
                     rbound = exitC;
@@ -335,10 +350,10 @@ public class InputHandler {
 
             for (int carPos : potentialRiskyPos) {
                 int carBound;
-                if (carOrientation) carBound = carPos % B;
-                else carBound = carPos / A;
+                if (carHorizontal) carBound = carPos % B;
+                else carBound = carPos / B;
 
-                if (carBound > lbound && carBound < rbound) {
+                if (carBound >= lbound && carBound <= rbound) {
                     throw new IllegalArgumentException("Unsolvable board of file: " + filename);
                 }
             }
@@ -352,9 +367,7 @@ public class InputHandler {
             Vehicle[] vehiclesArr = new Vehicle[vehicles.size()];
             vehiclesArr = vehicles.toArray(vehiclesArr);
             int[] posArr = pos.stream().mapToInt(i -> i).toArray();
-
-            System.out.println("Done Parsing");
-            return new Pair<>(new Board(A, B, exitR, exitC, vehiclesArr), new State(posArr));
+            return new Pair<>(new Board(A, B, exitR, exitC, exitHorizontal, vehiclesArr), new State(posArr));
         } catch (IOException e) {
             throw new IOException("Error reading file: " + filename, e);
         }

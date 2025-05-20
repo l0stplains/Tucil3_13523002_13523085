@@ -1,8 +1,9 @@
-6 6  
-12    
+6 6
+12   
  GBB.L.   
  GHI.LM   
 KGHIPPM  
  CCCZ.M   
  ..JZDD   
  EEJFF.   
+ ......
