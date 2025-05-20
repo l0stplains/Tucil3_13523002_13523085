@@ -5,11 +5,6 @@ import tucil_3_stima.utils.BenchmarkRunner;
 
 public class Main {
     public static void main(String[] args) {
-        if (args.length == 0) {
-            System.err.println("Error: No arguments provided. Use -b <input-folder> -o <output-file.csv> or no flags for GUI mode.");
-            System.exit(1);
-        }
-
         boolean benchmarkMode = false;
         String inputFolder = null;
         String outputFile = null;
