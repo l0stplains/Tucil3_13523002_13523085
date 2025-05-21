@@ -1,0 +1,7 @@
+tc 1 = tc ghana solvable
+tc 2 = tc ghana unsolvable
+tc 3 = solvable
+tc 4 = solvable
+tc 5 = solvable
+tc 6 = solvable 
+tc 7 = solvable

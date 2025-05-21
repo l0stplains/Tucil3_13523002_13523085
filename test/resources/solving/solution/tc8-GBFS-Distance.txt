@@ -1,0 +1,9446 @@
+Solution Stats
+Time           : 571.8811
+Expanded Node  : 54463
+Generated Node : 655357
+Solution Depth : 1179
+
+Initial Board
+RSSBBZ
+RDDJ.Z
+..VJPP
+EEV...
+.L.FFF
+.LHHGG
+
+Step 1: R-down
+.SSBBZ
+RDDJ.Z
+R.VJPP
+EEV...
+.L.FFF
+.LHHGG
+
+Step 2: F-left
+.SSBBZ
+RDDJ.Z
+R.VJPP
+EEV...
+.LFFF.
+.LHHGG
+
+Step 3: J-down
+.SSBBZ
+RDD..Z
+R.VJPP
+EEVJ..
+.LFFF.
+.LHHGG
+
+Step 4: D-right
+.SSBBZ
+R..DDZ
+R.VJPP
+EEVJ..
+.LFFF.
+.LHHGG
+
+Step 5: F-right
+.SSBBZ
+R..DDZ
+R.VJPP
+EEVJ..
+.L.FFF
+.LHHGG
+
+Step 6: V-down
+.SSBBZ
+R..DDZ
+R..JPP
+EEVJ..
+.LVFFF
+.LHHGG
+
+Step 7: D-left
+.SSBBZ
+RDD..Z
+R..JPP
+EEVJ..
+.LVFFF
+.LHHGG
+
+Step 8: S-left
+SS.BBZ
+RDD..Z
+R..JPP
+EEVJ..
+.LVFFF
+.LHHGG
+
+Step 9: V-up
+SS.BBZ
+RDD..Z
+R.VJPP
+EEVJ..
+.L.FFF
+.LHHGG
+
+Step 10: B-left
+SSBB.Z
+RDD..Z
+R.VJPP
+EEVJ..
+.L.FFF
+.LHHGG
+
+Step 11: F-left
+SSBB.Z
+RDD..Z
+R.VJPP
+EEVJ..
+.LFFF.
+.LHHGG
+
+Step 12: D-right
+SSBB.Z
+R..DDZ
+R.VJPP
+EEVJ..
+.LFFF.
+.LHHGG
+
+Step 13: V-up
+SSBB.Z
+R.VDDZ
+R.VJPP
+EE.J..
+.LFFF.
+.LHHGG
+
+Step 14: F-right
+SSBB.Z
+R.VDDZ
+R.VJPP
+EE.J..
+.L.FFF
+.LHHGG
+
+Step 15: E-right
+SSBB.Z
+R.VDDZ
+R.VJPP
+.EEJ..
+.L.FFF
+.LHHGG
+
+Step 16: B-right
+SS.BBZ
+R.VDDZ
+R.VJPP
+.EEJ..
+.L.FFF
+.LHHGG
+
+Step 17: V-up
+SSVBBZ
+R.VDDZ
+R..JPP
+.EEJ..
+.L.FFF
+.LHHGG
+
+Step 18: R-down
+SSVBBZ
+..VDDZ
+...JPP
+.EEJ..
+RL.FFF
+RLHHGG
+
+Step 19: E-left
+SSVBBZ
+..VDDZ
+...JPP
+EE.J..
+RL.FFF
+RLHHGG
+
+Step 20: F-left
+SSVBBZ
+..VDDZ
+...JPP
+EE.J..
+RLFFF.
+RLHHGG
+
+Step 21: V-down
+SS.BBZ
+...DDZ
+..VJPP
+EEVJ..
+RLFFF.
+RLHHGG
+
+Step 22: D-left
+SS.BBZ
+DD...Z
+..VJPP
+EEVJ..
+RLFFF.
+RLHHGG
+
+Step 23: V-up
+SSVBBZ
+DDV..Z
+...JPP
+EE.J..
+RLFFF.
+RLHHGG
+
+Step 24: E-right
+SSVBBZ
+DDV..Z
+...JPP
+.EEJ..
+RLFFF.
+RLHHGG
+
+Step 25: V-down
+SS.BBZ
+DDV..Z
+..VJPP
+.EEJ..
+RLFFF.
+RLHHGG
+
+Step 26: J-up
+SS.BBZ
+DDVJ.Z
+..VJPP
+.EE...
+RLFFF.
+RLHHGG
+
+Step 27: E-right
+SS.BBZ
+DDVJ.Z
+..VJPP
+....EE
+RLFFF.
+RLHHGG
+
+Step 28: L-up
+SS.BBZ
+DDVJ.Z
+.LVJPP
+.L..EE
+R.FFF.
+R.HHGG
+
+Step 29: H-left
+SS.BBZ
+DDVJ.Z
+.LVJPP
+.L..EE
+R.FFF.
+RHH.GG
+
+Step 30: G-left
+SS.BBZ
+DDVJ.Z
+.LVJPP
+.L..EE
+R.FFF.
+RHHGG.
+
+Step 31: L-down
+SS.BBZ
+DDVJ.Z
+..VJPP
+.L..EE
+RLFFF.
+RHHGG.
+
+Step 32: E-left
+SS.BBZ
+DDVJ.Z
+..VJPP
+.LEE..
+RLFFF.
+RHHGG.
+
+Step 33: G-right
+SS.BBZ
+DDVJ.Z
+..VJPP
+.LEE..
+RLFFF.
+RHH.GG
+
+Step 34: H-right
+SS.BBZ
+DDVJ.Z
+..VJPP
+.LEE..
+RLFFF.
+R.HHGG
+
+Step 35: F-right
+SS.BBZ
+DDVJ.Z
+..VJPP
+.LEE..
+RL.FFF
+R.HHGG
+
+Step 36: E-right
+SS.BBZ
+DDVJ.Z
+..VJPP
+.L.EE.
+RL.FFF
+R.HHGG
+
+Step 37: H-left
+SS.BBZ
+DDVJ.Z
+..VJPP
+.L.EE.
+RL.FFF
+RHH.GG
+
+Step 38: G-left
+SS.BBZ
+DDVJ.Z
+..VJPP
+.L.EE.
+RL.FFF
+RHHGG.
+
+Step 39: V-down
+SS.BBZ
+DD.J.Z
+...JPP
+.LVEE.
+RLVFFF
+RHHGG.
+
+Step 40: E-right
+SS.BBZ
+DD.J.Z
+...JPP
+.LV.EE
+RLVFFF
+RHHGG.
+
+Step 41: G-right
+SS.BBZ
+DD.J.Z
+...JPP
+.LV.EE
+RLVFFF
+RHH.GG
+
+Step 42: H-right
+SS.BBZ
+DD.J.Z
+...JPP
+.LV.EE
+RLVFFF
+R.HHGG
+
+Step 43: V-up
+SSVBBZ
+DDVJ.Z
+...JPP
+.L..EE
+RL.FFF
+R.HHGG
+
+Step 44: F-left
+SSVBBZ
+DDVJ.Z
+...JPP
+.L..EE
+RLFFF.
+R.HHGG
+
+Step 45: H-left
+SSVBBZ
+DDVJ.Z
+...JPP
+.L..EE
+RLFFF.
+RHH.GG
+
+Step 46: E-left
+SSVBBZ
+DDVJ.Z
+...JPP
+.L.EE.
+RLFFF.
+RHH.GG
+
+Step 47: G-left
+SSVBBZ
+DDVJ.Z
+...JPP
+.L.EE.
+RLFFF.
+RHHGG.
+
+Step 48: V-down
+SS.BBZ
+DD.J.Z
+..VJPP
+.LVEE.
+RLFFF.
+RHHGG.
+
+Step 49: D-right
+SS.BBZ
+.DDJ.Z
+..VJPP
+.LVEE.
+RLFFF.
+RHHGG.
+
+Step 50: G-right
+SS.BBZ
+.DDJ.Z
+..VJPP
+.LVEE.
+RLFFF.
+RHH.GG
+
+Step 51: H-right
+SS.BBZ
+.DDJ.Z
+..VJPP
+.LVEE.
+RLFFF.
+R.HHGG
+
+Step 52: F-right
+SS.BBZ
+.DDJ.Z
+..VJPP
+.LVEE.
+RL.FFF
+R.HHGG
+
+Step 53: L-down
+SS.BBZ
+.DDJ.Z
+..VJPP
+..VEE.
+RL.FFF
+RLHHGG
+
+Step 54: E-right
+SS.BBZ
+.DDJ.Z
+..VJPP
+..V.EE
+RL.FFF
+RLHHGG
+
+Step 55: F-left
+SS.BBZ
+.DDJ.Z
+..VJPP
+..V.EE
+RLFFF.
+RLHHGG
+
+Step 56: L-up
+SS.BBZ
+.DDJ.Z
+.LVJPP
+.LV.EE
+R.FFF.
+R.HHGG
+
+Step 57: H-left
+SS.BBZ
+.DDJ.Z
+.LVJPP
+.LV.EE
+R.FFF.
+RHH.GG
+
+Step 58: G-left
+SS.BBZ
+.DDJ.Z
+.LVJPP
+.LV.EE
+R.FFF.
+RHHGG.
+
+Step 59: F-right
+SS.BBZ
+.DDJ.Z
+.LVJPP
+.LV.EE
+R..FFF
+RHHGG.
+
+Step 60: L-down
+SS.BBZ
+.DDJ.Z
+..VJPP
+.LV.EE
+RL.FFF
+RHHGG.
+
+Step 61: G-right
+SS.BBZ
+.DDJ.Z
+..VJPP
+.LV.EE
+RL.FFF
+RHH.GG
+
+Step 62: J-down
+SS.BBZ
+.DD..Z
+..VJPP
+.LVJEE
+RL.FFF
+RHH.GG
+
+Step 63: H-right
+SS.BBZ
+.DD..Z
+..VJPP
+.LVJEE
+RL.FFF
+R.HHGG
+
+Step 64: F-left
+SS.BBZ
+.DD..Z
+..VJPP
+.LVJEE
+RLFFF.
+R.HHGG
+
+Step 65: D-right
+SS.BBZ
+...DDZ
+..VJPP
+.LVJEE
+RLFFF.
+R.HHGG
+
+Step 66: H-left
+SS.BBZ
+...DDZ
+..VJPP
+.LVJEE
+RLFFF.
+RHH.GG
+
+Step 67: G-left
+SS.BBZ
+...DDZ
+..VJPP
+.LVJEE
+RLFFF.
+RHHGG.
+
+Step 68: F-right
+SS.BBZ
+...DDZ
+..VJPP
+.LVJEE
+RL.FFF
+RHHGG.
+
+Step 69: L-up
+SS.BBZ
+.L.DDZ
+.LVJPP
+..VJEE
+R..FFF
+RHHGG.
+
+Step 70: G-right
+SS.BBZ
+.L.DDZ
+.LVJPP
+..VJEE
+R..FFF
+RHH.GG
+
+Step 71: H-right
+SS.BBZ
+.L.DDZ
+.LVJPP
+..VJEE
+R..FFF
+R.HHGG
+
+Step 72: F-left
+SS.BBZ
+.L.DDZ
+.LVJPP
+..VJEE
+RFFF..
+R.HHGG
+
+Step 73: L-down
+SS.BBZ
+...DDZ
+.LVJPP
+.LVJEE
+RFFF..
+R.HHGG
+
+Step 74: H-left
+SS.BBZ
+...DDZ
+.LVJPP
+.LVJEE
+RFFF..
+RHH.GG
+
+Step 75: G-left
+SS.BBZ
+...DDZ
+.LVJPP
+.LVJEE
+RFFF..
+RHHGG.
+
+Step 76: V-up
+SSVBBZ
+..VDDZ
+.L.JPP
+.L.JEE
+RFFF..
+RHHGG.
+
+Step 77: F-right
+SSVBBZ
+..VDDZ
+.L.JPP
+.L.JEE
+R..FFF
+RHHGG.
+
+Step 78: G-right
+SSVBBZ
+..VDDZ
+.L.JPP
+.L.JEE
+R..FFF
+RHH.GG
+
+Step 79: H-right
+SSVBBZ
+..VDDZ
+.L.JPP
+.L.JEE
+R..FFF
+R.HHGG
+
+Step 80: F-left
+SSVBBZ
+..VDDZ
+.L.JPP
+.L.JEE
+R.FFF.
+R.HHGG
+
+Step 81: L-down
+SSVBBZ
+..VDDZ
+...JPP
+...JEE
+RLFFF.
+RLHHGG
+
+Step 82: V-down
+SS.BBZ
+..VDDZ
+..VJPP
+...JEE
+RLFFF.
+RLHHGG
+
+Step 83: F-right
+SS.BBZ
+..VDDZ
+..VJPP
+...JEE
+RL.FFF
+RLHHGG
+
+Step 84: L-up
+SS.BBZ
+..VDDZ
+..VJPP
+.L.JEE
+RL.FFF
+R.HHGG
+
+Step 85: H-left
+SS.BBZ
+..VDDZ
+..VJPP
+.L.JEE
+RL.FFF
+RHH.GG
+
+Step 86: V-down
+SS.BBZ
+...DDZ
+...JPP
+.LVJEE
+RLVFFF
+RHH.GG
+
+Step 87: D-left
+SS.BBZ
+..DD.Z
+...JPP
+.LVJEE
+RLVFFF
+RHH.GG
+
+Step 88: G-left
+SS.BBZ
+..DD.Z
+...JPP
+.LVJEE
+RLVFFF
+RHHGG.
+
+Step 89: L-up
+SS.BBZ
+.LDD.Z
+.L.JPP
+..VJEE
+R.VFFF
+RHHGG.
+
+Step 90: B-left
+SSBB.Z
+.LDD.Z
+.L.JPP
+..VJEE
+R.VFFF
+RHHGG.
+
+Step 91: G-right
+SSBB.Z
+.LDD.Z
+.L.JPP
+..VJEE
+R.VFFF
+RHH.GG
+
+Step 92: H-right
+SSBB.Z
+.LDD.Z
+.L.JPP
+..VJEE
+R.VFFF
+R.HHGG
+
+Step 93: L-down
+SSBB.Z
+..DD.Z
+...JPP
+..VJEE
+RLVFFF
+RLHHGG
+
+Step 94: V-up
+SSBB.Z
+..DD.Z
+..VJPP
+..VJEE
+RL.FFF
+RLHHGG
+
+Step 95: F-left
+SSBB.Z
+..DD.Z
+..VJPP
+..VJEE
+RLFFF.
+RLHHGG
+
+Step 96: L-up
+SSBB.Z
+.LDD.Z
+.LVJPP
+..VJEE
+R.FFF.
+R.HHGG
+
+Step 97: H-left
+SSBB.Z
+.LDD.Z
+.LVJPP
+..VJEE
+R.FFF.
+RHH.GG
+
+Step 98: G-left
+SSBB.Z
+.LDD.Z
+.LVJPP
+..VJEE
+R.FFF.
+RHHGG.
+
+Step 99: F-left
+SSBB.Z
+.LDD.Z
+.LVJPP
+..VJEE
+RFFF..
+RHHGG.
+
+Step 100: L-down
+SSBB.Z
+..DD.Z
+.LVJPP
+.LVJEE
+RFFF..
+RHHGG.
+
+Step 101: G-right
+SSBB.Z
+..DD.Z
+.LVJPP
+.LVJEE
+RFFF..
+RHH.GG
+
+Step 102: H-right
+SSBB.Z
+..DD.Z
+.LVJPP
+.LVJEE
+RFFF..
+R.HHGG
+
+Step 103: D-left
+SSBB.Z
+DD...Z
+.LVJPP
+.LVJEE
+RFFF..
+R.HHGG
+
+Step 104: F-right
+SSBB.Z
+DD...Z
+.LVJPP
+.LVJEE
+R..FFF
+R.HHGG
+
+Step 105: H-left
+SSBB.Z
+DD...Z
+.LVJPP
+.LVJEE
+R..FFF
+RHH.GG
+
+Step 106: G-left
+SSBB.Z
+DD...Z
+.LVJPP
+.LVJEE
+R..FFF
+RHHGG.
+
+Step 107: F-left
+SSBB.Z
+DD...Z
+.LVJPP
+.LVJEE
+R.FFF.
+RHHGG.
+
+Step 108: L-down
+SSBB.Z
+DD...Z
+..VJPP
+.LVJEE
+RLFFF.
+RHHGG.
+
+Step 109: G-right
+SSBB.Z
+DD...Z
+..VJPP
+.LVJEE
+RLFFF.
+RHH.GG
+
+Step 110: H-right
+SSBB.Z
+DD...Z
+..VJPP
+.LVJEE
+RLFFF.
+R.HHGG
+
+Step 111: V-up
+SSBB.Z
+DDV..Z
+..VJPP
+.L.JEE
+RLFFF.
+R.HHGG
+
+Step 112: F-right
+SSBB.Z
+DDV..Z
+..VJPP
+.L.JEE
+RL.FFF
+R.HHGG
+
+Step 113: H-left
+SSBB.Z
+DDV..Z
+..VJPP
+.L.JEE
+RL.FFF
+RHH.GG
+
+Step 114: G-left
+SSBB.Z
+DDV..Z
+..VJPP
+.L.JEE
+RL.FFF
+RHHGG.
+
+Step 115: V-down
+SSBB.Z
+DD...Z
+...JPP
+.LVJEE
+RLVFFF
+RHHGG.
+
+Step 116: D-right
+SSBB.Z
+...DDZ
+...JPP
+.LVJEE
+RLVFFF
+RHHGG.
+
+Step 117: L-up
+SSBB.Z
+...DDZ
+.L.JPP
+.LVJEE
+R.VFFF
+RHHGG.
+
+Step 118: G-right
+SSBB.Z
+...DDZ
+.L.JPP
+.LVJEE
+R.VFFF
+RHH.GG
+
+Step 119: H-right
+SSBB.Z
+...DDZ
+.L.JPP
+.LVJEE
+R.VFFF
+R.HHGG
+
+Step 120: L-down
+SSBB.Z
+...DDZ
+...JPP
+.LVJEE
+RLVFFF
+R.HHGG
+
+Step 121: V-up
+SSBB.Z
+...DDZ
+..VJPP
+.LVJEE
+RL.FFF
+R.HHGG
+
+Step 122: H-left
+SSBB.Z
+...DDZ
+..VJPP
+.LVJEE
+RL.FFF
+RHH.GG
+
+Step 123: D-left
+SSBB.Z
+..DD.Z
+..VJPP
+.LVJEE
+RL.FFF
+RHH.GG
+
+Step 124: G-left
+SSBB.Z
+..DD.Z
+..VJPP
+.LVJEE
+RL.FFF
+RHHGG.
+
+Step 125: D-left
+SSBB.Z
+.DD..Z
+..VJPP
+.LVJEE
+RL.FFF
+RHHGG.
+
+Step 126: R-up
+SSBB.Z
+RDD..Z
+R.VJPP
+.LVJEE
+.L.FFF
+.HHGG.
+
+Step 127: G-right
+SSBB.Z
+RDD..Z
+R.VJPP
+.LVJEE
+.L.FFF
+.HH.GG
+
+Step 128: H-right
+SSBB.Z
+RDD..Z
+R.VJPP
+.LVJEE
+.L.FFF
+..HHGG
+
+Step 129: F-left
+SSBB.Z
+RDD..Z
+R.VJPP
+.LVJEE
+.LFFF.
+..HHGG
+
+Step 130: H-left
+SSBB.Z
+RDD..Z
+R.VJPP
+.LVJEE
+.LFFF.
+HH..GG
+
+Step 131: G-left
+SSBB.Z
+RDD..Z
+R.VJPP
+.LVJEE
+.LFFF.
+HHGG..
+
+Step 132: F-right
+SSBB.Z
+RDD..Z
+R.VJPP
+.LVJEE
+.L.FFF
+HHGG..
+
+Step 133: L-up
+SSBB.Z
+RDD..Z
+RLVJPP
+.LVJEE
+...FFF
+HHGG..
+
+Step 134: G-right
+SSBB.Z
+RDD..Z
+RLVJPP
+.LVJEE
+...FFF
+HH..GG
+
+Step 135: F-left
+SSBB.Z
+RDD..Z
+RLVJPP
+.LVJEE
+FFF...
+HH..GG
+
+Step 136: G-left
+SSBB.Z
+RDD..Z
+RLVJPP
+.LVJEE
+FFF...
+HH.GG.
+
+Step 137: H-right
+SSBB.Z
+RDD..Z
+RLVJPP
+.LVJEE
+FFF...
+.HHGG.
+
+Step 138: F-right
+SSBB.Z
+RDD..Z
+RLVJPP
+.LVJEE
+..FFF.
+.HHGG.
+
+Step 139: G-right
+SSBB.Z
+RDD..Z
+RLVJPP
+.LVJEE
+..FFF.
+.HH.GG
+
+Step 140: F-left
+SSBB.Z
+RDD..Z
+RLVJPP
+.LVJEE
+.FFF..
+.HH.GG
+
+Step 141: H-right
+SSBB.Z
+RDD..Z
+RLVJPP
+.LVJEE
+.FFF..
+..HHGG
+
+Step 142: J-up
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LV.EE
+.FFF..
+..HHGG
+
+Step 143: H-left
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LV.EE
+.FFF..
+HH..GG
+
+Step 144: G-left
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LV.EE
+.FFF..
+HHGG..
+
+Step 145: F-right
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LV.EE
+..FFF.
+HHGG..
+
+Step 146: G-right
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LV.EE
+..FFF.
+HH.GG.
+
+Step 147: F-right
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LV.EE
+...FFF
+HH.GG.
+
+Step 148: H-right
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LV.EE
+...FFF
+.HHGG.
+
+Step 149: G-right
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LV.EE
+...FFF
+.HH.GG
+
+Step 150: F-left
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LV.EE
+FFF...
+.HH.GG
+
+Step 151: E-left
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LVEE.
+FFF...
+.HH.GG
+
+Step 152: G-left
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LVEE.
+FFF...
+.HHGG.
+
+Step 153: H-left
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LVEE.
+FFF...
+HH.GG.
+
+Step 154: G-left
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LVEE.
+FFF...
+HHGG..
+
+Step 155: F-right
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LVEE.
+...FFF
+HHGG..
+
+Step 156: G-right
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LVEE.
+...FFF
+HH..GG
+
+Step 157: H-right
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LVEE.
+...FFF
+..HHGG
+
+Step 158: F-left
+SSBB.Z
+RDDJ.Z
+RLVJPP
+.LVEE.
+..FFF.
+..HHGG
+
+Step 159: L-down
+SSBB.Z
+RDDJ.Z
+R.VJPP
+..VEE.
+.LFFF.
+.LHHGG
+
+Step 160: E-right
+SSBB.Z
+RDDJ.Z
+R.VJPP
+..V.EE
+.LFFF.
+.LHHGG
+
+Step 161: F-right
+SSBB.Z
+RDDJ.Z
+R.VJPP
+..V.EE
+.L.FFF
+.LHHGG
+
+Step 162: V-down
+SSBB.Z
+RDDJ.Z
+R..JPP
+..V.EE
+.LVFFF
+.LHHGG
+
+Step 163: L-up
+SSBB.Z
+RDDJ.Z
+RL.JPP
+.LV.EE
+..VFFF
+..HHGG
+
+Step 164: H-left
+SSBB.Z
+RDDJ.Z
+RL.JPP
+.LV.EE
+..VFFF
+HH..GG
+
+Step 165: G-left
+SSBB.Z
+RDDJ.Z
+RL.JPP
+.LV.EE
+..VFFF
+HHGG..
+
+Step 166: L-down
+SSBB.Z
+RDDJ.Z
+R..JPP
+.LV.EE
+.LVFFF
+HHGG..
+
+Step 167: G-right
+SSBB.Z
+RDDJ.Z
+R..JPP
+.LV.EE
+.LVFFF
+HH.GG.
+
+Step 168: H-right
+SSBB.Z
+RDDJ.Z
+R..JPP
+.LV.EE
+.LVFFF
+.HHGG.
+
+Step 169: G-right
+SSBB.Z
+RDDJ.Z
+R..JPP
+.LV.EE
+.LVFFF
+.HH.GG
+
+Step 170: E-left
+SSBB.Z
+RDDJ.Z
+R..JPP
+.LVEE.
+.LVFFF
+.HH.GG
+
+Step 171: H-right
+SSBB.Z
+RDDJ.Z
+R..JPP
+.LVEE.
+.LVFFF
+..HHGG
+
+Step 172: B-right
+SS.BBZ
+RDDJ.Z
+R..JPP
+.LVEE.
+.LVFFF
+..HHGG
+
+Step 173: H-left
+SS.BBZ
+RDDJ.Z
+R..JPP
+.LVEE.
+.LVFFF
+HH..GG
+
+Step 174: G-left
+SS.BBZ
+RDDJ.Z
+R..JPP
+.LVEE.
+.LVFFF
+HHGG..
+
+Step 175: L-up
+SS.BBZ
+RDDJ.Z
+RL.JPP
+.LVEE.
+..VFFF
+HHGG..
+
+Step 176: G-right
+SS.BBZ
+RDDJ.Z
+RL.JPP
+.LVEE.
+..VFFF
+HH.GG.
+
+Step 177: H-right
+SS.BBZ
+RDDJ.Z
+RL.JPP
+.LVEE.
+..VFFF
+.HHGG.
+
+Step 178: G-right
+SS.BBZ
+RDDJ.Z
+RL.JPP
+.LVEE.
+..VFFF
+.HH.GG
+
+Step 179: E-right
+SS.BBZ
+RDDJ.Z
+RL.JPP
+.LV.EE
+..VFFF
+.HH.GG
+
+Step 180: J-down
+SS.BBZ
+RDD..Z
+RL.JPP
+.LVJEE
+..VFFF
+.HH.GG
+
+Step 181: G-left
+SS.BBZ
+RDD..Z
+RL.JPP
+.LVJEE
+..VFFF
+.HHGG.
+
+Step 182: H-left
+SS.BBZ
+RDD..Z
+RL.JPP
+.LVJEE
+..VFFF
+HH.GG.
+
+Step 183: G-left
+SS.BBZ
+RDD..Z
+RL.JPP
+.LVJEE
+..VFFF
+HHGG..
+
+Step 184: L-down
+SS.BBZ
+RDD..Z
+R..JPP
+.LVJEE
+.LVFFF
+HHGG..
+
+Step 185: G-right
+SS.BBZ
+RDD..Z
+R..JPP
+.LVJEE
+.LVFFF
+HH..GG
+
+Step 186: H-right
+SS.BBZ
+RDD..Z
+R..JPP
+.LVJEE
+.LVFFF
+..HHGG
+
+Step 187: L-down
+SS.BBZ
+RDD..Z
+R..JPP
+..VJEE
+.LVFFF
+.LHHGG
+
+Step 188: V-up
+SS.BBZ
+RDD..Z
+R.VJPP
+..VJEE
+.L.FFF
+.LHHGG
+
+Step 189: F-left
+SS.BBZ
+RDD..Z
+R.VJPP
+..VJEE
+.LFFF.
+.LHHGG
+
+Step 190: L-up
+SS.BBZ
+RDD..Z
+RLVJPP
+.LVJEE
+..FFF.
+..HHGG
+
+Step 191: H-left
+SS.BBZ
+RDD..Z
+RLVJPP
+.LVJEE
+..FFF.
+HH..GG
+
+Step 192: G-left
+SS.BBZ
+RDD..Z
+RLVJPP
+.LVJEE
+..FFF.
+HHGG..
+
+Step 193: F-left
+SS.BBZ
+RDD..Z
+RLVJPP
+.LVJEE
+FFF...
+HHGG..
+
+Step 194: J-down
+SS.BBZ
+RDD..Z
+RLV.PP
+.LVJEE
+FFFJ..
+HHGG..
+
+Step 195: G-right
+SS.BBZ
+RDD..Z
+RLV.PP
+.LVJEE
+FFFJ..
+HH..GG
+
+Step 196: H-right
+SS.BBZ
+RDD..Z
+RLV.PP
+.LVJEE
+FFFJ..
+..HHGG
+
+Step 197: J-up
+SS.BBZ
+RDDJ.Z
+RLVJPP
+.LV.EE
+FFF...
+..HHGG
+
+Step 198: F-right
+SS.BBZ
+RDDJ.Z
+RLVJPP
+.LV.EE
+...FFF
+..HHGG
+
+Step 199: H-left
+SS.BBZ
+RDDJ.Z
+RLVJPP
+.LV.EE
+...FFF
+HH..GG
+
+Step 200: G-left
+SS.BBZ
+RDDJ.Z
+RLVJPP
+.LV.EE
+...FFF
+HHGG..
+
+Step 201: L-down
+SS.BBZ
+RDDJ.Z
+R.VJPP
+.LV.EE
+.L.FFF
+HHGG..
+
+Step 202: G-right
+SS.BBZ
+RDDJ.Z
+R.VJPP
+.LV.EE
+.L.FFF
+HH.GG.
+
+Step 203: F-left
+SS.BBZ
+RDDJ.Z
+R.VJPP
+.LV.EE
+.LFFF.
+HH.GG.
+
+Step 204: G-right
+SS.BBZ
+RDDJ.Z
+R.VJPP
+.LV.EE
+.LFFF.
+HH..GG
+
+Step 205: H-right
+SS.BBZ
+RDDJ.Z
+R.VJPP
+.LV.EE
+.LFFF.
+.HH.GG
+
+Step 206: J-down
+SS.BBZ
+RDD..Z
+R.VJPP
+.LVJEE
+.LFFF.
+.HH.GG
+
+Step 207: G-left
+SS.BBZ
+RDD..Z
+R.VJPP
+.LVJEE
+.LFFF.
+.HHGG.
+
+Step 208: D-right
+SS.BBZ
+R.DD.Z
+R.VJPP
+.LVJEE
+.LFFF.
+.HHGG.
+
+Step 209: H-left
+SS.BBZ
+R.DD.Z
+R.VJPP
+.LVJEE
+.LFFF.
+HH.GG.
+
+Step 210: G-right
+SS.BBZ
+R.DD.Z
+R.VJPP
+.LVJEE
+.LFFF.
+HH..GG
+
+Step 211: H-right
+SS.BBZ
+R.DD.Z
+R.VJPP
+.LVJEE
+.LFFF.
+..HHGG
+
+Step 212: F-right
+SS.BBZ
+R.DD.Z
+R.VJPP
+.LVJEE
+.L.FFF
+..HHGG
+
+Step 213: H-left
+SS.BBZ
+R.DD.Z
+R.VJPP
+.LVJEE
+.L.FFF
+.HH.GG
+
+Step 214: L-up
+SS.BBZ
+RLDD.Z
+RLVJPP
+..VJEE
+...FFF
+.HH.GG
+
+Step 215: G-left
+SS.BBZ
+RLDD.Z
+RLVJPP
+..VJEE
+...FFF
+.HHGG.
+
+Step 216: H-left
+SS.BBZ
+RLDD.Z
+RLVJPP
+..VJEE
+...FFF
+HH.GG.
+
+Step 217: G-left
+SS.BBZ
+RLDD.Z
+RLVJPP
+..VJEE
+...FFF
+HHGG..
+
+Step 218: F-left
+SS.BBZ
+RLDD.Z
+RLVJPP
+..VJEE
+FFF...
+HHGG..
+
+Step 219: G-right
+SS.BBZ
+RLDD.Z
+RLVJPP
+..VJEE
+FFF...
+HH..GG
+
+Step 220: H-right
+SS.BBZ
+RLDD.Z
+RLVJPP
+..VJEE
+FFF...
+..HHGG
+
+Step 221: F-right
+SS.BBZ
+RLDD.Z
+RLVJPP
+..VJEE
+.FFF..
+..HHGG
+
+Step 222: L-down
+SS.BBZ
+R.DD.Z
+RLVJPP
+.LVJEE
+.FFF..
+..HHGG
+
+Step 223: H-left
+SS.BBZ
+R.DD.Z
+RLVJPP
+.LVJEE
+.FFF..
+HH..GG
+
+Step 224: G-left
+SS.BBZ
+R.DD.Z
+RLVJPP
+.LVJEE
+.FFF..
+HHGG..
+
+Step 225: D-right
+SS.BBZ
+R..DDZ
+RLVJPP
+.LVJEE
+.FFF..
+HHGG..
+
+Step 226: G-right
+SS.BBZ
+R..DDZ
+RLVJPP
+.LVJEE
+.FFF..
+HH.GG.
+
+Step 227: F-right
+SS.BBZ
+R..DDZ
+RLVJPP
+.LVJEE
+...FFF
+HH.GG.
+
+Step 228: G-right
+SS.BBZ
+R..DDZ
+RLVJPP
+.LVJEE
+...FFF
+HH..GG
+
+Step 229: H-right
+SS.BBZ
+R..DDZ
+RLVJPP
+.LVJEE
+...FFF
+..HHGG
+
+Step 230: F-left
+SS.BBZ
+R..DDZ
+RLVJPP
+.LVJEE
+FFF...
+..HHGG
+
+Step 231: H-left
+SS.BBZ
+R..DDZ
+RLVJPP
+.LVJEE
+FFF...
+.HH.GG
+
+Step 232: G-left
+SS.BBZ
+R..DDZ
+RLVJPP
+.LVJEE
+FFF...
+.HHGG.
+
+Step 233: F-right
+SS.BBZ
+R..DDZ
+RLVJPP
+.LVJEE
+..FFF.
+.HHGG.
+
+Step 234: L-up
+SS.BBZ
+RL.DDZ
+RLVJPP
+..VJEE
+..FFF.
+.HHGG.
+
+Step 235: G-right
+SS.BBZ
+RL.DDZ
+RLVJPP
+..VJEE
+..FFF.
+.HH.GG
+
+Step 236: H-right
+SS.BBZ
+RL.DDZ
+RLVJPP
+..VJEE
+..FFF.
+..HHGG
+
+Step 237: V-up
+SSVBBZ
+RLVDDZ
+RL.JPP
+...JEE
+..FFF.
+..HHGG
+
+Step 238: H-left
+SSVBBZ
+RLVDDZ
+RL.JPP
+...JEE
+..FFF.
+HH..GG
+
+Step 239: G-left
+SSVBBZ
+RLVDDZ
+RL.JPP
+...JEE
+..FFF.
+HHGG..
+
+Step 240: F-right
+SSVBBZ
+RLVDDZ
+RL.JPP
+...JEE
+...FFF
+HHGG..
+
+Step 241: G-right
+SSVBBZ
+RLVDDZ
+RL.JPP
+...JEE
+...FFF
+HH.GG.
+
+Step 242: H-right
+SSVBBZ
+RLVDDZ
+RL.JPP
+...JEE
+...FFF
+.HHGG.
+
+Step 243: G-right
+SSVBBZ
+RLVDDZ
+RL.JPP
+...JEE
+...FFF
+.HH.GG
+
+Step 244: F-left
+SSVBBZ
+RLVDDZ
+RL.JPP
+...JEE
+FFF...
+.HH.GG
+
+Step 245: V-down
+SS.BBZ
+RLVDDZ
+RLVJPP
+...JEE
+FFF...
+.HH.GG
+
+Step 246: G-left
+SS.BBZ
+RLVDDZ
+RLVJPP
+...JEE
+FFF...
+.HHGG.
+
+Step 247: H-left
+SS.BBZ
+RLVDDZ
+RLVJPP
+...JEE
+FFF...
+HH.GG.
+
+Step 248: G-left
+SS.BBZ
+RLVDDZ
+RLVJPP
+...JEE
+FFF...
+HHGG..
+
+Step 249: F-right
+SS.BBZ
+RLVDDZ
+RLVJPP
+...JEE
+.FFF..
+HHGG..
+
+Step 250: G-right
+SS.BBZ
+RLVDDZ
+RLVJPP
+...JEE
+.FFF..
+HH..GG
+
+Step 251: H-right
+SS.BBZ
+RLVDDZ
+RLVJPP
+...JEE
+.FFF..
+..HHGG
+
+Step 252: F-right
+SS.BBZ
+RLVDDZ
+RLVJPP
+...JEE
+...FFF
+..HHGG
+
+Step 253: V-down
+SS.BBZ
+RL.DDZ
+RL.JPP
+..VJEE
+..VFFF
+..HHGG
+
+Step 254: H-left
+SS.BBZ
+RL.DDZ
+RL.JPP
+..VJEE
+..VFFF
+HH..GG
+
+Step 255: V-down
+SS.BBZ
+RL.DDZ
+RL.JPP
+...JEE
+..VFFF
+HHV.GG
+
+Step 256: L-down
+SS.BBZ
+R..DDZ
+R..JPP
+.L.JEE
+.LVFFF
+HHV.GG
+
+Step 257: G-left
+SS.BBZ
+R..DDZ
+R..JPP
+.L.JEE
+.LVFFF
+HHVGG.
+
+Step 258: V-up
+SS.BBZ
+R.VDDZ
+R.VJPP
+.L.JEE
+.L.FFF
+HH.GG.
+
+Step 259: G-left
+SS.BBZ
+R.VDDZ
+R.VJPP
+.L.JEE
+.L.FFF
+HHGG..
+
+Step 260: F-left
+SS.BBZ
+R.VDDZ
+R.VJPP
+.L.JEE
+.LFFF.
+HHGG..
+
+Step 261: G-right
+SS.BBZ
+R.VDDZ
+R.VJPP
+.L.JEE
+.LFFF.
+HH..GG
+
+Step 262: H-right
+SS.BBZ
+R.VDDZ
+R.VJPP
+.L.JEE
+.LFFF.
+..HHGG
+
+Step 263: L-up
+SS.BBZ
+R.VDDZ
+RLVJPP
+.L.JEE
+..FFF.
+..HHGG
+
+Step 264: H-left
+SS.BBZ
+R.VDDZ
+RLVJPP
+.L.JEE
+..FFF.
+.HH.GG
+
+Step 265: F-right
+SS.BBZ
+R.VDDZ
+RLVJPP
+.L.JEE
+...FFF
+.HH.GG
+
+Step 266: G-left
+SS.BBZ
+R.VDDZ
+RLVJPP
+.L.JEE
+...FFF
+.HHGG.
+
+Step 267: F-left
+SS.BBZ
+R.VDDZ
+RLVJPP
+.L.JEE
+.FFF..
+.HHGG.
+
+Step 268: B-left
+SSBB.Z
+R.VDDZ
+RLVJPP
+.L.JEE
+.FFF..
+.HHGG.
+
+Step 269: G-right
+SSBB.Z
+R.VDDZ
+RLVJPP
+.L.JEE
+.FFF..
+.HH.GG
+
+Step 270: H-right
+SSBB.Z
+R.VDDZ
+RLVJPP
+.L.JEE
+.FFF..
+..HHGG
+
+Step 271: F-right
+SSBB.Z
+R.VDDZ
+RLVJPP
+.L.JEE
+...FFF
+..HHGG
+
+Step 272: H-left
+SSBB.Z
+R.VDDZ
+RLVJPP
+.L.JEE
+...FFF
+HH..GG
+
+Step 273: G-left
+SSBB.Z
+R.VDDZ
+RLVJPP
+.L.JEE
+...FFF
+HHGG..
+
+Step 274: F-left
+SSBB.Z
+R.VDDZ
+RLVJPP
+.L.JEE
+FFF...
+HHGG..
+
+Step 275: G-right
+SSBB.Z
+R.VDDZ
+RLVJPP
+.L.JEE
+FFF...
+HH.GG.
+
+Step 276: F-right
+SSBB.Z
+R.VDDZ
+RLVJPP
+.L.JEE
+..FFF.
+HH.GG.
+
+Step 277: L-down
+SSBB.Z
+R.VDDZ
+R.VJPP
+.L.JEE
+.LFFF.
+HH.GG.
+
+Step 278: H-right
+SSBB.Z
+R.VDDZ
+R.VJPP
+.L.JEE
+.LFFF.
+.HHGG.
+
+Step 279: G-right
+SSBB.Z
+R.VDDZ
+R.VJPP
+.L.JEE
+.LFFF.
+.HH.GG
+
+Step 280: F-right
+SSBB.Z
+R.VDDZ
+R.VJPP
+.L.JEE
+.L.FFF
+.HH.GG
+
+Step 281: L-up
+SSBB.Z
+RLVDDZ
+RLVJPP
+...JEE
+...FFF
+.HH.GG
+
+Step 282: G-left
+SSBB.Z
+RLVDDZ
+RLVJPP
+...JEE
+...FFF
+.HHGG.
+
+Step 283: H-left
+SSBB.Z
+RLVDDZ
+RLVJPP
+...JEE
+...FFF
+HH.GG.
+
+Step 284: F-left
+SSBB.Z
+RLVDDZ
+RLVJPP
+...JEE
+.FFF..
+HH.GG.
+
+Step 285: V-down
+SSBB.Z
+RL.DDZ
+RLVJPP
+..VJEE
+.FFF..
+HH.GG.
+
+Step 286: G-right
+SSBB.Z
+RL.DDZ
+RLVJPP
+..VJEE
+.FFF..
+HH..GG
+
+Step 287: H-right
+SSBB.Z
+RL.DDZ
+RLVJPP
+..VJEE
+.FFF..
+..HHGG
+
+Step 288: F-right
+SSBB.Z
+RL.DDZ
+RLVJPP
+..VJEE
+...FFF
+..HHGG
+
+Step 289: L-down
+SSBB.Z
+R..DDZ
+R.VJPP
+..VJEE
+.L.FFF
+.LHHGG
+
+Step 290: F-left
+SSBB.Z
+R..DDZ
+R.VJPP
+..VJEE
+.LFFF.
+.LHHGG
+
+Step 291: L-up
+SSBB.Z
+R..DDZ
+RLVJPP
+.LVJEE
+..FFF.
+..HHGG
+
+Step 292: H-left
+SSBB.Z
+R..DDZ
+RLVJPP
+.LVJEE
+..FFF.
+HH..GG
+
+Step 293: G-left
+SSBB.Z
+R..DDZ
+RLVJPP
+.LVJEE
+..FFF.
+HHGG..
+
+Step 294: L-up
+SSBB.Z
+RL.DDZ
+RLVJPP
+..VJEE
+..FFF.
+HHGG..
+
+Step 295: F-right
+SSBB.Z
+RL.DDZ
+RLVJPP
+..VJEE
+...FFF
+HHGG..
+
+Step 296: V-down
+SSBB.Z
+RL.DDZ
+RL.JPP
+..VJEE
+..VFFF
+HHGG..
+
+Step 297: L-down
+SSBB.Z
+R..DDZ
+R..JPP
+.LVJEE
+.LVFFF
+HHGG..
+
+Step 298: G-right
+SSBB.Z
+R..DDZ
+R..JPP
+.LVJEE
+.LVFFF
+HH..GG
+
+Step 299: V-up
+SSBB.Z
+R..DDZ
+R.VJPP
+.LVJEE
+.L.FFF
+HH..GG
+
+Step 300: G-left
+SSBB.Z
+R..DDZ
+R.VJPP
+.LVJEE
+.L.FFF
+HH.GG.
+
+Step 301: D-left
+SSBB.Z
+R.DD.Z
+R.VJPP
+.LVJEE
+.L.FFF
+HH.GG.
+
+Step 302: L-up
+SSBB.Z
+R.DD.Z
+RLVJPP
+.LVJEE
+...FFF
+HH.GG.
+
+Step 303: H-right
+SSBB.Z
+R.DD.Z
+RLVJPP
+.LVJEE
+...FFF
+.HHGG.
+
+Step 304: G-right
+SSBB.Z
+R.DD.Z
+RLVJPP
+.LVJEE
+...FFF
+.HH.GG
+
+Step 305: H-right
+SSBB.Z
+R.DD.Z
+RLVJPP
+.LVJEE
+...FFF
+..HHGG
+
+Step 306: F-left
+SSBB.Z
+R.DD.Z
+RLVJPP
+.LVJEE
+FFF...
+..HHGG
+
+Step 307: J-down
+SSBB.Z
+R.DD.Z
+RLV.PP
+.LVJEE
+FFFJ..
+..HHGG
+
+Step 308: H-left
+SSBB.Z
+R.DD.Z
+RLV.PP
+.LVJEE
+FFFJ..
+HH..GG
+
+Step 309: G-left
+SSBB.Z
+R.DD.Z
+RLV.PP
+.LVJEE
+FFFJ..
+HHGG..
+
+Step 310: L-up
+SSBB.Z
+RLDD.Z
+RLV.PP
+..VJEE
+FFFJ..
+HHGG..
+
+Step 311: G-right
+SSBB.Z
+RLDD.Z
+RLV.PP
+..VJEE
+FFFJ..
+HH.GG.
+
+Step 312: H-right
+SSBB.Z
+RLDD.Z
+RLV.PP
+..VJEE
+FFFJ..
+.HHGG.
+
+Step 313: G-right
+SSBB.Z
+RLDD.Z
+RLV.PP
+..VJEE
+FFFJ..
+.HH.GG
+
+Step 314: J-down
+SSBB.Z
+RLDD.Z
+RLV.PP
+..V.EE
+FFFJ..
+.HHJGG
+
+Step 315: H-left
+SSBB.Z
+RLDD.Z
+RLV.PP
+..V.EE
+FFFJ..
+HH.JGG
+
+Step 316: E-left
+SSBB.Z
+RLDD.Z
+RLV.PP
+..VEE.
+FFFJ..
+HH.JGG
+
+Step 317: L-down
+SSBB.Z
+R.DD.Z
+RLV.PP
+.LVEE.
+FFFJ..
+HH.JGG
+
+Step 318: H-right
+SSBB.Z
+R.DD.Z
+RLV.PP
+.LVEE.
+FFFJ..
+.HHJGG
+
+Step 319: D-right
+SSBB.Z
+R..DDZ
+RLV.PP
+.LVEE.
+FFFJ..
+.HHJGG
+
+Step 320: L-up
+SSBB.Z
+RL.DDZ
+RLV.PP
+..VEE.
+FFFJ..
+.HHJGG
+
+Step 321: V-up
+SSBB.Z
+RLVDDZ
+RLV.PP
+...EE.
+FFFJ..
+.HHJGG
+
+Step 322: H-left
+SSBB.Z
+RLVDDZ
+RLV.PP
+...EE.
+FFFJ..
+HH.JGG
+
+Step 323: L-down
+SSBB.Z
+R.VDDZ
+RLV.PP
+.L.EE.
+FFFJ..
+HH.JGG
+
+Step 324: E-right
+SSBB.Z
+R.VDDZ
+RLV.PP
+.L..EE
+FFFJ..
+HH.JGG
+
+Step 325: H-right
+SSBB.Z
+R.VDDZ
+RLV.PP
+.L..EE
+FFFJ..
+.HHJGG
+
+Step 326: E-left
+SSBB.Z
+R.VDDZ
+RLV.PP
+.LEE..
+FFFJ..
+.HHJGG
+
+Step 327: B-right
+SS.BBZ
+R.VDDZ
+RLV.PP
+.LEE..
+FFFJ..
+.HHJGG
+
+Step 328: H-left
+SS.BBZ
+R.VDDZ
+RLV.PP
+.LEE..
+FFFJ..
+HH.JGG
+
+Step 329: L-up
+SS.BBZ
+RLVDDZ
+RLV.PP
+..EE..
+FFFJ..
+HH.JGG
+
+Step 330: E-right
+SS.BBZ
+RLVDDZ
+RLV.PP
+....EE
+FFFJ..
+HH.JGG
+
+Step 331: V-down
+SS.BBZ
+RL.DDZ
+RLV.PP
+..V.EE
+FFFJ..
+HH.JGG
+
+Step 332: H-right
+SS.BBZ
+RL.DDZ
+RLV.PP
+..V.EE
+FFFJ..
+.HHJGG
+
+Step 333: J-up
+SS.BBZ
+RL.DDZ
+RLV.PP
+..VJEE
+FFFJ..
+.HH.GG
+
+Step 334: G-left
+SS.BBZ
+RL.DDZ
+RLV.PP
+..VJEE
+FFFJ..
+.HHGG.
+
+Step 335: H-left
+SS.BBZ
+RL.DDZ
+RLV.PP
+..VJEE
+FFFJ..
+HH.GG.
+
+Step 336: G-left
+SS.BBZ
+RL.DDZ
+RLV.PP
+..VJEE
+FFFJ..
+HHGG..
+
+Step 337: V-up
+SSVBBZ
+RLVDDZ
+RL..PP
+...JEE
+FFFJ..
+HHGG..
+
+Step 338: G-right
+SSVBBZ
+RLVDDZ
+RL..PP
+...JEE
+FFFJ..
+HH..GG
+
+Step 339: H-right
+SSVBBZ
+RLVDDZ
+RL..PP
+...JEE
+FFFJ..
+..HHGG
+
+Step 340: L-down
+SSVBBZ
+R.VDDZ
+RL..PP
+.L.JEE
+FFFJ..
+..HHGG
+
+Step 341: H-left
+SSVBBZ
+R.VDDZ
+RL..PP
+.L.JEE
+FFFJ..
+.HH.GG
+
+Step 342: G-left
+SSVBBZ
+R.VDDZ
+RL..PP
+.L.JEE
+FFFJ..
+.HHGG.
+
+Step 343: H-left
+SSVBBZ
+R.VDDZ
+RL..PP
+.L.JEE
+FFFJ..
+HH.GG.
+
+Step 344: V-down
+SS.BBZ
+R.VDDZ
+RLV.PP
+.L.JEE
+FFFJ..
+HH.GG.
+
+Step 345: G-right
+SS.BBZ
+R.VDDZ
+RLV.PP
+.L.JEE
+FFFJ..
+HH..GG
+
+Step 346: J-up
+SS.BBZ
+R.VDDZ
+RLVJPP
+.L.JEE
+FFF...
+HH..GG
+
+Step 347: V-up
+SSVBBZ
+R.VDDZ
+RL.JPP
+.L.JEE
+FFF...
+HH..GG
+
+Step 348: G-left
+SSVBBZ
+R.VDDZ
+RL.JPP
+.L.JEE
+FFF...
+HHGG..
+
+Step 349: R-down
+SSVBBZ
+..VDDZ
+RL.JPP
+RL.JEE
+FFF...
+HHGG..
+
+Step 350: G-right
+SSVBBZ
+..VDDZ
+RL.JPP
+RL.JEE
+FFF...
+HH.GG.
+
+Step 351: H-right
+SSVBBZ
+..VDDZ
+RL.JPP
+RL.JEE
+FFF...
+.HHGG.
+
+Step 352: G-right
+SSVBBZ
+..VDDZ
+RL.JPP
+RL.JEE
+FFF...
+.HH.GG
+
+Step 353: H-right
+SSVBBZ
+..VDDZ
+RL.JPP
+RL.JEE
+FFF...
+..HHGG
+
+Step 354: F-right
+SSVBBZ
+..VDDZ
+RL.JPP
+RL.JEE
+.FFF..
+..HHGG
+
+Step 355: H-left
+SSVBBZ
+..VDDZ
+RL.JPP
+RL.JEE
+.FFF..
+HH..GG
+
+Step 356: F-right
+SSVBBZ
+..VDDZ
+RL.JPP
+RL.JEE
+...FFF
+HH..GG
+
+Step 357: L-down
+SSVBBZ
+..VDDZ
+R..JPP
+RL.JEE
+.L.FFF
+HH..GG
+
+Step 358: G-left
+SSVBBZ
+..VDDZ
+R..JPP
+RL.JEE
+.L.FFF
+HHGG..
+
+Step 359: F-left
+SSVBBZ
+..VDDZ
+R..JPP
+RL.JEE
+.LFFF.
+HHGG..
+
+Step 360: G-right
+SSVBBZ
+..VDDZ
+R..JPP
+RL.JEE
+.LFFF.
+HH.GG.
+
+Step 361: H-right
+SSVBBZ
+..VDDZ
+R..JPP
+RL.JEE
+.LFFF.
+.HHGG.
+
+Step 362: G-right
+SSVBBZ
+..VDDZ
+R..JPP
+RL.JEE
+.LFFF.
+.HH.GG
+
+Step 363: H-right
+SSVBBZ
+..VDDZ
+R..JPP
+RL.JEE
+.LFFF.
+..HHGG
+
+Step 364: R-down
+SSVBBZ
+..VDDZ
+...JPP
+RL.JEE
+RLFFF.
+..HHGG
+
+Step 365: H-left
+SSVBBZ
+..VDDZ
+...JPP
+RL.JEE
+RLFFF.
+HH..GG
+
+Step 366: L-up
+SSVBBZ
+..VDDZ
+.L.JPP
+RL.JEE
+R.FFF.
+HH..GG
+
+Step 367: G-left
+SSVBBZ
+..VDDZ
+.L.JPP
+RL.JEE
+R.FFF.
+HH.GG.
+
+Step 368: H-right
+SSVBBZ
+..VDDZ
+.L.JPP
+RL.JEE
+R.FFF.
+.HHGG.
+
+Step 369: L-up
+SSVBBZ
+.LVDDZ
+.L.JPP
+R..JEE
+R.FFF.
+.HHGG.
+
+Step 370: G-right
+SSVBBZ
+.LVDDZ
+.L.JPP
+R..JEE
+R.FFF.
+.HH.GG
+
+Step 371: F-left
+SSVBBZ
+.LVDDZ
+.L.JPP
+R..JEE
+RFFF..
+.HH.GG
+
+Step 372: H-right
+SSVBBZ
+.LVDDZ
+.L.JPP
+R..JEE
+RFFF..
+..HHGG
+
+Step 373: F-right
+SSVBBZ
+.LVDDZ
+.L.JPP
+R..JEE
+R..FFF
+..HHGG
+
+Step 374: H-left
+SSVBBZ
+.LVDDZ
+.L.JPP
+R..JEE
+R..FFF
+HH..GG
+
+Step 375: V-down
+SS.BBZ
+.LVDDZ
+.LVJPP
+R..JEE
+R..FFF
+HH..GG
+
+Step 376: G-left
+SS.BBZ
+.LVDDZ
+.LVJPP
+R..JEE
+R..FFF
+HHGG..
+
+Step 377: F-left
+SS.BBZ
+.LVDDZ
+.LVJPP
+R..JEE
+R.FFF.
+HHGG..
+
+Step 378: G-right
+SS.BBZ
+.LVDDZ
+.LVJPP
+R..JEE
+R.FFF.
+HH.GG.
+
+Step 379: L-down
+SS.BBZ
+..VDDZ
+..VJPP
+RL.JEE
+RLFFF.
+HH.GG.
+
+Step 380: H-right
+SS.BBZ
+..VDDZ
+..VJPP
+RL.JEE
+RLFFF.
+.HHGG.
+
+Step 381: G-right
+SS.BBZ
+..VDDZ
+..VJPP
+RL.JEE
+RLFFF.
+.HH.GG
+
+Step 382: S-right
+.SSBBZ
+..VDDZ
+..VJPP
+RL.JEE
+RLFFF.
+.HH.GG
+
+Step 383: H-right
+.SSBBZ
+..VDDZ
+..VJPP
+RL.JEE
+RLFFF.
+..HHGG
+
+Step 384: F-right
+.SSBBZ
+..VDDZ
+..VJPP
+RL.JEE
+RL.FFF
+..HHGG
+
+Step 385: H-left
+.SSBBZ
+..VDDZ
+..VJPP
+RL.JEE
+RL.FFF
+HH..GG
+
+Step 386: G-left
+.SSBBZ
+..VDDZ
+..VJPP
+RL.JEE
+RL.FFF
+HHGG..
+
+Step 387: F-left
+.SSBBZ
+..VDDZ
+..VJPP
+RL.JEE
+RLFFF.
+HHGG..
+
+Step 388: L-up
+.SSBBZ
+..VDDZ
+.LVJPP
+RL.JEE
+R.FFF.
+HHGG..
+
+Step 389: G-right
+.SSBBZ
+..VDDZ
+.LVJPP
+RL.JEE
+R.FFF.
+HH..GG
+
+Step 390: F-left
+.SSBBZ
+..VDDZ
+.LVJPP
+RL.JEE
+RFFF..
+HH..GG
+
+Step 391: G-left
+.SSBBZ
+..VDDZ
+.LVJPP
+RL.JEE
+RFFF..
+HH.GG.
+
+Step 392: H-right
+.SSBBZ
+..VDDZ
+.LVJPP
+RL.JEE
+RFFF..
+.HHGG.
+
+Step 393: F-right
+.SSBBZ
+..VDDZ
+.LVJPP
+RL.JEE
+R..FFF
+.HHGG.
+
+Step 394: G-right
+.SSBBZ
+..VDDZ
+.LVJPP
+RL.JEE
+R..FFF
+.HH.GG
+
+Step 395: L-up
+.SSBBZ
+.LVDDZ
+.LVJPP
+R..JEE
+R..FFF
+.HH.GG
+
+Step 396: F-left
+.SSBBZ
+.LVDDZ
+.LVJPP
+R..JEE
+RFFF..
+.HH.GG
+
+Step 397: H-right
+.SSBBZ
+.LVDDZ
+.LVJPP
+R..JEE
+RFFF..
+..HHGG
+
+Step 398: V-down
+.SSBBZ
+.L.DDZ
+.LVJPP
+R.VJEE
+RFFF..
+..HHGG
+
+Step 399: H-left
+.SSBBZ
+.L.DDZ
+.LVJPP
+R.VJEE
+RFFF..
+HH..GG
+
+Step 400: F-right
+.SSBBZ
+.L.DDZ
+.LVJPP
+R.VJEE
+R.FFF.
+HH..GG
+
+Step 401: G-left
+.SSBBZ
+.L.DDZ
+.LVJPP
+R.VJEE
+R.FFF.
+HHGG..
+
+Step 402: D-left
+.SSBBZ
+.LDD.Z
+.LVJPP
+R.VJEE
+R.FFF.
+HHGG..
+
+Step 403: G-right
+.SSBBZ
+.LDD.Z
+.LVJPP
+R.VJEE
+R.FFF.
+HH.GG.
+
+Step 404: H-right
+.SSBBZ
+.LDD.Z
+.LVJPP
+R.VJEE
+R.FFF.
+.HHGG.
+
+Step 405: G-right
+.SSBBZ
+.LDD.Z
+.LVJPP
+R.VJEE
+R.FFF.
+.HH.GG
+
+Step 406: H-right
+.SSBBZ
+.LDD.Z
+.LVJPP
+R.VJEE
+R.FFF.
+..HHGG
+
+Step 407: F-right
+.SSBBZ
+.LDD.Z
+.LVJPP
+R.VJEE
+R..FFF
+..HHGG
+
+Step 408: H-left
+.SSBBZ
+.LDD.Z
+.LVJPP
+R.VJEE
+R..FFF
+HH..GG
+
+Step 409: L-down
+.SSBBZ
+..DD.Z
+..VJPP
+RLVJEE
+RL.FFF
+HH..GG
+
+Step 410: G-left
+.SSBBZ
+..DD.Z
+..VJPP
+RLVJEE
+RL.FFF
+HHGG..
+
+Step 411: D-left
+.SSBBZ
+.DD..Z
+..VJPP
+RLVJEE
+RL.FFF
+HHGG..
+
+Step 412: G-right
+.SSBBZ
+.DD..Z
+..VJPP
+RLVJEE
+RL.FFF
+HH.GG.
+
+Step 413: H-right
+.SSBBZ
+.DD..Z
+..VJPP
+RLVJEE
+RL.FFF
+.HHGG.
+
+Step 414: G-right
+.SSBBZ
+.DD..Z
+..VJPP
+RLVJEE
+RL.FFF
+.HH.GG
+
+Step 415: H-right
+.SSBBZ
+.DD..Z
+..VJPP
+RLVJEE
+RL.FFF
+..HHGG
+
+Step 416: F-left
+.SSBBZ
+.DD..Z
+..VJPP
+RLVJEE
+RLFFF.
+..HHGG
+
+Step 417: H-left
+.SSBBZ
+.DD..Z
+..VJPP
+RLVJEE
+RLFFF.
+HH..GG
+
+Step 418: L-up
+.SSBBZ
+.DD..Z
+.LVJPP
+RLVJEE
+R.FFF.
+HH..GG
+
+Step 419: G-left
+.SSBBZ
+.DD..Z
+.LVJPP
+RLVJEE
+R.FFF.
+HHGG..
+
+Step 420: F-left
+.SSBBZ
+.DD..Z
+.LVJPP
+RLVJEE
+RFFF..
+HHGG..
+
+Step 421: G-right
+.SSBBZ
+.DD..Z
+.LVJPP
+RLVJEE
+RFFF..
+HH.GG.
+
+Step 422: H-right
+.SSBBZ
+.DD..Z
+.LVJPP
+RLVJEE
+RFFF..
+.HHGG.
+
+Step 423: G-right
+.SSBBZ
+.DD..Z
+.LVJPP
+RLVJEE
+RFFF..
+.HH.GG
+
+Step 424: H-right
+.SSBBZ
+.DD..Z
+.LVJPP
+RLVJEE
+RFFF..
+..HHGG
+
+Step 425: D-right
+.SSBBZ
+..DD.Z
+.LVJPP
+RLVJEE
+RFFF..
+..HHGG
+
+Step 426: H-left
+.SSBBZ
+..DD.Z
+.LVJPP
+RLVJEE
+RFFF..
+HH..GG
+
+Step 427: D-left
+.SSBBZ
+DD...Z
+.LVJPP
+RLVJEE
+RFFF..
+HH..GG
+
+Step 428: F-right
+.SSBBZ
+DD...Z
+.LVJPP
+RLVJEE
+R..FFF
+HH..GG
+
+Step 429: V-down
+.SSBBZ
+DD...Z
+.L.JPP
+RL.JEE
+R.VFFF
+HHV.GG
+
+Step 430: G-left
+.SSBBZ
+DD...Z
+.L.JPP
+RL.JEE
+R.VFFF
+HHVGG.
+
+Step 431: V-up
+.SSBBZ
+DD...Z
+.L.JPP
+RLVJEE
+R.VFFF
+HH.GG.
+
+Step 432: G-left
+.SSBBZ
+DD...Z
+.L.JPP
+RLVJEE
+R.VFFF
+HHGG..
+
+Step 433: D-right
+.SSBBZ
+..DD.Z
+.L.JPP
+RLVJEE
+R.VFFF
+HHGG..
+
+Step 434: G-right
+.SSBBZ
+..DD.Z
+.L.JPP
+RLVJEE
+R.VFFF
+HH..GG
+
+Step 435: H-right
+.SSBBZ
+..DD.Z
+.L.JPP
+RLVJEE
+R.VFFF
+..HHGG
+
+Step 436: L-down
+.SSBBZ
+..DD.Z
+...JPP
+R.VJEE
+RLVFFF
+.LHHGG
+
+Step 437: D-left
+.SSBBZ
+DD...Z
+...JPP
+R.VJEE
+RLVFFF
+.LHHGG
+
+Step 438: L-up
+.SSBBZ
+DD...Z
+...JPP
+RLVJEE
+RLVFFF
+..HHGG
+
+Step 439: R-down
+.SSBBZ
+DD...Z
+...JPP
+.LVJEE
+RLVFFF
+R.HHGG
+
+Step 440: H-left
+.SSBBZ
+DD...Z
+...JPP
+.LVJEE
+RLVFFF
+RHH.GG
+
+Step 441: G-left
+.SSBBZ
+DD...Z
+...JPP
+.LVJEE
+RLVFFF
+RHHGG.
+
+Step 442: R-up
+.SSBBZ
+DD...Z
+R..JPP
+RLVJEE
+.LVFFF
+.HHGG.
+
+Step 443: D-right
+.SSBBZ
+..DD.Z
+R..JPP
+RLVJEE
+.LVFFF
+.HHGG.
+
+Step 444: G-right
+.SSBBZ
+..DD.Z
+R..JPP
+RLVJEE
+.LVFFF
+.HH.GG
+
+Step 445: H-right
+.SSBBZ
+..DD.Z
+R..JPP
+RLVJEE
+.LVFFF
+..HHGG
+
+Step 446: L-up
+.SSBBZ
+.LDD.Z
+RL.JPP
+R.VJEE
+..VFFF
+..HHGG
+
+Step 447: H-left
+.SSBBZ
+.LDD.Z
+RL.JPP
+R.VJEE
+..VFFF
+HH..GG
+
+Step 448: G-left
+.SSBBZ
+.LDD.Z
+RL.JPP
+R.VJEE
+..VFFF
+HHGG..
+
+Step 449: L-down
+.SSBBZ
+..DD.Z
+R..JPP
+RLVJEE
+.LVFFF
+HHGG..
+
+Step 450: D-right
+.SSBBZ
+...DDZ
+R..JPP
+RLVJEE
+.LVFFF
+HHGG..
+
+Step 451: G-right
+.SSBBZ
+...DDZ
+R..JPP
+RLVJEE
+.LVFFF
+HH..GG
+
+Step 452: L-up
+.SSBBZ
+...DDZ
+RL.JPP
+RLVJEE
+..VFFF
+HH..GG
+
+Step 453: G-left
+.SSBBZ
+...DDZ
+RL.JPP
+RLVJEE
+..VFFF
+HH.GG.
+
+Step 454: H-right
+.SSBBZ
+...DDZ
+RL.JPP
+RLVJEE
+..VFFF
+.HHGG.
+
+Step 455: D-left
+.SSBBZ
+.DD..Z
+RL.JPP
+RLVJEE
+..VFFF
+.HHGG.
+
+Step 456: G-right
+.SSBBZ
+.DD..Z
+RL.JPP
+RLVJEE
+..VFFF
+.HH.GG
+
+Step 457: R-up
+RSSBBZ
+RDD..Z
+.L.JPP
+.LVJEE
+..VFFF
+.HH.GG
+
+Step 458: V-up
+RSSBBZ
+RDD..Z
+.LVJPP
+.LVJEE
+...FFF
+.HH.GG
+
+Step 459: G-left
+RSSBBZ
+RDD..Z
+.LVJPP
+.LVJEE
+...FFF
+.HHGG.
+
+Step 460: H-left
+RSSBBZ
+RDD..Z
+.LVJPP
+.LVJEE
+...FFF
+HH.GG.
+
+Step 461: G-left
+RSSBBZ
+RDD..Z
+.LVJPP
+.LVJEE
+...FFF
+HHGG..
+
+Step 462: F-left
+RSSBBZ
+RDD..Z
+.LVJPP
+.LVJEE
+FFF...
+HHGG..
+
+Step 463: G-right
+RSSBBZ
+RDD..Z
+.LVJPP
+.LVJEE
+FFF...
+HH..GG
+
+Step 464: H-right
+RSSBBZ
+RDD..Z
+.LVJPP
+.LVJEE
+FFF...
+..HHGG
+
+Step 465: F-right
+RSSBBZ
+RDD..Z
+.LVJPP
+.LVJEE
+..FFF.
+..HHGG
+
+Step 466: L-down
+RSSBBZ
+RDD..Z
+..VJPP
+..VJEE
+.LFFF.
+.LHHGG
+
+Step 467: F-right
+RSSBBZ
+RDD..Z
+..VJPP
+..VJEE
+.L.FFF
+.LHHGG
+
+Step 468: J-up
+RSSBBZ
+RDDJ.Z
+..VJPP
+..V.EE
+.L.FFF
+.LHHGG
+
+Step 469: R-down
+.SSBBZ
+.DDJ.Z
+..VJPP
+R.V.EE
+RL.FFF
+.LHHGG
+
+Step 470: F-left
+.SSBBZ
+.DDJ.Z
+..VJPP
+R.V.EE
+RLFFF.
+.LHHGG
+
+Step 471: L-up
+.SSBBZ
+.DDJ.Z
+.LVJPP
+RLV.EE
+R.FFF.
+..HHGG
+
+Step 472: H-left
+.SSBBZ
+.DDJ.Z
+.LVJPP
+RLV.EE
+R.FFF.
+.HH.GG
+
+Step 473: G-left
+.SSBBZ
+.DDJ.Z
+.LVJPP
+RLV.EE
+R.FFF.
+.HHGG.
+
+Step 474: H-left
+.SSBBZ
+.DDJ.Z
+.LVJPP
+RLV.EE
+R.FFF.
+HH.GG.
+
+Step 475: F-right
+.SSBBZ
+.DDJ.Z
+.LVJPP
+RLV.EE
+R..FFF
+HH.GG.
+
+Step 476: G-right
+.SSBBZ
+.DDJ.Z
+.LVJPP
+RLV.EE
+R..FFF
+HH..GG
+
+Step 477: F-left
+.SSBBZ
+.DDJ.Z
+.LVJPP
+RLV.EE
+RFFF..
+HH..GG
+
+Step 478: E-left
+.SSBBZ
+.DDJ.Z
+.LVJPP
+RLVEE.
+RFFF..
+HH..GG
+
+Step 479: G-left
+.SSBBZ
+.DDJ.Z
+.LVJPP
+RLVEE.
+RFFF..
+HHGG..
+
+Step 480: F-right
+.SSBBZ
+.DDJ.Z
+.LVJPP
+RLVEE.
+R..FFF
+HHGG..
+
+Step 481: S-left
+SS.BBZ
+.DDJ.Z
+.LVJPP
+RLVEE.
+R..FFF
+HHGG..
+
+Step 482: G-right
+SS.BBZ
+.DDJ.Z
+.LVJPP
+RLVEE.
+R..FFF
+HH..GG
+
+Step 483: H-right
+SS.BBZ
+.DDJ.Z
+.LVJPP
+RLVEE.
+R..FFF
+..HHGG
+
+Step 484: F-left
+SS.BBZ
+.DDJ.Z
+.LVJPP
+RLVEE.
+RFFF..
+..HHGG
+
+Step 485: H-left
+SS.BBZ
+.DDJ.Z
+.LVJPP
+RLVEE.
+RFFF..
+.HH.GG
+
+Step 486: G-left
+SS.BBZ
+.DDJ.Z
+.LVJPP
+RLVEE.
+RFFF..
+.HHGG.
+
+Step 487: F-right
+SS.BBZ
+.DDJ.Z
+.LVJPP
+RLVEE.
+R..FFF
+.HHGG.
+
+Step 488: L-down
+SS.BBZ
+.DDJ.Z
+..VJPP
+RLVEE.
+RL.FFF
+.HHGG.
+
+Step 489: G-right
+SS.BBZ
+.DDJ.Z
+..VJPP
+RLVEE.
+RL.FFF
+.HH.GG
+
+Step 490: V-down
+SS.BBZ
+.DDJ.Z
+...JPP
+RLVEE.
+RLVFFF
+.HH.GG
+
+Step 491: E-right
+SS.BBZ
+.DDJ.Z
+...JPP
+RLV.EE
+RLVFFF
+.HH.GG
+
+Step 492: G-left
+SS.BBZ
+.DDJ.Z
+...JPP
+RLV.EE
+RLVFFF
+.HHGG.
+
+Step 493: H-left
+SS.BBZ
+.DDJ.Z
+...JPP
+RLV.EE
+RLVFFF
+HH.GG.
+
+Step 494: G-left
+SS.BBZ
+.DDJ.Z
+...JPP
+RLV.EE
+RLVFFF
+HHGG..
+
+Step 495: L-up
+SS.BBZ
+.DDJ.Z
+.L.JPP
+RLV.EE
+R.VFFF
+HHGG..
+
+Step 496: G-right
+SS.BBZ
+.DDJ.Z
+.L.JPP
+RLV.EE
+R.VFFF
+HH..GG
+
+Step 497: H-right
+SS.BBZ
+.DDJ.Z
+.L.JPP
+RLV.EE
+R.VFFF
+..HHGG
+
+Step 498: L-down
+SS.BBZ
+.DDJ.Z
+...JPP
+R.V.EE
+RLVFFF
+.LHHGG
+
+Step 499: E-left
+SS.BBZ
+.DDJ.Z
+...JPP
+R.VEE.
+RLVFFF
+.LHHGG
+
+Step 500: B-left
+SSBB.Z
+.DDJ.Z
+...JPP
+R.VEE.
+RLVFFF
+.LHHGG
+
+Step 501: V-up
+SSBB.Z
+.DDJ.Z
+..VJPP
+R.VEE.
+RL.FFF
+.LHHGG
+
+Step 502: L-up
+SSBB.Z
+.DDJ.Z
+..VJPP
+RLVEE.
+RL.FFF
+..HHGG
+
+Step 503: H-left
+SSBB.Z
+.DDJ.Z
+..VJPP
+RLVEE.
+RL.FFF
+HH..GG
+
+Step 504: G-left
+SSBB.Z
+.DDJ.Z
+..VJPP
+RLVEE.
+RL.FFF
+HHGG..
+
+Step 505: F-left
+SSBB.Z
+.DDJ.Z
+..VJPP
+RLVEE.
+RLFFF.
+HHGG..
+
+Step 506: G-right
+SSBB.Z
+.DDJ.Z
+..VJPP
+RLVEE.
+RLFFF.
+HH.GG.
+
+Step 507: H-right
+SSBB.Z
+.DDJ.Z
+..VJPP
+RLVEE.
+RLFFF.
+.HHGG.
+
+Step 508: G-right
+SSBB.Z
+.DDJ.Z
+..VJPP
+RLVEE.
+RLFFF.
+.HH.GG
+
+Step 509: L-up
+SSBB.Z
+.DDJ.Z
+.LVJPP
+RLVEE.
+R.FFF.
+.HH.GG
+
+Step 510: H-left
+SSBB.Z
+.DDJ.Z
+.LVJPP
+RLVEE.
+R.FFF.
+HH..GG
+
+Step 511: F-left
+SSBB.Z
+.DDJ.Z
+.LVJPP
+RLVEE.
+RFFF..
+HH..GG
+
+Step 512: G-left
+SSBB.Z
+.DDJ.Z
+.LVJPP
+RLVEE.
+RFFF..
+HHGG..
+
+Step 513: R-up
+SSBB.Z
+.DDJ.Z
+RLVJPP
+RLVEE.
+.FFF..
+HHGG..
+
+Step 514: G-right
+SSBB.Z
+.DDJ.Z
+RLVJPP
+RLVEE.
+.FFF..
+HH.GG.
+
+Step 515: H-right
+SSBB.Z
+.DDJ.Z
+RLVJPP
+RLVEE.
+.FFF..
+.HHGG.
+
+Step 516: G-right
+SSBB.Z
+.DDJ.Z
+RLVJPP
+RLVEE.
+.FFF..
+.HH.GG
+
+Step 517: H-right
+SSBB.Z
+.DDJ.Z
+RLVJPP
+RLVEE.
+.FFF..
+..HHGG
+
+Step 518: F-left
+SSBB.Z
+.DDJ.Z
+RLVJPP
+RLVEE.
+FFF...
+..HHGG
+
+Step 519: H-left
+SSBB.Z
+.DDJ.Z
+RLVJPP
+RLVEE.
+FFF...
+HH..GG
+
+Step 520: E-right
+SSBB.Z
+.DDJ.Z
+RLVJPP
+RLV.EE
+FFF...
+HH..GG
+
+Step 521: G-left
+SSBB.Z
+.DDJ.Z
+RLVJPP
+RLV.EE
+FFF...
+HHGG..
+
+Step 522: F-right
+SSBB.Z
+.DDJ.Z
+RLVJPP
+RLV.EE
+...FFF
+HHGG..
+
+Step 523: L-down
+SSBB.Z
+.DDJ.Z
+R.VJPP
+RLV.EE
+.L.FFF
+HHGG..
+
+Step 524: G-right
+SSBB.Z
+.DDJ.Z
+R.VJPP
+RLV.EE
+.L.FFF
+HH..GG
+
+Step 525: H-right
+SSBB.Z
+.DDJ.Z
+R.VJPP
+RLV.EE
+.L.FFF
+..HHGG
+
+Step 526: F-left
+SSBB.Z
+.DDJ.Z
+R.VJPP
+RLV.EE
+.LFFF.
+..HHGG
+
+Step 527: H-left
+SSBB.Z
+.DDJ.Z
+R.VJPP
+RLV.EE
+.LFFF.
+.HH.GG
+
+Step 528: G-left
+SSBB.Z
+.DDJ.Z
+R.VJPP
+RLV.EE
+.LFFF.
+.HHGG.
+
+Step 529: H-left
+SSBB.Z
+.DDJ.Z
+R.VJPP
+RLV.EE
+.LFFF.
+HH.GG.
+
+Step 530: J-down
+SSBB.Z
+.DD..Z
+R.VJPP
+RLVJEE
+.LFFF.
+HH.GG.
+
+Step 531: F-right
+SSBB.Z
+.DD..Z
+R.VJPP
+RLVJEE
+.L.FFF
+HH.GG.
+
+Step 532: L-up
+SSBB.Z
+.DD..Z
+RLVJPP
+RLVJEE
+...FFF
+HH.GG.
+
+Step 533: H-right
+SSBB.Z
+.DD..Z
+RLVJPP
+RLVJEE
+...FFF
+.HHGG.
+
+Step 534: G-right
+SSBB.Z
+.DD..Z
+RLVJPP
+RLVJEE
+...FFF
+.HH.GG
+
+Step 535: H-right
+SSBB.Z
+.DD..Z
+RLVJPP
+RLVJEE
+...FFF
+..HHGG
+
+Step 536: F-left
+SSBB.Z
+.DD..Z
+RLVJPP
+RLVJEE
+FFF...
+..HHGG
+
+Step 537: J-down
+SSBB.Z
+.DD..Z
+RLV.PP
+RLVJEE
+FFFJ..
+..HHGG
+
+Step 538: H-left
+SSBB.Z
+.DD..Z
+RLV.PP
+RLVJEE
+FFFJ..
+.HH.GG
+
+Step 539: G-left
+SSBB.Z
+.DD..Z
+RLV.PP
+RLVJEE
+FFFJ..
+.HHGG.
+
+Step 540: H-left
+SSBB.Z
+.DD..Z
+RLV.PP
+RLVJEE
+FFFJ..
+HH.GG.
+
+Step 541: D-right
+SSBB.Z
+...DDZ
+RLV.PP
+RLVJEE
+FFFJ..
+HH.GG.
+
+Step 542: G-left
+SSBB.Z
+...DDZ
+RLV.PP
+RLVJEE
+FFFJ..
+HHGG..
+
+Step 543: L-up
+SSBB.Z
+.L.DDZ
+RLV.PP
+R.VJEE
+FFFJ..
+HHGG..
+
+Step 544: P-left
+SSBB.Z
+.L.DDZ
+RLVPP.
+R.VJEE
+FFFJ..
+HHGG..
+
+Step 545: G-right
+SSBB.Z
+.L.DDZ
+RLVPP.
+R.VJEE
+FFFJ..
+HH..GG
+
+Step 546: H-right
+SSBB.Z
+.L.DDZ
+RLVPP.
+R.VJEE
+FFFJ..
+..HHGG
+
+Step 547: L-down
+SSBB.Z
+...DDZ
+RLVPP.
+RLVJEE
+FFFJ..
+..HHGG
+
+Step 548: H-left
+SSBB.Z
+...DDZ
+RLVPP.
+RLVJEE
+FFFJ..
+.HH.GG
+
+Step 549: G-left
+SSBB.Z
+...DDZ
+RLVPP.
+RLVJEE
+FFFJ..
+.HHGG.
+
+Step 550: L-up
+SSBB.Z
+.L.DDZ
+RLVPP.
+R.VJEE
+FFFJ..
+.HHGG.
+
+Step 551: V-up
+SSBB.Z
+.LVDDZ
+RLVPP.
+R..JEE
+FFFJ..
+.HHGG.
+
+Step 552: G-right
+SSBB.Z
+.LVDDZ
+RLVPP.
+R..JEE
+FFFJ..
+.HH.GG
+
+Step 553: J-down
+SSBB.Z
+.LVDDZ
+RLVPP.
+R...EE
+FFFJ..
+.HHJGG
+
+Step 554: H-left
+SSBB.Z
+.LVDDZ
+RLVPP.
+R...EE
+FFFJ..
+HH.JGG
+
+Step 555: L-down
+SSBB.Z
+..VDDZ
+RLVPP.
+RL..EE
+FFFJ..
+HH.JGG
+
+Step 556: E-left
+SSBB.Z
+..VDDZ
+RLVPP.
+RLEE..
+FFFJ..
+HH.JGG
+
+Step 557: H-right
+SSBB.Z
+..VDDZ
+RLVPP.
+RLEE..
+FFFJ..
+.HHJGG
+
+Step 558: E-right
+SSBB.Z
+..VDDZ
+RLVPP.
+RL.EE.
+FFFJ..
+.HHJGG
+
+Step 559: V-down
+SSBB.Z
+...DDZ
+RLVPP.
+RLVEE.
+FFFJ..
+.HHJGG
+
+Step 560: H-left
+SSBB.Z
+...DDZ
+RLVPP.
+RLVEE.
+FFFJ..
+HH.JGG
+
+Step 561: L-up
+SSBB.Z
+.L.DDZ
+RLVPP.
+R.VEE.
+FFFJ..
+HH.JGG
+
+Step 562: D-left
+SSBB.Z
+.LDD.Z
+RLVPP.
+R.VEE.
+FFFJ..
+HH.JGG
+
+Step 563: H-right
+SSBB.Z
+.LDD.Z
+RLVPP.
+R.VEE.
+FFFJ..
+.HHJGG
+
+Step 564: E-right
+SSBB.Z
+.LDD.Z
+RLVPP.
+R.V.EE
+FFFJ..
+.HHJGG
+
+Step 565: L-down
+SSBB.Z
+..DD.Z
+RLVPP.
+RLV.EE
+FFFJ..
+.HHJGG
+
+Step 566: H-left
+SSBB.Z
+..DD.Z
+RLVPP.
+RLV.EE
+FFFJ..
+HH.JGG
+
+Step 567: J-up
+SSBB.Z
+..DD.Z
+RLVPP.
+RLVJEE
+FFFJ..
+HH..GG
+
+Step 568: G-left
+SSBB.Z
+..DD.Z
+RLVPP.
+RLVJEE
+FFFJ..
+HHGG..
+
+Step 569: D-left
+SSBB.Z
+DD...Z
+RLVPP.
+RLVJEE
+FFFJ..
+HHGG..
+
+Step 570: G-right
+SSBB.Z
+DD...Z
+RLVPP.
+RLVJEE
+FFFJ..
+HH.GG.
+
+Step 571: V-up
+SSBB.Z
+DDV..Z
+RLVPP.
+RL.JEE
+FFFJ..
+HH.GG.
+
+Step 572: G-right
+SSBB.Z
+DDV..Z
+RLVPP.
+RL.JEE
+FFFJ..
+HH..GG
+
+Step 573: H-right
+SSBB.Z
+DDV..Z
+RLVPP.
+RL.JEE
+FFFJ..
+..HHGG
+
+Step 574: Z-down
+SSBB..
+DDV..Z
+RLVPPZ
+RL.JEE
+FFFJ..
+..HHGG
+
+Step 575: H-left
+SSBB..
+DDV..Z
+RLVPPZ
+RL.JEE
+FFFJ..
+.HH.GG
+
+Step 576: G-left
+SSBB..
+DDV..Z
+RLVPPZ
+RL.JEE
+FFFJ..
+.HHGG.
+
+Step 577: V-down
+SSBB..
+DD...Z
+RLVPPZ
+RLVJEE
+FFFJ..
+.HHGG.
+
+Step 578: D-right
+SSBB..
+..DD.Z
+RLVPPZ
+RLVJEE
+FFFJ..
+.HHGG.
+
+Step 579: G-right
+SSBB..
+..DD.Z
+RLVPPZ
+RLVJEE
+FFFJ..
+.HH.GG
+
+Step 580: H-right
+SSBB..
+..DD.Z
+RLVPPZ
+RLVJEE
+FFFJ..
+..HHGG
+
+Step 581: L-up
+SSBB..
+.LDD.Z
+RLVPPZ
+R.VJEE
+FFFJ..
+..HHGG
+
+Step 582: H-left
+SSBB..
+.LDD.Z
+RLVPPZ
+R.VJEE
+FFFJ..
+HH..GG
+
+Step 583: G-left
+SSBB..
+.LDD.Z
+RLVPPZ
+R.VJEE
+FFFJ..
+HHGG..
+
+Step 584: B-right
+SS..BB
+.LDD.Z
+RLVPPZ
+R.VJEE
+FFFJ..
+HHGG..
+
+Step 585: G-right
+SS..BB
+.LDD.Z
+RLVPPZ
+R.VJEE
+FFFJ..
+HH.GG.
+
+Step 586: H-right
+SS..BB
+.LDD.Z
+RLVPPZ
+R.VJEE
+FFFJ..
+.HHGG.
+
+Step 587: G-right
+SS..BB
+.LDD.Z
+RLVPPZ
+R.VJEE
+FFFJ..
+.HH.GG
+
+Step 588: J-down
+SS..BB
+.LDD.Z
+RLVPPZ
+R.V.EE
+FFFJ..
+.HHJGG
+
+Step 589: H-left
+SS..BB
+.LDD.Z
+RLVPPZ
+R.V.EE
+FFFJ..
+HH.JGG
+
+Step 590: L-down
+SS..BB
+..DD.Z
+RLVPPZ
+RLV.EE
+FFFJ..
+HH.JGG
+
+Step 591: E-left
+SS..BB
+..DD.Z
+RLVPPZ
+RLVEE.
+FFFJ..
+HH.JGG
+
+Step 592: H-right
+SS..BB
+..DD.Z
+RLVPPZ
+RLVEE.
+FFFJ..
+.HHJGG
+
+Step 593: D-right
+SS..BB
+...DDZ
+RLVPPZ
+RLVEE.
+FFFJ..
+.HHJGG
+
+Step 594: L-up
+SS..BB
+.L.DDZ
+RLVPPZ
+R.VEE.
+FFFJ..
+.HHJGG
+
+Step 595: H-left
+SS..BB
+.L.DDZ
+RLVPPZ
+R.VEE.
+FFFJ..
+HH.JGG
+
+Step 596: V-up
+SSV.BB
+.LVDDZ
+RL.PPZ
+R..EE.
+FFFJ..
+HH.JGG
+
+Step 597: L-down
+SSV.BB
+..VDDZ
+RL.PPZ
+RL.EE.
+FFFJ..
+HH.JGG
+
+Step 598: E-right
+SSV.BB
+..VDDZ
+RL.PPZ
+RL..EE
+FFFJ..
+HH.JGG
+
+Step 599: H-right
+SSV.BB
+..VDDZ
+RL.PPZ
+RL..EE
+FFFJ..
+.HHJGG
+
+Step 600: L-up
+SSV.BB
+.LVDDZ
+RL.PPZ
+R...EE
+FFFJ..
+.HHJGG
+
+Step 601: E-left
+SSV.BB
+.LVDDZ
+RL.PPZ
+REE...
+FFFJ..
+.HHJGG
+
+Step 602: V-down
+SS..BB
+.LVDDZ
+RLVPPZ
+REE...
+FFFJ..
+.HHJGG
+
+Step 603: H-left
+SS..BB
+.LVDDZ
+RLVPPZ
+REE...
+FFFJ..
+HH.JGG
+
+Step 604: E-right
+SS..BB
+.LVDDZ
+RLVPPZ
+R...EE
+FFFJ..
+HH.JGG
+
+Step 605: J-up
+SS..BB
+.LVDDZ
+RLVPPZ
+R..JEE
+FFFJ..
+HH..GG
+
+Step 606: G-left
+SS..BB
+.LVDDZ
+RLVPPZ
+R..JEE
+FFFJ..
+HHGG..
+
+Step 607: L-down
+SS..BB
+..VDDZ
+RLVPPZ
+RL.JEE
+FFFJ..
+HHGG..
+
+Step 608: G-right
+SS..BB
+..VDDZ
+RLVPPZ
+RL.JEE
+FFFJ..
+HH.GG.
+
+Step 609: H-right
+SS..BB
+..VDDZ
+RLVPPZ
+RL.JEE
+FFFJ..
+.HHGG.
+
+Step 610: G-right
+SS..BB
+..VDDZ
+RLVPPZ
+RL.JEE
+FFFJ..
+.HH.GG
+
+Step 611: H-right
+SS..BB
+..VDDZ
+RLVPPZ
+RL.JEE
+FFFJ..
+..HHGG
+
+Step 612: V-down
+SS..BB
+...DDZ
+RLVPPZ
+RLVJEE
+FFFJ..
+..HHGG
+
+Step 613: H-left
+SS..BB
+...DDZ
+RLVPPZ
+RLVJEE
+FFFJ..
+HH..GG
+
+Step 614: D-left
+SS..BB
+DD...Z
+RLVPPZ
+RLVJEE
+FFFJ..
+HH..GG
+
+Step 615: G-left
+SS..BB
+DD...Z
+RLVPPZ
+RLVJEE
+FFFJ..
+HHGG..
+
+Step 616: V-up
+SSV.BB
+DDV..Z
+RL.PPZ
+RL.JEE
+FFFJ..
+HHGG..
+
+Step 617: G-right
+SSV.BB
+DDV..Z
+RL.PPZ
+RL.JEE
+FFFJ..
+HH.GG.
+
+Step 618: H-right
+SSV.BB
+DDV..Z
+RL.PPZ
+RL.JEE
+FFFJ..
+.HHGG.
+
+Step 619: G-right
+SSV.BB
+DDV..Z
+RL.PPZ
+RL.JEE
+FFFJ..
+.HH.GG
+
+Step 620: H-right
+SSV.BB
+DDV..Z
+RL.PPZ
+RL.JEE
+FFFJ..
+..HHGG
+
+Step 621: B-left
+SSVBB.
+DDV..Z
+RL.PPZ
+RL.JEE
+FFFJ..
+..HHGG
+
+Step 622: H-left
+SSVBB.
+DDV..Z
+RL.PPZ
+RL.JEE
+FFFJ..
+HH..GG
+
+Step 623: V-down
+SS.BB.
+DDV..Z
+RLVPPZ
+RL.JEE
+FFFJ..
+HH..GG
+
+Step 624: G-left
+SS.BB.
+DDV..Z
+RLVPPZ
+RL.JEE
+FFFJ..
+HHGG..
+
+Step 625: Z-up
+SS.BBZ
+DDV..Z
+RLVPP.
+RL.JEE
+FFFJ..
+HHGG..
+
+Step 626: V-up
+SSVBBZ
+DDV..Z
+RL.PP.
+RL.JEE
+FFFJ..
+HHGG..
+
+Step 627: G-right
+SSVBBZ
+DDV..Z
+RL.PP.
+RL.JEE
+FFFJ..
+HH.GG.
+
+Step 628: H-right
+SSVBBZ
+DDV..Z
+RL.PP.
+RL.JEE
+FFFJ..
+.HHGG.
+
+Step 629: G-right
+SSVBBZ
+DDV..Z
+RL.PP.
+RL.JEE
+FFFJ..
+.HH.GG
+
+Step 630: V-down
+SS.BBZ
+DD...Z
+RLVPP.
+RLVJEE
+FFFJ..
+.HH.GG
+
+Step 631: H-right
+SS.BBZ
+DD...Z
+RLVPP.
+RLVJEE
+FFFJ..
+..HHGG
+
+Step 632: D-right
+SS.BBZ
+..DD.Z
+RLVPP.
+RLVJEE
+FFFJ..
+..HHGG
+
+Step 633: L-up
+SS.BBZ
+.LDD.Z
+RLVPP.
+R.VJEE
+FFFJ..
+..HHGG
+
+Step 634: H-left
+SS.BBZ
+.LDD.Z
+RLVPP.
+R.VJEE
+FFFJ..
+HH..GG
+
+Step 635: G-left
+SS.BBZ
+.LDD.Z
+RLVPP.
+R.VJEE
+FFFJ..
+HHGG..
+
+Step 636: S-right
+.SSBBZ
+.LDD.Z
+RLVPP.
+R.VJEE
+FFFJ..
+HHGG..
+
+Step 637: G-right
+.SSBBZ
+.LDD.Z
+RLVPP.
+R.VJEE
+FFFJ..
+HH.GG.
+
+Step 638: H-right
+.SSBBZ
+.LDD.Z
+RLVPP.
+R.VJEE
+FFFJ..
+.HHGG.
+
+Step 639: G-right
+.SSBBZ
+.LDD.Z
+RLVPP.
+R.VJEE
+FFFJ..
+.HH.GG
+
+Step 640: L-down
+.SSBBZ
+..DD.Z
+RLVPP.
+RLVJEE
+FFFJ..
+.HH.GG
+
+Step 641: H-left
+.SSBBZ
+..DD.Z
+RLVPP.
+RLVJEE
+FFFJ..
+HH..GG
+
+Step 642: J-down
+.SSBBZ
+..DD.Z
+RLVPP.
+RLV.EE
+FFFJ..
+HH.JGG
+
+Step 643: L-up
+.SSBBZ
+.LDD.Z
+RLVPP.
+R.V.EE
+FFFJ..
+HH.JGG
+
+Step 644: E-left
+.SSBBZ
+.LDD.Z
+RLVPP.
+R.VEE.
+FFFJ..
+HH.JGG
+
+Step 645: H-right
+.SSBBZ
+.LDD.Z
+RLVPP.
+R.VEE.
+FFFJ..
+.HHJGG
+
+Step 646: L-down
+.SSBBZ
+..DD.Z
+RLVPP.
+RLVEE.
+FFFJ..
+.HHJGG
+
+Step 647: D-right
+.SSBBZ
+...DDZ
+RLVPP.
+RLVEE.
+FFFJ..
+.HHJGG
+
+Step 648: H-left
+.SSBBZ
+...DDZ
+RLVPP.
+RLVEE.
+FFFJ..
+HH.JGG
+
+Step 649: V-up
+.SSBBZ
+..VDDZ
+RLVPP.
+RL.EE.
+FFFJ..
+HH.JGG
+
+Step 650: L-up
+.SSBBZ
+.LVDDZ
+RLVPP.
+R..EE.
+FFFJ..
+HH.JGG
+
+Step 651: E-right
+.SSBBZ
+.LVDDZ
+RLVPP.
+R...EE
+FFFJ..
+HH.JGG
+
+Step 652: Z-down
+.SSBB.
+.LVDDZ
+RLVPPZ
+R...EE
+FFFJ..
+HH.JGG
+
+Step 653: L-down
+.SSBB.
+..VDDZ
+RLVPPZ
+RL..EE
+FFFJ..
+HH.JGG
+
+Step 654: E-left
+.SSBB.
+..VDDZ
+RLVPPZ
+RLEE..
+FFFJ..
+HH.JGG
+
+Step 655: Z-down
+.SSBB.
+..VDD.
+RLVPP.
+RLEE.Z
+FFFJ.Z
+HH.JGG
+
+Step 656: L-up
+.SSBB.
+.LVDD.
+RLVPP.
+R.EE.Z
+FFFJ.Z
+HH.JGG
+
+Step 657: E-left
+.SSBB.
+.LVDD.
+RLVPP.
+REE..Z
+FFFJ.Z
+HH.JGG
+
+Step 658: J-up
+.SSBB.
+.LVDD.
+RLVPP.
+REEJ.Z
+FFFJ.Z
+HH..GG
+
+Step 659: G-left
+.SSBB.
+.LVDD.
+RLVPP.
+REEJ.Z
+FFFJ.Z
+HHGG..
+
+Step 660: D-right
+.SSBB.
+.LV.DD
+RLVPP.
+REEJ.Z
+FFFJ.Z
+HHGG..
+
+Step 661: Z-down
+.SSBB.
+.LV.DD
+RLVPP.
+REEJ..
+FFFJ.Z
+HHGG.Z
+
+Step 662: B-right
+.SS.BB
+.LV.DD
+RLVPP.
+REEJ..
+FFFJ.Z
+HHGG.Z
+
+Step 663: D-left
+.SS.BB
+.LVDD.
+RLVPP.
+REEJ..
+FFFJ.Z
+HHGG.Z
+
+Step 664: Z-up
+.SS.BB
+.LVDDZ
+RLVPPZ
+REEJ..
+FFFJ..
+HHGG..
+
+Step 665: G-right
+.SS.BB
+.LVDDZ
+RLVPPZ
+REEJ..
+FFFJ..
+HH..GG
+
+Step 666: H-right
+.SS.BB
+.LVDDZ
+RLVPPZ
+REEJ..
+FFFJ..
+..HHGG
+
+Step 667: Z-down
+.SS.BB
+.LVDD.
+RLVPP.
+REEJ.Z
+FFFJ.Z
+..HHGG
+
+Step 668: D-right
+.SS.BB
+.LV.DD
+RLVPP.
+REEJ.Z
+FFFJ.Z
+..HHGG
+
+Step 669: H-left
+.SS.BB
+.LV.DD
+RLVPP.
+REEJ.Z
+FFFJ.Z
+HH..GG
+
+Step 670: J-down
+.SS.BB
+.LV.DD
+RLVPP.
+REE..Z
+FFFJ.Z
+HH.JGG
+
+Step 671: H-right
+.SS.BB
+.LV.DD
+RLVPP.
+REE..Z
+FFFJ.Z
+.HHJGG
+
+Step 672: E-right
+.SS.BB
+.LV.DD
+RLVPP.
+R..EEZ
+FFFJ.Z
+.HHJGG
+
+Step 673: L-down
+.SS.BB
+..V.DD
+RLVPP.
+RL.EEZ
+FFFJ.Z
+.HHJGG
+
+Step 674: H-left
+.SS.BB
+..V.DD
+RLVPP.
+RL.EEZ
+FFFJ.Z
+HH.JGG
+
+Step 675: E-left
+.SS.BB
+..V.DD
+RLVPP.
+RLEE.Z
+FFFJ.Z
+HH.JGG
+
+Step 676: Z-up
+.SS.BB
+..V.DD
+RLVPPZ
+RLEE.Z
+FFFJ..
+HH.JGG
+
+Step 677: H-right
+.SS.BB
+..V.DD
+RLVPPZ
+RLEE.Z
+FFFJ..
+.HHJGG
+
+Step 678: L-up
+.SS.BB
+.LV.DD
+RLVPPZ
+R.EE.Z
+FFFJ..
+.HHJGG
+
+Step 679: D-left
+.SS.BB
+.LVDD.
+RLVPPZ
+R.EE.Z
+FFFJ..
+.HHJGG
+
+Step 680: H-left
+.SS.BB
+.LVDD.
+RLVPPZ
+R.EE.Z
+FFFJ..
+HH.JGG
+
+Step 681: E-right
+.SS.BB
+.LVDD.
+RLVPPZ
+R..EEZ
+FFFJ..
+HH.JGG
+
+Step 682: L-down
+.SS.BB
+..VDD.
+RLVPPZ
+RL.EEZ
+FFFJ..
+HH.JGG
+
+Step 683: H-right
+.SS.BB
+..VDD.
+RLVPPZ
+RL.EEZ
+FFFJ..
+.HHJGG
+
+Step 684: V-down
+.SS.BB
+...DD.
+RLVPPZ
+RLVEEZ
+FFFJ..
+.HHJGG
+
+Step 685: L-up
+.SS.BB
+.L.DD.
+RLVPPZ
+R.VEEZ
+FFFJ..
+.HHJGG
+
+Step 686: D-right
+.SS.BB
+.L..DD
+RLVPPZ
+R.VEEZ
+FFFJ..
+.HHJGG
+
+Step 687: H-left
+.SS.BB
+.L..DD
+RLVPPZ
+R.VEEZ
+FFFJ..
+HH.JGG
+
+Step 688: L-down
+.SS.BB
+....DD
+RLVPPZ
+RLVEEZ
+FFFJ..
+HH.JGG
+
+Step 689: D-left
+.SS.BB
+DD....
+RLVPPZ
+RLVEEZ
+FFFJ..
+HH.JGG
+
+Step 690: V-up
+.SS.BB
+DDV...
+RLVPPZ
+RL.EEZ
+FFFJ..
+HH.JGG
+
+Step 691: H-right
+.SS.BB
+DDV...
+RLVPPZ
+RL.EEZ
+FFFJ..
+.HHJGG
+
+Step 692: E-left
+.SS.BB
+DDV...
+RLVPPZ
+RLEE.Z
+FFFJ..
+.HHJGG
+
+Step 693: Z-down
+.SS.BB
+DDV...
+RLVPP.
+RLEE.Z
+FFFJ.Z
+.HHJGG
+
+Step 694: H-left
+.SS.BB
+DDV...
+RLVPP.
+RLEE.Z
+FFFJ.Z
+HH.JGG
+
+Step 695: Z-up
+.SS.BB
+DDV..Z
+RLVPPZ
+RLEE..
+FFFJ..
+HH.JGG
+
+Step 696: E-right
+.SS.BB
+DDV..Z
+RLVPPZ
+RL..EE
+FFFJ..
+HH.JGG
+
+Step 697: H-right
+.SS.BB
+DDV..Z
+RLVPPZ
+RL..EE
+FFFJ..
+.HHJGG
+
+Step 698: V-down
+.SS.BB
+DD...Z
+RLVPPZ
+RLV.EE
+FFFJ..
+.HHJGG
+
+Step 699: E-left
+.SS.BB
+DD...Z
+RLVPPZ
+RLVEE.
+FFFJ..
+.HHJGG
+
+Step 700: D-right
+.SS.BB
+.DD..Z
+RLVPPZ
+RLVEE.
+FFFJ..
+.HHJGG
+
+Step 701: H-left
+.SS.BB
+.DD..Z
+RLVPPZ
+RLVEE.
+FFFJ..
+HH.JGG
+
+Step 702: E-right
+.SS.BB
+.DD..Z
+RLVPPZ
+RLV.EE
+FFFJ..
+HH.JGG
+
+Step 703: J-up
+.SS.BB
+.DD..Z
+RLVPPZ
+RLVJEE
+FFFJ..
+HH..GG
+
+Step 704: G-left
+.SS.BB
+.DD..Z
+RLVPPZ
+RLVJEE
+FFFJ..
+HHGG..
+
+Step 705: D-right
+.SS.BB
+...DDZ
+RLVPPZ
+RLVJEE
+FFFJ..
+HHGG..
+
+Step 706: G-right
+.SS.BB
+...DDZ
+RLVPPZ
+RLVJEE
+FFFJ..
+HH.GG.
+
+Step 707: H-right
+.SS.BB
+...DDZ
+RLVPPZ
+RLVJEE
+FFFJ..
+.HHGG.
+
+Step 708: G-right
+.SS.BB
+...DDZ
+RLVPPZ
+RLVJEE
+FFFJ..
+.HH.GG
+
+Step 709: L-up
+.SS.BB
+.L.DDZ
+RLVPPZ
+R.VJEE
+FFFJ..
+.HH.GG
+
+Step 710: H-right
+.SS.BB
+.L.DDZ
+RLVPPZ
+R.VJEE
+FFFJ..
+..HHGG
+
+Step 711: V-up
+.SS.BB
+.LVDDZ
+RLVPPZ
+R..JEE
+FFFJ..
+..HHGG
+
+Step 712: B-left
+.SSBB.
+.LVDDZ
+RLVPPZ
+R..JEE
+FFFJ..
+..HHGG
+
+Step 713: H-left
+.SSBB.
+.LVDDZ
+RLVPPZ
+R..JEE
+FFFJ..
+.HH.GG
+
+Step 714: G-left
+.SSBB.
+.LVDDZ
+RLVPPZ
+R..JEE
+FFFJ..
+.HHGG.
+
+Step 715: H-left
+.SSBB.
+.LVDDZ
+RLVPPZ
+R..JEE
+FFFJ..
+HH.GG.
+
+Step 716: G-left
+.SSBB.
+.LVDDZ
+RLVPPZ
+R..JEE
+FFFJ..
+HHGG..
+
+Step 717: L-down
+.SSBB.
+..VDDZ
+RLVPPZ
+RL.JEE
+FFFJ..
+HHGG..
+
+Step 718: Z-up
+.SSBBZ
+..VDDZ
+RLVPP.
+RL.JEE
+FFFJ..
+HHGG..
+
+Step 719: G-right
+.SSBBZ
+..VDDZ
+RLVPP.
+RL.JEE
+FFFJ..
+HH..GG
+
+Step 720: H-right
+.SSBBZ
+..VDDZ
+RLVPP.
+RL.JEE
+FFFJ..
+..HHGG
+
+Step 721: V-down
+.SSBBZ
+...DDZ
+RLVPP.
+RLVJEE
+FFFJ..
+..HHGG
+
+Step 722: Z-down
+.SSBB.
+...DDZ
+RLVPPZ
+RLVJEE
+FFFJ..
+..HHGG
+
+Step 723: H-left
+.SSBB.
+...DDZ
+RLVPPZ
+RLVJEE
+FFFJ..
+HH..GG
+
+Step 724: L-up
+.SSBB.
+.L.DDZ
+RLVPPZ
+R.VJEE
+FFFJ..
+HH..GG
+
+Step 725: D-left
+.SSBB.
+.LDD.Z
+RLVPPZ
+R.VJEE
+FFFJ..
+HH..GG
+
+Step 726: H-right
+.SSBB.
+.LDD.Z
+RLVPPZ
+R.VJEE
+FFFJ..
+..HHGG
+
+Step 727: R-up
+RSSBB.
+RLDD.Z
+.LVPPZ
+..VJEE
+FFFJ..
+..HHGG
+
+Step 728: H-left
+RSSBB.
+RLDD.Z
+.LVPPZ
+..VJEE
+FFFJ..
+.HH.GG
+
+Step 729: G-left
+RSSBB.
+RLDD.Z
+.LVPPZ
+..VJEE
+FFFJ..
+.HHGG.
+
+Step 730: H-left
+RSSBB.
+RLDD.Z
+.LVPPZ
+..VJEE
+FFFJ..
+HH.GG.
+
+Step 731: G-left
+RSSBB.
+RLDD.Z
+.LVPPZ
+..VJEE
+FFFJ..
+HHGG..
+
+Step 732: L-down
+RSSBB.
+R.DD.Z
+.LVPPZ
+.LVJEE
+FFFJ..
+HHGG..
+
+Step 733: G-right
+RSSBB.
+R.DD.Z
+.LVPPZ
+.LVJEE
+FFFJ..
+HH..GG
+
+Step 734: J-down
+RSSBB.
+R.DD.Z
+.LVPPZ
+.LV.EE
+FFFJ..
+HH.JGG
+
+Step 735: H-right
+RSSBB.
+R.DD.Z
+.LVPPZ
+.LV.EE
+FFFJ..
+.HHJGG
+
+Step 736: E-left
+RSSBB.
+R.DD.Z
+.LVPPZ
+.LVEE.
+FFFJ..
+.HHJGG
+
+Step 737: L-up
+RSSBB.
+RLDD.Z
+.LVPPZ
+..VEE.
+FFFJ..
+.HHJGG
+
+Step 738: H-left
+RSSBB.
+RLDD.Z
+.LVPPZ
+..VEE.
+FFFJ..
+HH.JGG
+
+Step 739: D-right
+RSSBB.
+RL.DDZ
+.LVPPZ
+..VEE.
+FFFJ..
+HH.JGG
+
+Step 740: L-down
+RSSBB.
+R..DDZ
+.LVPPZ
+.LVEE.
+FFFJ..
+HH.JGG
+
+Step 741: V-up
+RSSBB.
+R.VDDZ
+.LVPPZ
+.L.EE.
+FFFJ..
+HH.JGG
+
+Step 742: H-right
+RSSBB.
+R.VDDZ
+.LVPPZ
+.L.EE.
+FFFJ..
+.HHJGG
+
+Step 743: L-up
+RSSBB.
+RLVDDZ
+.LVPPZ
+...EE.
+FFFJ..
+.HHJGG
+
+Step 744: E-right
+RSSBB.
+RLVDDZ
+.LVPPZ
+....EE
+FFFJ..
+.HHJGG
+
+Step 745: V-down
+RSSBB.
+RL.DDZ
+.LVPPZ
+..V.EE
+FFFJ..
+.HHJGG
+
+Step 746: Z-up
+RSSBBZ
+RL.DDZ
+.LVPP.
+..V.EE
+FFFJ..
+.HHJGG
+
+Step 747: H-left
+RSSBBZ
+RL.DDZ
+.LVPP.
+..V.EE
+FFFJ..
+HH.JGG
+
+Step 748: L-down
+RSSBBZ
+R..DDZ
+.LVPP.
+.LV.EE
+FFFJ..
+HH.JGG
+
+Step 749: V-up
+RSSBBZ
+R.VDDZ
+.LVPP.
+.L..EE
+FFFJ..
+HH.JGG
+
+Step 750: E-left
+RSSBBZ
+R.VDDZ
+.LVPP.
+.LEE..
+FFFJ..
+HH.JGG
+
+Step 751: L-up
+RSSBBZ
+RLVDDZ
+.LVPP.
+..EE..
+FFFJ..
+HH.JGG
+
+Step 752: H-right
+RSSBBZ
+RLVDDZ
+.LVPP.
+..EE..
+FFFJ..
+.HHJGG
+
+Step 753: E-left
+RSSBBZ
+RLVDDZ
+.LVPP.
+EE....
+FFFJ..
+.HHJGG
+
+Step 754: V-down
+RSSBBZ
+RL.DDZ
+.LVPP.
+EEV...
+FFFJ..
+.HHJGG
+
+Step 755: H-left
+RSSBBZ
+RL.DDZ
+.LVPP.
+EEV...
+FFFJ..
+HH.JGG
+
+Step 756: J-up
+RSSBBZ
+RL.DDZ
+.LVPP.
+EEVJ..
+FFFJ..
+HH..GG
+
+Step 757: G-left
+RSSBBZ
+RL.DDZ
+.LVPP.
+EEVJ..
+FFFJ..
+HHGG..
+
+Step 758: V-up
+RSSBBZ
+RLVDDZ
+.LVPP.
+EE.J..
+FFFJ..
+HHGG..
+
+Step 759: G-right
+RSSBBZ
+RLVDDZ
+.LVPP.
+EE.J..
+FFFJ..
+HH.GG.
+
+Step 760: H-right
+RSSBBZ
+RLVDDZ
+.LVPP.
+EE.J..
+FFFJ..
+.HHGG.
+
+Step 761: E-right
+RSSBBZ
+RLVDDZ
+.LVPP.
+.EEJ..
+FFFJ..
+.HHGG.
+
+Step 762: G-right
+RSSBBZ
+RLVDDZ
+.LVPP.
+.EEJ..
+FFFJ..
+.HH.GG
+
+Step 763: H-right
+RSSBBZ
+RLVDDZ
+.LVPP.
+.EEJ..
+FFFJ..
+..HHGG
+
+Step 764: E-left
+RSSBBZ
+RLVDDZ
+.LVPP.
+EE.J..
+FFFJ..
+..HHGG
+
+Step 765: Z-down
+RSSBB.
+RLVDD.
+.LVPP.
+EE.J.Z
+FFFJ.Z
+..HHGG
+
+Step 766: H-left
+RSSBB.
+RLVDD.
+.LVPP.
+EE.J.Z
+FFFJ.Z
+HH..GG
+
+Step 767: J-down
+RSSBB.
+RLVDD.
+.LVPP.
+EE...Z
+FFFJ.Z
+HH.JGG
+
+Step 768: E-right
+RSSBB.
+RLVDD.
+.LVPP.
+...EEZ
+FFFJ.Z
+HH.JGG
+
+Step 769: D-right
+RSSBB.
+RLV.DD
+.LVPP.
+...EEZ
+FFFJ.Z
+HH.JGG
+
+Step 770: H-right
+RSSBB.
+RLV.DD
+.LVPP.
+...EEZ
+FFFJ.Z
+.HHJGG
+
+Step 771: L-down
+RSSBB.
+R.V.DD
+.LVPP.
+.L.EEZ
+FFFJ.Z
+.HHJGG
+
+Step 772: E-left
+RSSBB.
+R.V.DD
+.LVPP.
+.LEE.Z
+FFFJ.Z
+.HHJGG
+
+Step 773: H-left
+RSSBB.
+R.V.DD
+.LVPP.
+.LEE.Z
+FFFJ.Z
+HH.JGG
+
+Step 774: Z-up
+RSSBB.
+R.V.DD
+.LVPPZ
+.LEE.Z
+FFFJ..
+HH.JGG
+
+Step 775: L-up
+RSSBB.
+RLV.DD
+.LVPPZ
+..EE.Z
+FFFJ..
+HH.JGG
+
+Step 776: H-right
+RSSBB.
+RLV.DD
+.LVPPZ
+..EE.Z
+FFFJ..
+.HHJGG
+
+Step 777: E-left
+RSSBB.
+RLV.DD
+.LVPPZ
+EE...Z
+FFFJ..
+.HHJGG
+
+Step 778: V-down
+RSSBB.
+RL..DD
+.LVPPZ
+EEV..Z
+FFFJ..
+.HHJGG
+
+Step 779: H-left
+RSSBB.
+RL..DD
+.LVPPZ
+EEV..Z
+FFFJ..
+HH.JGG
+
+Step 780: J-up
+RSSBB.
+RL..DD
+.LVPPZ
+EEVJ.Z
+FFFJ..
+HH..GG
+
+Step 781: G-left
+RSSBB.
+RL..DD
+.LVPPZ
+EEVJ.Z
+FFFJ..
+HHGG..
+
+Step 782: V-up
+RSSBB.
+RLV.DD
+.LVPPZ
+EE.J.Z
+FFFJ..
+HHGG..
+
+Step 783: G-right
+RSSBB.
+RLV.DD
+.LVPPZ
+EE.J.Z
+FFFJ..
+HH.GG.
+
+Step 784: H-right
+RSSBB.
+RLV.DD
+.LVPPZ
+EE.J.Z
+FFFJ..
+.HHGG.
+
+Step 785: E-right
+RSSBB.
+RLV.DD
+.LVPPZ
+.EEJ.Z
+FFFJ..
+.HHGG.
+
+Step 786: G-right
+RSSBB.
+RLV.DD
+.LVPPZ
+.EEJ.Z
+FFFJ..
+.HH.GG
+
+Step 787: H-right
+RSSBB.
+RLV.DD
+.LVPPZ
+.EEJ.Z
+FFFJ..
+..HHGG
+
+Step 788: E-left
+RSSBB.
+RLV.DD
+.LVPPZ
+EE.J.Z
+FFFJ..
+..HHGG
+
+Step 789: B-right
+RSS.BB
+RLV.DD
+.LVPPZ
+EE.J.Z
+FFFJ..
+..HHGG
+
+Step 790: H-left
+RSS.BB
+RLV.DD
+.LVPPZ
+EE.J.Z
+FFFJ..
+HH..GG
+
+Step 791: E-right
+RSS.BB
+RLV.DD
+.LVPPZ
+.EEJ.Z
+FFFJ..
+HH..GG
+
+Step 792: G-left
+RSS.BB
+RLV.DD
+.LVPPZ
+.EEJ.Z
+FFFJ..
+HHGG..
+
+Step 793: D-left
+RSS.BB
+RLVDD.
+.LVPPZ
+.EEJ.Z
+FFFJ..
+HHGG..
+
+Step 794: G-right
+RSS.BB
+RLVDD.
+.LVPPZ
+.EEJ.Z
+FFFJ..
+HH.GG.
+
+Step 795: H-right
+RSS.BB
+RLVDD.
+.LVPPZ
+.EEJ.Z
+FFFJ..
+.HHGG.
+
+Step 796: G-right
+RSS.BB
+RLVDD.
+.LVPPZ
+.EEJ.Z
+FFFJ..
+.HH.GG
+
+Step 797: H-right
+RSS.BB
+RLVDD.
+.LVPPZ
+.EEJ.Z
+FFFJ..
+..HHGG
+
+Step 798: R-down
+.SS.BB
+RLVDD.
+RLVPPZ
+.EEJ.Z
+FFFJ..
+..HHGG
+
+Step 799: H-left
+.SS.BB
+RLVDD.
+RLVPPZ
+.EEJ.Z
+FFFJ..
+HH..GG
+
+Step 800: E-left
+.SS.BB
+RLVDD.
+RLVPPZ
+EE.J.Z
+FFFJ..
+HH..GG
+
+Step 801: G-left
+.SS.BB
+RLVDD.
+RLVPPZ
+EE.J.Z
+FFFJ..
+HHGG..
+
+Step 802: V-down
+.SS.BB
+RL.DD.
+RLVPPZ
+EEVJ.Z
+FFFJ..
+HHGG..
+
+Step 803: G-right
+.SS.BB
+RL.DD.
+RLVPPZ
+EEVJ.Z
+FFFJ..
+HH.GG.
+
+Step 804: H-right
+.SS.BB
+RL.DD.
+RLVPPZ
+EEVJ.Z
+FFFJ..
+.HHGG.
+
+Step 805: G-right
+.SS.BB
+RL.DD.
+RLVPPZ
+EEVJ.Z
+FFFJ..
+.HH.GG
+
+Step 806: H-right
+.SS.BB
+RL.DD.
+RLVPPZ
+EEVJ.Z
+FFFJ..
+..HHGG
+
+Step 807: D-right
+.SS.BB
+RL..DD
+RLVPPZ
+EEVJ.Z
+FFFJ..
+..HHGG
+
+Step 808: H-left
+.SS.BB
+RL..DD
+RLVPPZ
+EEVJ.Z
+FFFJ..
+HH..GG
+
+Step 809: J-down
+.SS.BB
+RL..DD
+RLVPPZ
+EEV..Z
+FFFJ..
+HH.JGG
+
+Step 810: H-right
+.SS.BB
+RL..DD
+RLVPPZ
+EEV..Z
+FFFJ..
+.HHJGG
+
+Step 811: V-up
+.SS.BB
+RLV.DD
+RLVPPZ
+EE...Z
+FFFJ..
+.HHJGG
+
+Step 812: E-right
+.SS.BB
+RLV.DD
+RLVPPZ
+...EEZ
+FFFJ..
+.HHJGG
+
+Step 813: H-left
+.SS.BB
+RLV.DD
+RLVPPZ
+...EEZ
+FFFJ..
+HH.JGG
+
+Step 814: L-down
+.SS.BB
+R.V.DD
+RLVPPZ
+.L.EEZ
+FFFJ..
+HH.JGG
+
+Step 815: B-left
+.SSBB.
+R.V.DD
+RLVPPZ
+.L.EEZ
+FFFJ..
+HH.JGG
+
+Step 816: H-right
+.SSBB.
+R.V.DD
+RLVPPZ
+.L.EEZ
+FFFJ..
+.HHJGG
+
+Step 817: E-left
+.SSBB.
+R.V.DD
+RLVPPZ
+.LEE.Z
+FFFJ..
+.HHJGG
+
+Step 818: D-left
+.SSBB.
+R.VDD.
+RLVPPZ
+.LEE.Z
+FFFJ..
+.HHJGG
+
+Step 819: H-left
+.SSBB.
+R.VDD.
+RLVPPZ
+.LEE.Z
+FFFJ..
+HH.JGG
+
+Step 820: L-up
+.SSBB.
+RLVDD.
+RLVPPZ
+..EE.Z
+FFFJ..
+HH.JGG
+
+Step 821: E-right
+.SSBB.
+RLVDD.
+RLVPPZ
+...EEZ
+FFFJ..
+HH.JGG
+
+Step 822: H-right
+.SSBB.
+RLVDD.
+RLVPPZ
+...EEZ
+FFFJ..
+.HHJGG
+
+Step 823: E-left
+.SSBB.
+RLVDD.
+RLVPPZ
+EE...Z
+FFFJ..
+.HHJGG
+
+Step 824: V-down
+.SSBB.
+RL.DD.
+RLVPPZ
+EEV..Z
+FFFJ..
+.HHJGG
+
+Step 825: H-left
+.SSBB.
+RL.DD.
+RLVPPZ
+EEV..Z
+FFFJ..
+HH.JGG
+
+Step 826: J-up
+.SSBB.
+RL.DD.
+RLVPPZ
+EEVJ.Z
+FFFJ..
+HH..GG
+
+Step 827: D-left
+.SSBB.
+RLDD..
+RLVPPZ
+EEVJ.Z
+FFFJ..
+HH..GG
+
+Step 828: G-left
+.SSBB.
+RLDD..
+RLVPPZ
+EEVJ.Z
+FFFJ..
+HHGG..
+
+Step 829: Z-down
+.SSBB.
+RLDD..
+RLVPP.
+EEVJ..
+FFFJ.Z
+HHGG.Z
+
+Step 830: G-right
+.SSBB.
+RLDD..
+RLVPP.
+EEVJ..
+FFFJ.Z
+HH.GGZ
+
+Step 831: H-right
+.SSBB.
+RLDD..
+RLVPP.
+EEVJ..
+FFFJ.Z
+.HHGGZ
+
+Step 832: D-right
+.SSBB.
+RL..DD
+RLVPP.
+EEVJ..
+FFFJ.Z
+.HHGGZ
+
+Step 833: V-up
+.SSBB.
+RLV.DD
+RLVPP.
+EE.J..
+FFFJ.Z
+.HHGGZ
+
+Step 834: H-left
+.SSBB.
+RLV.DD
+RLVPP.
+EE.J..
+FFFJ.Z
+HH.GGZ
+
+Step 835: G-left
+.SSBB.
+RLV.DD
+RLVPP.
+EE.J..
+FFFJ.Z
+HHGG.Z
+
+Step 836: D-left
+.SSBB.
+RLVDD.
+RLVPP.
+EE.J..
+FFFJ.Z
+HHGG.Z
+
+Step 837: E-right
+.SSBB.
+RLVDD.
+RLVPP.
+.EEJ..
+FFFJ.Z
+HHGG.Z
+
+Step 838: Z-up
+.SSBBZ
+RLVDDZ
+RLVPP.
+.EEJ..
+FFFJ..
+HHGG..
+
+Step 839: G-right
+.SSBBZ
+RLVDDZ
+RLVPP.
+.EEJ..
+FFFJ..
+HH..GG
+
+Step 840: E-left
+.SSBBZ
+RLVDDZ
+RLVPP.
+EE.J..
+FFFJ..
+HH..GG
+
+Step 841: H-right
+.SSBBZ
+RLVDDZ
+RLVPP.
+EE.J..
+FFFJ..
+.HH.GG
+
+Step 842: V-down
+.SSBBZ
+RL.DDZ
+RLVPP.
+EEVJ..
+FFFJ..
+.HH.GG
+
+Step 843: G-left
+.SSBBZ
+RL.DDZ
+RLVPP.
+EEVJ..
+FFFJ..
+.HHGG.
+
+Step 844: H-left
+.SSBBZ
+RL.DDZ
+RLVPP.
+EEVJ..
+FFFJ..
+HH.GG.
+
+Step 845: Z-down
+.SSBB.
+RL.DD.
+RLVPP.
+EEVJ.Z
+FFFJ.Z
+HH.GG.
+
+Step 846: G-left
+.SSBB.
+RL.DD.
+RLVPP.
+EEVJ.Z
+FFFJ.Z
+HHGG..
+
+Step 847: D-right
+.SSBB.
+RL..DD
+RLVPP.
+EEVJ.Z
+FFFJ.Z
+HHGG..
+
+Step 848: G-right
+.SSBB.
+RL..DD
+RLVPP.
+EEVJ.Z
+FFFJ.Z
+HH..GG
+
+Step 849: H-right
+.SSBB.
+RL..DD
+RLVPP.
+EEVJ.Z
+FFFJ.Z
+..HHGG
+
+Step 850: V-up
+.SSBB.
+RLV.DD
+RLVPP.
+EE.J.Z
+FFFJ.Z
+..HHGG
+
+Step 851: H-left
+.SSBB.
+RLV.DD
+RLVPP.
+EE.J.Z
+FFFJ.Z
+.HH.GG
+
+Step 852: E-right
+.SSBB.
+RLV.DD
+RLVPP.
+.EEJ.Z
+FFFJ.Z
+.HH.GG
+
+Step 853: H-left
+.SSBB.
+RLV.DD
+RLVPP.
+.EEJ.Z
+FFFJ.Z
+HH..GG
+
+Step 854: J-down
+.SSBB.
+RLV.DD
+RLVPP.
+.EE..Z
+FFFJ.Z
+HH.JGG
+
+Step 855: E-right
+.SSBB.
+RLV.DD
+RLVPP.
+..EE.Z
+FFFJ.Z
+HH.JGG
+
+Step 856: H-right
+.SSBB.
+RLV.DD
+RLVPP.
+..EE.Z
+FFFJ.Z
+.HHJGG
+
+Step 857: B-right
+.SS.BB
+RLV.DD
+RLVPP.
+..EE.Z
+FFFJ.Z
+.HHJGG
+
+Step 858: L-down
+.SS.BB
+R.V.DD
+RLVPP.
+.LEE.Z
+FFFJ.Z
+.HHJGG
+
+Step 859: D-left
+.SS.BB
+R.VDD.
+RLVPP.
+.LEE.Z
+FFFJ.Z
+.HHJGG
+
+Step 860: H-left
+.SS.BB
+R.VDD.
+RLVPP.
+.LEE.Z
+FFFJ.Z
+HH.JGG
+
+Step 861: L-up
+.SS.BB
+RLVDD.
+RLVPP.
+..EE.Z
+FFFJ.Z
+HH.JGG
+
+Step 862: E-right
+.SS.BB
+RLVDD.
+RLVPP.
+...EEZ
+FFFJ.Z
+HH.JGG
+
+Step 863: H-right
+.SS.BB
+RLVDD.
+RLVPP.
+...EEZ
+FFFJ.Z
+.HHJGG
+
+Step 864: E-left
+.SS.BB
+RLVDD.
+RLVPP.
+EE...Z
+FFFJ.Z
+.HHJGG
+
+Step 865: V-down
+.SS.BB
+RL.DD.
+RLVPP.
+EEV..Z
+FFFJ.Z
+.HHJGG
+
+Step 866: H-left
+.SS.BB
+RL.DD.
+RLVPP.
+EEV..Z
+FFFJ.Z
+HH.JGG
+
+Step 867: P-right
+.SS.BB
+RL.DD.
+RLV.PP
+EEV..Z
+FFFJ.Z
+HH.JGG
+
+Step 868: J-up
+.SS.BB
+RL.DD.
+RLVJPP
+EEVJ.Z
+FFF..Z
+HH..GG
+
+Step 869: S-right
+..SSBB
+RL.DD.
+RLVJPP
+EEVJ.Z
+FFF..Z
+HH..GG
+
+Step 870: G-left
+..SSBB
+RL.DD.
+RLVJPP
+EEVJ.Z
+FFF..Z
+HH.GG.
+
+Step 871: L-up
+.LSSBB
+RL.DD.
+R.VJPP
+EEVJ.Z
+FFF..Z
+HH.GG.
+
+Step 872: H-right
+.LSSBB
+RL.DD.
+R.VJPP
+EEVJ.Z
+FFF..Z
+.HHGG.
+
+Step 873: J-down
+.LSSBB
+RL.DD.
+R.V.PP
+EEVJ.Z
+FFFJ.Z
+.HHGG.
+
+Step 874: R-up
+RLSSBB
+RL.DD.
+..V.PP
+EEVJ.Z
+FFFJ.Z
+.HHGG.
+
+Step 875: L-down
+R.SSBB
+RL.DD.
+.LV.PP
+EEVJ.Z
+FFFJ.Z
+.HHGG.
+
+Step 876: G-right
+R.SSBB
+RL.DD.
+.LV.PP
+EEVJ.Z
+FFFJ.Z
+.HH.GG
+
+Step 877: J-down
+R.SSBB
+RL.DD.
+.LV.PP
+EEV..Z
+FFFJ.Z
+.HHJGG
+
+Step 878: L-up
+RLSSBB
+RL.DD.
+..V.PP
+EEV..Z
+FFFJ.Z
+.HHJGG
+
+Step 879: P-left
+RLSSBB
+RL.DD.
+..VPP.
+EEV..Z
+FFFJ.Z
+.HHJGG
+
+Step 880: D-left
+RLSSBB
+RLDD..
+..VPP.
+EEV..Z
+FFFJ.Z
+.HHJGG
+
+Step 881: L-down
+R.SSBB
+RLDD..
+.LVPP.
+EEV..Z
+FFFJ.Z
+.HHJGG
+
+Step 882: S-left
+RSS.BB
+RLDD..
+.LVPP.
+EEV..Z
+FFFJ.Z
+.HHJGG
+
+Step 883: H-left
+RSS.BB
+RLDD..
+.LVPP.
+EEV..Z
+FFFJ.Z
+HH.JGG
+
+Step 884: Z-up
+RSS.BB
+RLDD.Z
+.LVPPZ
+EEV...
+FFFJ..
+HH.JGG
+
+Step 885: J-up
+RSS.BB
+RLDD.Z
+.LVPPZ
+EEVJ..
+FFFJ..
+HH..GG
+
+Step 886: D-right
+RSS.BB
+RL.DDZ
+.LVPPZ
+EEVJ..
+FFFJ..
+HH..GG
+
+Step 887: G-left
+RSS.BB
+RL.DDZ
+.LVPPZ
+EEVJ..
+FFFJ..
+HHGG..
+
+Step 888: Z-down
+RSS.BB
+RL.DD.
+.LVPP.
+EEVJ.Z
+FFFJ.Z
+HHGG..
+
+Step 889: D-right
+RSS.BB
+RL..DD
+.LVPP.
+EEVJ.Z
+FFFJ.Z
+HHGG..
+
+Step 890: G-right
+RSS.BB
+RL..DD
+.LVPP.
+EEVJ.Z
+FFFJ.Z
+HH..GG
+
+Step 891: H-right
+RSS.BB
+RL..DD
+.LVPP.
+EEVJ.Z
+FFFJ.Z
+..HHGG
+
+Step 892: D-left
+RSS.BB
+RLDD..
+.LVPP.
+EEVJ.Z
+FFFJ.Z
+..HHGG
+
+Step 893: B-left
+RSSBB.
+RLDD..
+.LVPP.
+EEVJ.Z
+FFFJ.Z
+..HHGG
+
+Step 894: H-left
+RSSBB.
+RLDD..
+.LVPP.
+EEVJ.Z
+FFFJ.Z
+HH..GG
+
+Step 895: G-left
+RSSBB.
+RLDD..
+.LVPP.
+EEVJ.Z
+FFFJ.Z
+HHGG..
+
+Step 896: Z-up
+RSSBB.
+RLDD.Z
+.LVPPZ
+EEVJ..
+FFFJ..
+HHGG..
+
+Step 897: G-right
+RSSBB.
+RLDD.Z
+.LVPPZ
+EEVJ..
+FFFJ..
+HH.GG.
+
+Step 898: H-right
+RSSBB.
+RLDD.Z
+.LVPPZ
+EEVJ..
+FFFJ..
+.HHGG.
+
+Step 899: G-right
+RSSBB.
+RLDD.Z
+.LVPPZ
+EEVJ..
+FFFJ..
+.HH.GG
+
+Step 900: J-down
+RSSBB.
+RLDD.Z
+.LVPPZ
+EEV...
+FFFJ..
+.HHJGG
+
+Step 901: R-down
+.SSBB.
+RLDD.Z
+RLVPPZ
+EEV...
+FFFJ..
+.HHJGG
+
+Step 902: H-left
+.SSBB.
+RLDD.Z
+RLVPPZ
+EEV...
+FFFJ..
+HH.JGG
+
+Step 903: S-left
+SS.BB.
+RLDD.Z
+RLVPPZ
+EEV...
+FFFJ..
+HH.JGG
+
+Step 904: Z-down
+SS.BB.
+RLDD..
+RLVPPZ
+EEV..Z
+FFFJ..
+HH.JGG
+
+Step 905: H-right
+SS.BB.
+RLDD..
+RLVPPZ
+EEV..Z
+FFFJ..
+.HHJGG
+
+Step 906: J-up
+SS.BB.
+RLDD..
+RLVPPZ
+EEVJ.Z
+FFFJ..
+.HH.GG
+
+Step 907: G-left
+SS.BB.
+RLDD..
+RLVPPZ
+EEVJ.Z
+FFFJ..
+.HHGG.
+
+Step 908: Z-up
+SS.BB.
+RLDD.Z
+RLVPPZ
+EEVJ..
+FFFJ..
+.HHGG.
+
+Step 909: B-left
+SSBB..
+RLDD.Z
+RLVPPZ
+EEVJ..
+FFFJ..
+.HHGG.
+
+Step 910: G-right
+SSBB..
+RLDD.Z
+RLVPPZ
+EEVJ..
+FFFJ..
+.HH.GG
+
+Step 911: J-down
+SSBB..
+RLDD.Z
+RLVPPZ
+EEV...
+FFFJ..
+.HHJGG
+
+Step 912: Z-down
+SSBB..
+RLDD..
+RLVPP.
+EEV..Z
+FFFJ.Z
+.HHJGG
+
+Step 913: P-right
+SSBB..
+RLDD..
+RLV.PP
+EEV..Z
+FFFJ.Z
+.HHJGG
+
+Step 914: B-right
+SS.BB.
+RLDD..
+RLV.PP
+EEV..Z
+FFFJ.Z
+.HHJGG
+
+Step 915: J-up
+SS.BB.
+RLDD..
+RLV.PP
+EEVJ.Z
+FFFJ.Z
+.HH.GG
+
+Step 916: G-left
+SS.BB.
+RLDD..
+RLV.PP
+EEVJ.Z
+FFFJ.Z
+.HHGG.
+
+Step 917: H-left
+SS.BB.
+RLDD..
+RLV.PP
+EEVJ.Z
+FFFJ.Z
+HH.GG.
+
+Step 918: Z-down
+SS.BB.
+RLDD..
+RLV.PP
+EEVJ..
+FFFJ.Z
+HH.GGZ
+
+Step 919: J-up
+SS.BB.
+RLDD..
+RLVJPP
+EEVJ..
+FFF..Z
+HH.GGZ
+
+Step 920: H-right
+SS.BB.
+RLDD..
+RLVJPP
+EEVJ..
+FFF..Z
+.HHGGZ
+
+Step 921: F-right
+SS.BB.
+RLDD..
+RLVJPP
+EEVJ..
+.FFF.Z
+.HHGGZ
+
+Step 922: D-right
+SS.BB.
+RL.DD.
+RLVJPP
+EEVJ..
+.FFF.Z
+.HHGGZ
+
+Step 923: H-left
+SS.BB.
+RL.DD.
+RLVJPP
+EEVJ..
+.FFF.Z
+HH.GGZ
+
+Step 924: V-up
+SSVBB.
+RLVDD.
+RL.JPP
+EE.J..
+.FFF.Z
+HH.GGZ
+
+Step 925: F-left
+SSVBB.
+RLVDD.
+RL.JPP
+EE.J..
+FFF..Z
+HH.GGZ
+
+Step 926: G-left
+SSVBB.
+RLVDD.
+RL.JPP
+EE.J..
+FFF..Z
+HHGG.Z
+
+Step 927: D-right
+SSVBB.
+RLV.DD
+RL.JPP
+EE.J..
+FFF..Z
+HHGG.Z
+
+Step 928: F-right
+SSVBB.
+RLV.DD
+RL.JPP
+EE.J..
+.FFF.Z
+HHGG.Z
+
+Step 929: J-up
+SSVBB.
+RLVJDD
+RL.JPP
+EE....
+.FFF.Z
+HHGG.Z
+
+Step 930: G-right
+SSVBB.
+RLVJDD
+RL.JPP
+EE....
+.FFF.Z
+HH.GGZ
+
+Step 931: E-right
+SSVBB.
+RLVJDD
+RL.JPP
+...EE.
+.FFF.Z
+HH.GGZ
+
+Step 932: F-right
+SSVBB.
+RLVJDD
+RL.JPP
+...EE.
+..FFFZ
+HH.GGZ
+
+Step 933: G-left
+SSVBB.
+RLVJDD
+RL.JPP
+...EE.
+..FFFZ
+HHGG.Z
+
+Step 934: F-left
+SSVBB.
+RLVJDD
+RL.JPP
+...EE.
+FFF..Z
+HHGG.Z
+
+Step 935: L-down
+SSVBB.
+R.VJDD
+RL.JPP
+.L.EE.
+FFF..Z
+HHGG.Z
+
+Step 936: G-right
+SSVBB.
+R.VJDD
+RL.JPP
+.L.EE.
+FFF..Z
+HH.GGZ
+
+Step 937: H-right
+SSVBB.
+R.VJDD
+RL.JPP
+.L.EE.
+FFF..Z
+.HHGGZ
+
+Step 938: V-down
+SS.BB.
+R.VJDD
+RLVJPP
+.L.EE.
+FFF..Z
+.HHGGZ
+
+Step 939: E-left
+SS.BB.
+R.VJDD
+RLVJPP
+.LEE..
+FFF..Z
+.HHGGZ
+
+Step 940: F-right
+SS.BB.
+R.VJDD
+RLVJPP
+.LEE..
+..FFFZ
+.HHGGZ
+
+Step 941: R-down
+SS.BB.
+..VJDD
+.LVJPP
+.LEE..
+R.FFFZ
+RHHGGZ
+
+Step 942: E-right
+SS.BB.
+..VJDD
+.LVJPP
+.L..EE
+R.FFFZ
+RHHGGZ
+
+Step 943: F-left
+SS.BB.
+..VJDD
+.LVJPP
+.L..EE
+RFFF.Z
+RHHGGZ
+
+Step 944: L-up
+SS.BB.
+.LVJDD
+.LVJPP
+....EE
+RFFF.Z
+RHHGGZ
+
+Step 945: J-down
+SS.BB.
+.LV.DD
+.LVJPP
+...JEE
+RFFF.Z
+RHHGGZ
+
+Step 946: F-right
+SS.BB.
+.LV.DD
+.LVJPP
+...JEE
+R.FFFZ
+RHHGGZ
+
+Step 947: B-left
+SSBB..
+.LV.DD
+.LVJPP
+...JEE
+R.FFFZ
+RHHGGZ
+
+Step 948: V-down
+SSBB..
+.L..DD
+.LVJPP
+..VJEE
+R.FFFZ
+RHHGGZ
+
+Step 949: F-left
+SSBB..
+.L..DD
+.LVJPP
+..VJEE
+RFFF.Z
+RHHGGZ
+
+Step 950: L-down
+SSBB..
+....DD
+.LVJPP
+.LVJEE
+RFFF.Z
+RHHGGZ
+
+Step 951: V-up
+SSBB..
+..V.DD
+.LVJPP
+.L.JEE
+RFFF.Z
+RHHGGZ
+
+Step 952: R-up
+SSBB..
+..V.DD
+RLVJPP
+RL.JEE
+.FFF.Z
+.HHGGZ
+
+Step 953: H-left
+SSBB..
+..V.DD
+RLVJPP
+RL.JEE
+.FFF.Z
+HH.GGZ
+
+Step 954: G-left
+SSBB..
+..V.DD
+RLVJPP
+RL.JEE
+.FFF.Z
+HHGG.Z
+
+Step 955: F-left
+SSBB..
+..V.DD
+RLVJPP
+RL.JEE
+FFF..Z
+HHGG.Z
+
+Step 956: V-down
+SSBB..
+....DD
+RLVJPP
+RLVJEE
+FFF..Z
+HHGG.Z
+
+Step 957: G-right
+SSBB..
+....DD
+RLVJPP
+RLVJEE
+FFF..Z
+HH.GGZ
+
+Step 958: L-up
+SSBB..
+.L..DD
+RLVJPP
+R.VJEE
+FFF..Z
+HH.GGZ
+
+Step 959: D-left
+SSBB..
+.LDD..
+RLVJPP
+R.VJEE
+FFF..Z
+HH.GGZ
+
+Step 960: B-right
+SS.BB.
+.LDD..
+RLVJPP
+R.VJEE
+FFF..Z
+HH.GGZ
+
+Step 961: F-right
+SS.BB.
+.LDD..
+RLVJPP
+R.VJEE
+.FFF.Z
+HH.GGZ
+
+Step 962: G-left
+SS.BB.
+.LDD..
+RLVJPP
+R.VJEE
+.FFF.Z
+HHGG.Z
+
+Step 963: S-right
+.SSBB.
+.LDD..
+RLVJPP
+R.VJEE
+.FFF.Z
+HHGG.Z
+
+Step 964: F-right
+.SSBB.
+.LDD..
+RLVJPP
+R.VJEE
+..FFFZ
+HHGG.Z
+
+Step 965: G-right
+.SSBB.
+.LDD..
+RLVJPP
+R.VJEE
+..FFFZ
+HH.GGZ
+
+Step 966: L-down
+.SSBB.
+..DD..
+R.VJPP
+RLVJEE
+.LFFFZ
+HH.GGZ
+
+Step 967: D-right
+.SSBB.
+....DD
+R.VJPP
+RLVJEE
+.LFFFZ
+HH.GGZ
+
+Step 968: G-left
+.SSBB.
+....DD
+R.VJPP
+RLVJEE
+.LFFFZ
+HHGG.Z
+
+Step 969: R-up
+RSSBB.
+R...DD
+..VJPP
+.LVJEE
+.LFFFZ
+HHGG.Z
+
+Step 970: L-up
+RSSBB.
+RL..DD
+.LVJPP
+..VJEE
+..FFFZ
+HHGG.Z
+
+Step 971: G-right
+RSSBB.
+RL..DD
+.LVJPP
+..VJEE
+..FFFZ
+HH.GGZ
+
+Step 972: F-left
+RSSBB.
+RL..DD
+.LVJPP
+..VJEE
+FFF..Z
+HH.GGZ
+
+Step 973: H-right
+RSSBB.
+RL..DD
+.LVJPP
+..VJEE
+FFF..Z
+.HHGGZ
+
+Step 974: J-down
+RSSBB.
+RL..DD
+.LV.PP
+..VJEE
+FFFJ.Z
+.HHGGZ
+
+Step 975: V-up
+RSSBB.
+RLV.DD
+.LV.PP
+...JEE
+FFFJ.Z
+.HHGGZ
+
+Step 976: H-left
+RSSBB.
+RLV.DD
+.LV.PP
+...JEE
+FFFJ.Z
+HH.GGZ
+
+Step 977: P-left
+RSSBB.
+RLV.DD
+.LVPP.
+...JEE
+FFFJ.Z
+HH.GGZ
+
+Step 978: L-down
+RSSBB.
+R.V.DD
+.LVPP.
+.L.JEE
+FFFJ.Z
+HH.GGZ
+
+Step 979: G-left
+RSSBB.
+R.V.DD
+.LVPP.
+.L.JEE
+FFFJ.Z
+HHGG.Z
+
+Step 980: V-down
+RSSBB.
+R...DD
+.LVPP.
+.LVJEE
+FFFJ.Z
+HHGG.Z
+
+Step 981: D-left
+RSSBB.
+R.DD..
+.LVPP.
+.LVJEE
+FFFJ.Z
+HHGG.Z
+
+Step 982: R-down
+.SSBB.
+R.DD..
+RLVPP.
+.LVJEE
+FFFJ.Z
+HHGG.Z
+
+Step 983: L-up
+.SSBB.
+RLDD..
+RLVPP.
+..VJEE
+FFFJ.Z
+HHGG.Z
+
+Step 984: G-right
+.SSBB.
+RLDD..
+RLVPP.
+..VJEE
+FFFJ.Z
+HH.GGZ
+
+Step 985: D-right
+.SSBB.
+RL..DD
+RLVPP.
+..VJEE
+FFFJ.Z
+HH.GGZ
+
+Step 986: H-right
+.SSBB.
+RL..DD
+RLVPP.
+..VJEE
+FFFJ.Z
+.HHGGZ
+
+Step 987: L-down
+.SSBB.
+R...DD
+RLVPP.
+.LVJEE
+FFFJ.Z
+.HHGGZ
+
+Step 988: V-up
+.SSBB.
+R.V.DD
+RLVPP.
+.L.JEE
+FFFJ.Z
+.HHGGZ
+
+Step 989: B-right
+.SS.BB
+R.V.DD
+RLVPP.
+.L.JEE
+FFFJ.Z
+.HHGGZ
+
+Step 990: H-left
+.SS.BB
+R.V.DD
+RLVPP.
+.L.JEE
+FFFJ.Z
+HH.GGZ
+
+Step 991: G-left
+.SS.BB
+R.V.DD
+RLVPP.
+.L.JEE
+FFFJ.Z
+HHGG.Z
+
+Step 992: S-right
+..SSBB
+R.V.DD
+RLVPP.
+.L.JEE
+FFFJ.Z
+HHGG.Z
+
+Step 993: L-up
+.LSSBB
+RLV.DD
+R.VPP.
+...JEE
+FFFJ.Z
+HHGG.Z
+
+Step 994: G-right
+.LSSBB
+RLV.DD
+R.VPP.
+...JEE
+FFFJ.Z
+HH.GGZ
+
+Step 995: H-right
+.LSSBB
+RLV.DD
+R.VPP.
+...JEE
+FFFJ.Z
+.HHGGZ
+
+Step 996: V-down
+.LSSBB
+RL..DD
+R.VPP.
+..VJEE
+FFFJ.Z
+.HHGGZ
+
+Step 997: D-left
+.LSSBB
+RLDD..
+R.VPP.
+..VJEE
+FFFJ.Z
+.HHGGZ
+
+Step 998: H-left
+.LSSBB
+RLDD..
+R.VPP.
+..VJEE
+FFFJ.Z
+HH.GGZ
+
+Step 999: G-left
+.LSSBB
+RLDD..
+R.VPP.
+..VJEE
+FFFJ.Z
+HHGG.Z
+
+Step 1000: D-right
+.LSSBB
+RL.DD.
+R.VPP.
+..VJEE
+FFFJ.Z
+HHGG.Z
+
+Step 1001: L-down
+..SSBB
+RL.DD.
+RLVPP.
+..VJEE
+FFFJ.Z
+HHGG.Z
+
+Step 1002: G-right
+..SSBB
+RL.DD.
+RLVPP.
+..VJEE
+FFFJ.Z
+HH.GGZ
+
+Step 1003: V-up
+..SSBB
+RLVDD.
+RLVPP.
+...JEE
+FFFJ.Z
+HH.GGZ
+
+Step 1004: H-right
+..SSBB
+RLVDD.
+RLVPP.
+...JEE
+FFFJ.Z
+.HHGGZ
+
+Step 1005: R-down
+..SSBB
+.LVDD.
+RLVPP.
+R..JEE
+FFFJ.Z
+.HHGGZ
+
+Step 1006: D-right
+..SSBB
+.LV.DD
+RLVPP.
+R..JEE
+FFFJ.Z
+.HHGGZ
+
+Step 1007: H-left
+..SSBB
+.LV.DD
+RLVPP.
+R..JEE
+FFFJ.Z
+HH.GGZ
+
+Step 1008: G-left
+..SSBB
+.LV.DD
+RLVPP.
+R..JEE
+FFFJ.Z
+HHGG.Z
+
+Step 1009: V-down
+..SSBB
+.L..DD
+RLVPP.
+R.VJEE
+FFFJ.Z
+HHGG.Z
+
+Step 1010: L-up
+.LSSBB
+.L..DD
+R.VPP.
+R.VJEE
+FFFJ.Z
+HHGG.Z
+
+Step 1011: G-right
+.LSSBB
+.L..DD
+R.VPP.
+R.VJEE
+FFFJ.Z
+HH.GGZ
+
+Step 1012: P-right
+.LSSBB
+.L..DD
+R.V.PP
+R.VJEE
+FFFJ.Z
+HH.GGZ
+
+Step 1013: H-right
+.LSSBB
+.L..DD
+R.V.PP
+R.VJEE
+FFFJ.Z
+.HHGGZ
+
+Step 1014: V-up
+.LSSBB
+.LV.DD
+R.V.PP
+R..JEE
+FFFJ.Z
+.HHGGZ
+
+Step 1015: R-up
+RLSSBB
+RLV.DD
+..V.PP
+...JEE
+FFFJ.Z
+.HHGGZ
+
+Step 1016: H-left
+RLSSBB
+RLV.DD
+..V.PP
+...JEE
+FFFJ.Z
+HH.GGZ
+
+Step 1017: G-left
+RLSSBB
+RLV.DD
+..V.PP
+...JEE
+FFFJ.Z
+HHGG.Z
+
+Step 1018: L-down
+R.SSBB
+RLV.DD
+.LV.PP
+...JEE
+FFFJ.Z
+HHGG.Z
+
+Step 1019: V-down
+R.SSBB
+RL..DD
+.LV.PP
+..VJEE
+FFFJ.Z
+HHGG.Z
+
+Step 1020: G-right
+R.SSBB
+RL..DD
+.LV.PP
+..VJEE
+FFFJ.Z
+HH.GGZ
+
+Step 1021: J-up
+R.SSBB
+RL..DD
+.LVJPP
+..VJEE
+FFF..Z
+HH.GGZ
+
+Step 1022: L-down
+R.SSBB
+R...DD
+.LVJPP
+.LVJEE
+FFF..Z
+HH.GGZ
+
+Step 1023: V-up
+R.SSBB
+R.V.DD
+.LVJPP
+.L.JEE
+FFF..Z
+HH.GGZ
+
+Step 1024: R-down
+..SSBB
+..V.DD
+RLVJPP
+RL.JEE
+FFF..Z
+HH.GGZ
+
+Step 1025: F-right
+..SSBB
+..V.DD
+RLVJPP
+RL.JEE
+..FFFZ
+HH.GGZ
+
+Step 1026: L-down
+..SSBB
+..V.DD
+R.VJPP
+RL.JEE
+.LFFFZ
+HH.GGZ
+
+Step 1027: G-left
+..SSBB
+..V.DD
+R.VJPP
+RL.JEE
+.LFFFZ
+HHGG.Z
+
+Step 1028: L-up
+..SSBB
+.LV.DD
+RLVJPP
+R..JEE
+..FFFZ
+HHGG.Z
+
+Step 1029: D-left
+..SSBB
+.LVDD.
+RLVJPP
+R..JEE
+..FFFZ
+HHGG.Z
+
+Step 1030: G-right
+..SSBB
+.LVDD.
+RLVJPP
+R..JEE
+..FFFZ
+HH.GGZ
+
+Step 1031: F-left
+..SSBB
+.LVDD.
+RLVJPP
+R..JEE
+.FFF.Z
+HH.GGZ
+
+Step 1032: R-down
+..SSBB
+.LVDD.
+.LVJPP
+R..JEE
+RFFF.Z
+HH.GGZ
+
+Step 1033: D-right
+..SSBB
+.LV.DD
+.LVJPP
+R..JEE
+RFFF.Z
+HH.GGZ
+
+Step 1034: H-right
+..SSBB
+.LV.DD
+.LVJPP
+R..JEE
+RFFF.Z
+.HHGGZ
+
+Step 1035: V-down
+..SSBB
+.L..DD
+.LVJPP
+R.VJEE
+RFFF.Z
+.HHGGZ
+
+Step 1036: J-up
+..SSBB
+.L.JDD
+.LVJPP
+R.V.EE
+RFFF.Z
+.HHGGZ
+
+Step 1037: H-left
+..SSBB
+.L.JDD
+.LVJPP
+R.V.EE
+RFFF.Z
+HH.GGZ
+
+Step 1038: S-left
+.SS.BB
+.L.JDD
+.LVJPP
+R.V.EE
+RFFF.Z
+HH.GGZ
+
+Step 1039: L-down
+.SS.BB
+...JDD
+.LVJPP
+RLV.EE
+RFFF.Z
+HH.GGZ
+
+Step 1040: H-right
+.SS.BB
+...JDD
+.LVJPP
+RLV.EE
+RFFF.Z
+.HHGGZ
+
+Step 1041: F-right
+.SS.BB
+...JDD
+.LVJPP
+RLV.EE
+R.FFFZ
+.HHGGZ
+
+Step 1042: R-up
+.SS.BB
+R..JDD
+RLVJPP
+.LV.EE
+..FFFZ
+.HHGGZ
+
+Step 1043: H-left
+.SS.BB
+R..JDD
+RLVJPP
+.LV.EE
+..FFFZ
+HH.GGZ
+
+Step 1044: L-down
+.SS.BB
+R..JDD
+R.VJPP
+.LV.EE
+.LFFFZ
+HH.GGZ
+
+Step 1045: B-left
+.SSBB.
+R..JDD
+R.VJPP
+.LV.EE
+.LFFFZ
+HH.GGZ
+
+Step 1046: H-right
+.SSBB.
+R..JDD
+R.VJPP
+.LV.EE
+.LFFFZ
+.HHGGZ
+
+Step 1047: R-up
+RSSBB.
+R..JDD
+..VJPP
+.LV.EE
+.LFFFZ
+.HHGGZ
+
+Step 1048: L-up
+RSSBB.
+R..JDD
+.LVJPP
+.LV.EE
+..FFFZ
+.HHGGZ
+
+Step 1049: R-down
+.SSBB.
+...JDD
+RLVJPP
+RLV.EE
+..FFFZ
+.HHGGZ
+
+Step 1050: F-left
+.SSBB.
+...JDD
+RLVJPP
+RLV.EE
+FFF..Z
+.HHGGZ
+
+Step 1051: H-left
+.SSBB.
+...JDD
+RLVJPP
+RLV.EE
+FFF..Z
+HH.GGZ
+
+Step 1052: J-down
+.SSBB.
+....DD
+RLV.PP
+RLVJEE
+FFFJ.Z
+HH.GGZ
+
+Step 1053: D-left
+.SSBB.
+DD....
+RLV.PP
+RLVJEE
+FFFJ.Z
+HH.GGZ
+
+Step 1054: P-left
+.SSBB.
+DD....
+RLVPP.
+RLVJEE
+FFFJ.Z
+HH.GGZ
+
+Step 1055: H-right
+.SSBB.
+DD....
+RLVPP.
+RLVJEE
+FFFJ.Z
+.HHGGZ
+
+Step 1056: V-up
+.SSBB.
+DDV...
+RLVPP.
+RL.JEE
+FFFJ.Z
+.HHGGZ
+
+Step 1057: S-left
+SS.BB.
+DDV...
+RLVPP.
+RL.JEE
+FFFJ.Z
+.HHGGZ
+
+Step 1058: H-left
+SS.BB.
+DDV...
+RLVPP.
+RL.JEE
+FFFJ.Z
+HH.GGZ
+
+Step 1059: B-left
+SSBB..
+DDV...
+RLVPP.
+RL.JEE
+FFFJ.Z
+HH.GGZ
+
+Step 1060: P-right
+SSBB..
+DDV...
+RLV.PP
+RL.JEE
+FFFJ.Z
+HH.GGZ
+
+Step 1061: G-left
+SSBB..
+DDV...
+RLV.PP
+RL.JEE
+FFFJ.Z
+HHGG.Z
+
+Step 1062: J-up
+SSBB..
+DDVJ..
+RLVJPP
+RL..EE
+FFF..Z
+HHGG.Z
+
+Step 1063: E-left
+SSBB..
+DDVJ..
+RLVJPP
+RL.EE.
+FFF..Z
+HHGG.Z
+
+Step 1064: F-right
+SSBB..
+DDVJ..
+RLVJPP
+RL.EE.
+..FFFZ
+HHGG.Z
+
+Step 1065: L-down
+SSBB..
+DDVJ..
+R.VJPP
+RL.EE.
+.LFFFZ
+HHGG.Z
+
+Step 1066: E-left
+SSBB..
+DDVJ..
+R.VJPP
+RLEE..
+.LFFFZ
+HHGG.Z
+
+Step 1067: Z-up
+SSBB..
+DDVJ..
+R.VJPP
+RLEE.Z
+.LFFFZ
+HHGG..
+
+Step 1068: R-down
+SSBB..
+DDVJ..
+..VJPP
+RLEE.Z
+RLFFFZ
+HHGG..
+
+Step 1069: G-right
+SSBB..
+DDVJ..
+..VJPP
+RLEE.Z
+RLFFFZ
+HH..GG
+
+Step 1070: B-right
+SS..BB
+DDVJ..
+..VJPP
+RLEE.Z
+RLFFFZ
+HH..GG
+
+Step 1071: V-up
+SSV.BB
+DDVJ..
+...JPP
+RLEE.Z
+RLFFFZ
+HH..GG
+
+Step 1072: L-up
+SSV.BB
+DDVJ..
+.L.JPP
+RLEE.Z
+R.FFFZ
+HH..GG
+
+Step 1073: J-up
+SSVJBB
+DDVJ..
+.L..PP
+RLEE.Z
+R.FFFZ
+HH..GG
+
+Step 1074: P-left
+SSVJBB
+DDVJ..
+.LPP..
+RLEE.Z
+R.FFFZ
+HH..GG
+
+Step 1075: G-left
+SSVJBB
+DDVJ..
+.LPP..
+RLEE.Z
+R.FFFZ
+HH.GG.
+
+Step 1076: H-right
+SSVJBB
+DDVJ..
+.LPP..
+RLEE.Z
+R.FFFZ
+.HHGG.
+
+Step 1077: Z-up
+SSVJBB
+DDVJ..
+.LPP.Z
+RLEE.Z
+R.FFF.
+.HHGG.
+
+Step 1078: G-right
+SSVJBB
+DDVJ..
+.LPP.Z
+RLEE.Z
+R.FFF.
+.HH.GG
+
+Step 1079: H-right
+SSVJBB
+DDVJ..
+.LPP.Z
+RLEE.Z
+R.FFF.
+..HHGG
+
+Step 1080: F-left
+SSVJBB
+DDVJ..
+.LPP.Z
+RLEE.Z
+RFFF..
+..HHGG
+
+Step 1081: H-left
+SSVJBB
+DDVJ..
+.LPP.Z
+RLEE.Z
+RFFF..
+HH..GG
+
+Step 1082: F-right
+SSVJBB
+DDVJ..
+.LPP.Z
+RLEE.Z
+R..FFF
+HH..GG
+
+Step 1083: G-left
+SSVJBB
+DDVJ..
+.LPP.Z
+RLEE.Z
+R..FFF
+HH.GG.
+
+Step 1084: P-right
+SSVJBB
+DDVJ..
+.L.PPZ
+RLEE.Z
+R..FFF
+HH.GG.
+
+Step 1085: E-right
+SSVJBB
+DDVJ..
+.L.PPZ
+RL.EEZ
+R..FFF
+HH.GG.
+
+Step 1086: G-right
+SSVJBB
+DDVJ..
+.L.PPZ
+RL.EEZ
+R..FFF
+HH..GG
+
+Step 1087: H-right
+SSVJBB
+DDVJ..
+.L.PPZ
+RL.EEZ
+R..FFF
+.HH.GG
+
+Step 1088: F-left
+SSVJBB
+DDVJ..
+.L.PPZ
+RL.EEZ
+RFFF..
+.HH.GG
+
+Step 1089: V-down
+SS.JBB
+DDVJ..
+.LVPPZ
+RL.EEZ
+RFFF..
+.HH.GG
+
+Step 1090: G-left
+SS.JBB
+DDVJ..
+.LVPPZ
+RL.EEZ
+RFFF..
+.HHGG.
+
+Step 1091: Z-up
+SS.JBB
+DDVJ.Z
+.LVPPZ
+RL.EE.
+RFFF..
+.HHGG.
+
+Step 1092: F-right
+SS.JBB
+DDVJ.Z
+.LVPPZ
+RL.EE.
+R..FFF
+.HHGG.
+
+Step 1093: V-down
+SS.JBB
+DD.J.Z
+.LVPPZ
+RLVEE.
+R..FFF
+.HHGG.
+
+Step 1094: H-left
+SS.JBB
+DD.J.Z
+.LVPPZ
+RLVEE.
+R..FFF
+HH.GG.
+
+Step 1095: V-down
+SS.JBB
+DD.J.Z
+.L.PPZ
+RL.EE.
+R.VFFF
+HHVGG.
+
+Step 1096: E-left
+SS.JBB
+DD.J.Z
+.L.PPZ
+RLEE..
+R.VFFF
+HHVGG.
+
+Step 1097: G-right
+SS.JBB
+DD.J.Z
+.L.PPZ
+RLEE..
+R.VFFF
+HHV.GG
+
+Step 1098: Z-down
+SS.JBB
+DD.J..
+.L.PPZ
+RLEE.Z
+R.VFFF
+HHV.GG
+
+Step 1099: S-right
+.SSJBB
+DD.J..
+.L.PPZ
+RLEE.Z
+R.VFFF
+HHV.GG
+
+Step 1100: G-left
+.SSJBB
+DD.J..
+.L.PPZ
+RLEE.Z
+R.VFFF
+HHVGG.
+
+Step 1101: R-up
+.SSJBB
+DD.J..
+RL.PPZ
+RLEE.Z
+..VFFF
+HHVGG.
+
+Step 1102: Z-up
+.SSJBB
+DD.J.Z
+RL.PPZ
+RLEE..
+..VFFF
+HHVGG.
+
+Step 1103: G-right
+.SSJBB
+DD.J.Z
+RL.PPZ
+RLEE..
+..VFFF
+HHV.GG
+
+Step 1104: P-left
+.SSJBB
+DD.J.Z
+RLPP.Z
+RLEE..
+..VFFF
+HHV.GG
+
+Step 1105: L-down
+.SSJBB
+DD.J.Z
+R.PP.Z
+RLEE..
+.LVFFF
+HHV.GG
+
+Step 1106: G-left
+.SSJBB
+DD.J.Z
+R.PP.Z
+RLEE..
+.LVFFF
+HHVGG.
+
+Step 1107: E-right
+.SSJBB
+DD.J.Z
+R.PP.Z
+RL..EE
+.LVFFF
+HHVGG.
+
+Step 1108: D-right
+.SSJBB
+.DDJ.Z
+R.PP.Z
+RL..EE
+.LVFFF
+HHVGG.
+
+Step 1109: G-right
+.SSJBB
+.DDJ.Z
+R.PP.Z
+RL..EE
+.LVFFF
+HHV.GG
+
+Step 1110: L-up
+.SSJBB
+.DDJ.Z
+RLPP.Z
+RL..EE
+..VFFF
+HHV.GG
+
+Step 1111: E-left
+.SSJBB
+.DDJ.Z
+RLPP.Z
+RL.EE.
+..VFFF
+HHV.GG
+
+Step 1112: Z-down
+.SSJBB
+.DDJ..
+RLPP.Z
+RL.EEZ
+..VFFF
+HHV.GG
+
+Step 1113: G-left
+.SSJBB
+.DDJ..
+RLPP.Z
+RL.EEZ
+..VFFF
+HHVGG.
+
+Step 1114: L-down
+.SSJBB
+.DDJ..
+R.PP.Z
+RL.EEZ
+.LVFFF
+HHVGG.
+
+Step 1115: E-left
+.SSJBB
+.DDJ..
+R.PP.Z
+RLEE.Z
+.LVFFF
+HHVGG.
+
+Step 1116: R-up
+.SSJBB
+RDDJ..
+R.PP.Z
+.LEE.Z
+.LVFFF
+HHVGG.
+
+Step 1117: L-up
+.SSJBB
+RDDJ..
+RLPP.Z
+.LEE.Z
+..VFFF
+HHVGG.
+
+Step 1118: Z-up
+.SSJBB
+RDDJ.Z
+RLPP.Z
+.LEE..
+..VFFF
+HHVGG.
+
+Step 1119: E-right
+.SSJBB
+RDDJ.Z
+RLPP.Z
+.L..EE
+..VFFF
+HHVGG.
+
+Step 1120: V-up
+.SSJBB
+RDDJ.Z
+RLPP.Z
+.LV.EE
+..VFFF
+HH.GG.
+
+Step 1121: G-right
+.SSJBB
+RDDJ.Z
+RLPP.Z
+.LV.EE
+..VFFF
+HH..GG
+
+Step 1122: H-right
+.SSJBB
+RDDJ.Z
+RLPP.Z
+.LV.EE
+..VFFF
+..HHGG
+
+Step 1123: S-left
+SS.JBB
+RDDJ.Z
+RLPP.Z
+.LV.EE
+..VFFF
+..HHGG
+
+Step 1124: H-left
+SS.JBB
+RDDJ.Z
+RLPP.Z
+.LV.EE
+..VFFF
+.HH.GG
+
+Step 1125: G-left
+SS.JBB
+RDDJ.Z
+RLPP.Z
+.LV.EE
+..VFFF
+.HHGG.
+
+Step 1126: E-left
+SS.JBB
+RDDJ.Z
+RLPP.Z
+.LVEE.
+..VFFF
+.HHGG.
+
+Step 1127: H-left
+SS.JBB
+RDDJ.Z
+RLPP.Z
+.LVEE.
+..VFFF
+HH.GG.
+
+Step 1128: Z-down
+SS.JBB
+RDDJ..
+RLPP.Z
+.LVEEZ
+..VFFF
+HH.GG.
+
+Step 1129: G-right
+SS.JBB
+RDDJ..
+RLPP.Z
+.LVEEZ
+..VFFF
+HH..GG
+
+Step 1130: H-right
+SS.JBB
+RDDJ..
+RLPP.Z
+.LVEEZ
+..VFFF
+..HHGG
+
+Step 1131: L-down
+SS.JBB
+RDDJ..
+R.PP.Z
+.LVEEZ
+.LVFFF
+..HHGG
+
+Step 1132: H-left
+SS.JBB
+RDDJ..
+R.PP.Z
+.LVEEZ
+.LVFFF
+.HH.GG
+
+Step 1133: G-left
+SS.JBB
+RDDJ..
+R.PP.Z
+.LVEEZ
+.LVFFF
+.HHGG.
+
+Step 1134: S-right
+.SSJBB
+RDDJ..
+R.PP.Z
+.LVEEZ
+.LVFFF
+.HHGG.
+
+Step 1135: Z-up
+.SSJBB
+RDDJ.Z
+R.PP.Z
+.LVEE.
+.LVFFF
+.HHGG.
+
+Step 1136: G-right
+.SSJBB
+RDDJ.Z
+R.PP.Z
+.LVEE.
+.LVFFF
+.HH.GG
+
+Step 1137: L-up
+.SSJBB
+RDDJ.Z
+RLPP.Z
+.LVEE.
+..VFFF
+.HH.GG
+
+Step 1138: R-down
+.SSJBB
+.DDJ.Z
+.LPP.Z
+RLVEE.
+R.VFFF
+.HH.GG
+
+Step 1139: G-left
+.SSJBB
+.DDJ.Z
+.LPP.Z
+RLVEE.
+R.VFFF
+.HHGG.
+
+Step 1140: H-left
+.SSJBB
+.DDJ.Z
+.LPP.Z
+RLVEE.
+R.VFFF
+HH.GG.
+
+Step 1141: G-left
+.SSJBB
+.DDJ.Z
+.LPP.Z
+RLVEE.
+R.VFFF
+HHGG..
+
+Step 1142: E-right
+.SSJBB
+.DDJ.Z
+.LPP.Z
+RLV.EE
+R.VFFF
+HHGG..
+
+Step 1143: S-left
+SS.JBB
+.DDJ.Z
+.LPP.Z
+RLV.EE
+R.VFFF
+HHGG..
+
+Step 1144: G-right
+SS.JBB
+.DDJ.Z
+.LPP.Z
+RLV.EE
+R.VFFF
+HH..GG
+
+Step 1145: E-left
+SS.JBB
+.DDJ.Z
+.LPP.Z
+RLVEE.
+R.VFFF
+HH..GG
+
+Step 1146: H-right
+SS.JBB
+.DDJ.Z
+.LPP.Z
+RLVEE.
+R.VFFF
+..HHGG
+
+Step 1147: D-left
+SS.JBB
+DD.J.Z
+.LPP.Z
+RLVEE.
+R.VFFF
+..HHGG
+
+Step 1148: H-left
+SS.JBB
+DD.J.Z
+.LPP.Z
+RLVEE.
+R.VFFF
+.HH.GG
+
+Step 1149: G-left
+SS.JBB
+DD.J.Z
+.LPP.Z
+RLVEE.
+R.VFFF
+.HHGG.
+
+Step 1150: H-left
+SS.JBB
+DD.J.Z
+.LPP.Z
+RLVEE.
+R.VFFF
+HH.GG.
+
+Step 1151: E-right
+SS.JBB
+DD.J.Z
+.LPP.Z
+RLV.EE
+R.VFFF
+HH.GG.
+
+Step 1152: R-up
+SS.JBB
+DD.J.Z
+RLPP.Z
+RLV.EE
+..VFFF
+HH.GG.
+
+Step 1153: G-left
+SS.JBB
+DD.J.Z
+RLPP.Z
+RLV.EE
+..VFFF
+HHGG..
+
+Step 1154: L-down
+SS.JBB
+DD.J.Z
+R.PP.Z
+RLV.EE
+.LVFFF
+HHGG..
+
+Step 1155: G-right
+SS.JBB
+DD.J.Z
+R.PP.Z
+RLV.EE
+.LVFFF
+HH..GG
+
+Step 1156: H-right
+SS.JBB
+DD.J.Z
+R.PP.Z
+RLV.EE
+.LVFFF
+..HHGG
+
+Step 1157: D-right
+SS.JBB
+.DDJ.Z
+R.PP.Z
+RLV.EE
+.LVFFF
+..HHGG
+
+Step 1158: H-left
+SS.JBB
+.DDJ.Z
+R.PP.Z
+RLV.EE
+.LVFFF
+.HH.GG
+
+Step 1159: G-left
+SS.JBB
+.DDJ.Z
+R.PP.Z
+RLV.EE
+.LVFFF
+.HHGG.
+
+Step 1160: E-left
+SS.JBB
+.DDJ.Z
+R.PP.Z
+RLVEE.
+.LVFFF
+.HHGG.
+
+Step 1161: H-left
+SS.JBB
+.DDJ.Z
+R.PP.Z
+RLVEE.
+.LVFFF
+HH.GG.
+
+Step 1162: D-left
+SS.JBB
+DD.J.Z
+R.PP.Z
+RLVEE.
+.LVFFF
+HH.GG.
+
+Step 1163: V-down
+SS.JBB
+DD.J.Z
+R.PP.Z
+RL.EE.
+.LVFFF
+HHVGG.
+
+Step 1164: G-right
+SS.JBB
+DD.J.Z
+R.PP.Z
+RL.EE.
+.LVFFF
+HHV.GG
+
+Step 1165: L-up
+SS.JBB
+DD.J.Z
+RLPP.Z
+RL.EE.
+..VFFF
+HHV.GG
+
+Step 1166: Z-down
+SS.JBB
+DD.J..
+RLPP.Z
+RL.EEZ
+..VFFF
+HHV.GG
+
+Step 1167: G-left
+SS.JBB
+DD.J..
+RLPP.Z
+RL.EEZ
+..VFFF
+HHVGG.
+
+Step 1168: E-left
+SS.JBB
+DD.J..
+RLPP.Z
+RLEE.Z
+..VFFF
+HHVGG.
+
+Step 1169: L-down
+SS.JBB
+DD.J..
+R.PP.Z
+RLEE.Z
+.LVFFF
+HHVGG.
+
+Step 1170: P-left
+SS.JBB
+DD.J..
+RPP..Z
+RLEE.Z
+.LVFFF
+HHVGG.
+
+Step 1171: E-right
+SS.JBB
+DD.J..
+RPP..Z
+RL.EEZ
+.LVFFF
+HHVGG.
+
+Step 1172: S-right
+.SSJBB
+DD.J..
+RPP..Z
+RL.EEZ
+.LVFFF
+HHVGG.
+
+Step 1173: G-right
+.SSJBB
+DD.J..
+RPP..Z
+RL.EEZ
+.LVFFF
+HHV.GG
+
+Step 1174: J-down
+.SS.BB
+DD.J..
+RPPJ.Z
+RL.EEZ
+.LVFFF
+HHV.GG
+
+Step 1175: E-left
+.SS.BB
+DD.J..
+RPPJ.Z
+RLEE.Z
+.LVFFF
+HHV.GG
+
+Step 1176: G-left
+.SS.BB
+DD.J..
+RPPJ.Z
+RLEE.Z
+.LVFFF
+HHVGG.
+
+Step 1177: D-right
+.SS.BB
+.DDJ..
+RPPJ.Z
+RLEE.Z
+.LVFFF
+HHVGG.
+
+Step 1178: R-up
+RSS.BB
+RDDJ..
+.PPJ.Z
+.LEE.Z
+.LVFFF
+HHVGG.
+
+Step 1179: P-left
+RSS.BB
+RDDJ..
+PP.J.Z
+.LEE.Z
+.LVFFF
+HHVGG.
+

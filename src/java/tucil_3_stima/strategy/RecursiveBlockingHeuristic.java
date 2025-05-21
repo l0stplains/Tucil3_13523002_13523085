@@ -1,10 +1,14 @@
 package tucil_3_stima.strategy;
 
+import java.util.ArrayList;
+import java.util.BitSet;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
+
 import tucil_3_stima.model.Board;
 import tucil_3_stima.model.State;
 import tucil_3_stima.model.Vehicle;
-
-import java.util.*;
 
 public class RecursiveBlockingHeuristic implements Heuristic {
 
@@ -26,7 +30,7 @@ public class RecursiveBlockingHeuristic implements Heuristic {
         int currCoord = horiz ? col : row;
         int dir       = exitCoord >= currCoord ? +1 : -1;
 
-        // start just beyond the “front” of the red car in the correct direction
+        // start just beyond the "front" of the red car in the correct direction
         int front = (dir > 0 ? currCoord + red.length()
                 : currCoord - 1);
 

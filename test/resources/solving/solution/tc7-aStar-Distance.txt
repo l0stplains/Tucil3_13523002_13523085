@@ -1,0 +1,422 @@
+Solution Stats
+Time           : 101.6441
+Expanded Node  : 3224
+Generated Node : 26083
+Solution Depth : 51
+
+Initial Board
+E.CGGG
+E.CHHB
+JJCIIB
+FZZP..
+FD.PLL
+.DMMM.
+
+Step 1: M-right
+E.CGGG
+E.CHHB
+JJCIIB
+FZZP..
+FD.PLL
+.D.MMM
+
+Step 2: F-down
+E.CGGG
+E.CHHB
+JJCIIB
+.ZZP..
+FD.PLL
+FD.MMM
+
+Step 3: Z-left
+E.CGGG
+E.CHHB
+JJCIIB
+ZZ.P..
+FD.PLL
+FD.MMM
+
+Step 4: C-down
+E..GGG
+E..HHB
+JJ.IIB
+ZZCP..
+FDCPLL
+FDCMMM
+
+Step 5: J-right
+E..GGG
+E..HHB
+.JJIIB
+ZZCP..
+FDCPLL
+FDCMMM
+
+Step 6: E-down
+...GGG
+E..HHB
+EJJIIB
+ZZCP..
+FDCPLL
+FDCMMM
+
+Step 7: G-left
+GGG...
+E..HHB
+EJJIIB
+ZZCP..
+FDCPLL
+FDCMMM
+
+Step 8: B-up
+GGG..B
+E..HHB
+EJJII.
+ZZCP..
+FDCPLL
+FDCMMM
+
+Step 9: H-left
+GGG..B
+EHH..B
+EJJII.
+ZZCP..
+FDCPLL
+FDCMMM
+
+Step 10: I-right
+GGG..B
+EHH..B
+EJJ.II
+ZZCP..
+FDCPLL
+FDCMMM
+
+Step 11: P-up
+GGGP.B
+EHHP.B
+EJJ.II
+ZZC...
+FDC.LL
+FDCMMM
+
+Step 12: I-left
+GGGP.B
+EHHP.B
+EJJII.
+ZZC...
+FDC.LL
+FDCMMM
+
+Step 13: L-left
+GGGP.B
+EHHP.B
+EJJII.
+ZZC...
+FDCLL.
+FDCMMM
+
+Step 14: B-down
+GGGP..
+EHHP..
+EJJII.
+ZZC..B
+FDCLLB
+FDCMMM
+
+Step 15: I-right
+GGGP..
+EHHP..
+EJJ.II
+ZZC..B
+FDCLLB
+FDCMMM
+
+Step 16: P-down
+GGG...
+EHH...
+EJJPII
+ZZCP.B
+FDCLLB
+FDCMMM
+
+Step 17: G-right
+...GGG
+EHH...
+EJJPII
+ZZCP.B
+FDCLLB
+FDCMMM
+
+Step 18: E-up
+E..GGG
+EHH...
+.JJPII
+ZZCP.B
+FDCLLB
+FDCMMM
+
+Step 19: J-left
+E..GGG
+EHH...
+JJ.PII
+ZZCP.B
+FDCLLB
+FDCMMM
+
+Step 20: H-right
+E..GGG
+E...HH
+JJ.PII
+ZZCP.B
+FDCLLB
+FDCMMM
+
+Step 21: C-up
+E.CGGG
+E.C.HH
+JJCPII
+ZZ.P.B
+FD.LLB
+FD.MMM
+
+Step 22: M-left
+E.CGGG
+E.C.HH
+JJCPII
+ZZ.P.B
+FD.LLB
+FDMMM.
+
+Step 23: P-up
+E.CGGG
+E.CPHH
+JJCPII
+ZZ...B
+FD.LLB
+FDMMM.
+
+Step 24: B-down
+E.CGGG
+E.CPHH
+JJCPII
+ZZ....
+FD.LLB
+FDMMMB
+
+Step 25: Z-right
+E.CGGG
+E.CPHH
+JJCPII
+....ZZ
+FD.LLB
+FDMMMB
+
+Step 26: P-down
+E.CGGG
+E.C.HH
+JJCPII
+...PZZ
+FD.LLB
+FDMMMB
+
+Step 27: C-down
+E..GGG
+E...HH
+JJCPII
+..CPZZ
+FDCLLB
+FDMMMB
+
+Step 28: H-left
+E..GGG
+EHH...
+JJCPII
+..CPZZ
+FDCLLB
+FDMMMB
+
+Step 29: P-up
+E..GGG
+EHHP..
+JJCPII
+..C.ZZ
+FDCLLB
+FDMMMB
+
+Step 30: Z-left
+E..GGG
+EHHP..
+JJCPII
+..CZZ.
+FDCLLB
+FDMMMB
+
+Step 31: B-up
+E..GGG
+EHHP..
+JJCPII
+..CZZB
+FDCLLB
+FDMMM.
+
+Step 32: M-right
+E..GGG
+EHHP..
+JJCPII
+..CZZB
+FDCLLB
+FD.MMM
+
+Step 33: C-down
+E..GGG
+EHHP..
+JJ.PII
+..CZZB
+FDCLLB
+FDCMMM
+
+Step 34: J-right
+E..GGG
+EHHP..
+.JJPII
+..CZZB
+FDCLLB
+FDCMMM
+
+Step 35: E-down
+...GGG
+EHHP..
+EJJPII
+..CZZB
+FDCLLB
+FDCMMM
+
+Step 36: G-left
+GGG...
+EHHP..
+EJJPII
+..CZZB
+FDCLLB
+FDCMMM
+
+Step 37: P-up
+GGGP..
+EHHP..
+EJJ.II
+..CZZB
+FDCLLB
+FDCMMM
+
+Step 38: I-left
+GGGP..
+EHHP..
+EJJII.
+..CZZB
+FDCLLB
+FDCMMM
+
+Step 39: B-up
+GGGP.B
+EHHP.B
+EJJII.
+..CZZ.
+FDCLL.
+FDCMMM
+
+Step 40: I-right
+GGGP.B
+EHHP.B
+EJJ.II
+..CZZ.
+FDCLL.
+FDCMMM
+
+Step 41: P-down
+GGG..B
+EHHP.B
+EJJPII
+..CZZ.
+FDCLL.
+FDCMMM
+
+Step 42: F-up
+GGG..B
+EHHP.B
+EJJPII
+F.CZZ.
+FDCLL.
+.DCMMM
+
+Step 43: Z-right
+GGG..B
+EHHP.B
+EJJPII
+F.C.ZZ
+FDCLL.
+.DCMMM
+
+Step 44: G-right
+.GGG.B
+EHHP.B
+EJJPII
+F.C.ZZ
+FDCLL.
+.DCMMM
+
+Step 45: E-up
+EGGG.B
+EHHP.B
+.JJPII
+F.C.ZZ
+FDCLL.
+.DCMMM
+
+Step 46: J-left
+EGGG.B
+EHHP.B
+JJ.PII
+F.C.ZZ
+FDCLL.
+.DCMMM
+
+Step 47: C-up
+EGGG.B
+EHHP.B
+JJCPII
+F.C.ZZ
+FDCLL.
+.D.MMM
+
+Step 48: L-right
+EGGG.B
+EHHP.B
+JJCPII
+F.C.ZZ
+FDC.LL
+.D.MMM
+
+Step 49: D-up
+EGGG.B
+EHHP.B
+JJCPII
+FDC.ZZ
+FDC.LL
+...MMM
+
+Step 50: M-left
+EGGG.B
+EHHP.B
+JJCPII
+FDC.ZZ
+FDC.LL
+MMM...
+
+Step 51: P-down
+EGGG.B
+EHH..B
+JJC.II
+FDC.ZZ
+FDCPLL
+MMMP..
+

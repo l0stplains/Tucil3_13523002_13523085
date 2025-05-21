@@ -1,0 +1,406 @@
+Solution Stats
+Time           : 350.9409
+Expanded Node  : 14322
+Generated Node : 143886
+Solution Depth : 49
+
+Initial Board
+BBBZLM
+HCCZLM
+H.PPLM
+DDJ...
+.IJEE.
+.IFFGG
+
+Step 1: P-left
+BBBZLM
+HCCZLM
+HPP.LM
+DDJ...
+.IJEE.
+.IFFGG
+
+Step 2: Z-down
+BBB.LM
+HCC.LM
+HPPZLM
+DDJZ..
+.IJEE.
+.IFFGG
+
+Step 3: B-right
+.BBBLM
+HCC.LM
+HPPZLM
+DDJZ..
+.IJEE.
+.IFFGG
+
+Step 4: H-up
+HBBBLM
+HCC.LM
+.PPZLM
+DDJZ..
+.IJEE.
+.IFFGG
+
+Step 5: P-left
+HBBBLM
+HCC.LM
+PP.ZLM
+DDJZ..
+.IJEE.
+.IFFGG
+
+Step 6: J-up
+HBBBLM
+HCC.LM
+PPJZLM
+DDJZ..
+.I.EE.
+.IFFGG
+
+Step 7: E-left
+HBBBLM
+HCC.LM
+PPJZLM
+DDJZ..
+.IEE..
+.IFFGG
+
+Step 8: L-down
+HBBB.M
+HCC..M
+PPJZLM
+DDJZL.
+.IEEL.
+.IFFGG
+
+Step 9: M-down
+HBBB..
+HCC...
+PPJZLM
+DDJZLM
+.IEELM
+.IFFGG
+
+Step 10: C-right
+HBBB..
+H..CC.
+PPJZLM
+DDJZLM
+.IEELM
+.IFFGG
+
+Step 11: B-right
+H..BBB
+H..CC.
+PPJZLM
+DDJZLM
+.IEELM
+.IFFGG
+
+Step 12: J-up
+H.JBBB
+H.JCC.
+PP.ZLM
+DD.ZLM
+.IEELM
+.IFFGG
+
+Step 13: D-right
+H.JBBB
+H.JCC.
+PP.ZLM
+.DDZLM
+.IEELM
+.IFFGG
+
+Step 14: P-right
+H.JBBB
+H.JCC.
+.PPZLM
+.DDZLM
+.IEELM
+.IFFGG
+
+Step 15: H-down
+..JBBB
+..JCC.
+.PPZLM
+.DDZLM
+HIEELM
+HIFFGG
+
+Step 16: D-left
+..JBBB
+..JCC.
+.PPZLM
+DD.ZLM
+HIEELM
+HIFFGG
+
+Step 17: P-left
+..JBBB
+..JCC.
+PP.ZLM
+DD.ZLM
+HIEELM
+HIFFGG
+
+Step 18: J-down
+...BBB
+...CC.
+PPJZLM
+DDJZLM
+HIEELM
+HIFFGG
+
+Step 19: C-left
+...BBB
+CC....
+PPJZLM
+DDJZLM
+HIEELM
+HIFFGG
+
+Step 20: J-up
+...BBB
+CCJ...
+PPJZLM
+DD.ZLM
+HIEELM
+HIFFGG
+
+Step 21: Z-up
+...BBB
+CCJZ..
+PPJZLM
+DD..LM
+HIEELM
+HIFFGG
+
+Step 22: B-left
+.BBB..
+CCJZ..
+PPJZLM
+DD..LM
+HIEELM
+HIFFGG
+
+Step 23: L-up
+.BBBL.
+CCJZL.
+PPJZLM
+DD...M
+HIEE.M
+HIFFGG
+
+Step 24: M-up
+.BBBLM
+CCJZLM
+PPJZLM
+DD....
+HIEE..
+HIFFGG
+
+Step 25: D-right
+.BBBLM
+CCJZLM
+PPJZLM
+....DD
+HIEE..
+HIFFGG
+
+Step 26: E-right
+.BBBLM
+CCJZLM
+PPJZLM
+....DD
+HI..EE
+HIFFGG
+
+Step 27: I-up
+.BBBLM
+CCJZLM
+PPJZLM
+.I..DD
+HI..EE
+H.FFGG
+
+Step 28: H-up
+.BBBLM
+CCJZLM
+PPJZLM
+HI..DD
+HI..EE
+..FFGG
+
+Step 29: F-left
+.BBBLM
+CCJZLM
+PPJZLM
+HI..DD
+HI..EE
+FF..GG
+
+Step 30: Z-down
+.BBBLM
+CCJ.LM
+PPJ.LM
+HI..DD
+HI.ZEE
+FF.ZGG
+
+Step 31: J-down
+.BBBLM
+CC..LM
+PP..LM
+HI..DD
+HIJZEE
+FFJZGG
+
+Step 32: D-left
+.BBBLM
+CC..LM
+PP..LM
+HIDD..
+HIJZEE
+FFJZGG
+
+Step 33: C-right
+.BBBLM
+..CCLM
+PP..LM
+HIDD..
+HIJZEE
+FFJZGG
+
+Step 34: P-right
+.BBBLM
+..CCLM
+..PPLM
+HIDD..
+HIJZEE
+FFJZGG
+
+Step 35: H-up
+HBBBLM
+H.CCLM
+..PPLM
+.IDD..
+.IJZEE
+FFJZGG
+
+Step 36: L-down
+HBBB.M
+H.CCLM
+..PPLM
+.IDDL.
+.IJZEE
+FFJZGG
+
+Step 37: B-right
+H.BBBM
+H.CCLM
+..PPLM
+.IDDL.
+.IJZEE
+FFJZGG
+
+Step 38: I-up
+HIBBBM
+HICCLM
+..PPLM
+..DDL.
+..JZEE
+FFJZGG
+
+Step 39: D-left
+HIBBBM
+HICCLM
+..PPLM
+DD..L.
+..JZEE
+FFJZGG
+
+Step 40: P-left
+HIBBBM
+HICCLM
+PP..LM
+DD..L.
+..JZEE
+FFJZGG
+
+Step 41: J-up
+HIBBBM
+HICCLM
+PPJ.LM
+DDJ.L.
+...ZEE
+FF.ZGG
+
+Step 42: Z-up
+HIBBBM
+HICCLM
+PPJZLM
+DDJZL.
+....EE
+FF..GG
+
+Step 43: E-left
+HIBBBM
+HICCLM
+PPJZLM
+DDJZL.
+EE....
+FF..GG
+
+Step 44: G-left
+HIBBBM
+HICCLM
+PPJZLM
+DDJZL.
+EE....
+FFGG..
+
+Step 45: Z-down
+HIBBBM
+HICCLM
+PPJ.LM
+DDJZL.
+EE.Z..
+FFGG..
+
+Step 46: L-down
+HIBBBM
+HICC.M
+PPJ..M
+DDJZL.
+EE.ZL.
+FFGGL.
+
+Step 47: J-down
+HIBBBM
+HICC.M
+PP...M
+DDJZL.
+EEJZL.
+FFGGL.
+
+Step 48: M-down
+HIBBB.
+HICC..
+PP....
+DDJZLM
+EEJZLM
+FFGGLM
+
+Step 49: P-right
+HIBBB.
+HICC..
+....PP
+DDJZLM
+EEJZLM
+FFGGLM
+

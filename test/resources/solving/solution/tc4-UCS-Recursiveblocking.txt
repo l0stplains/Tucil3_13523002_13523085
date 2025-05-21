@@ -1,0 +1,318 @@
+Solution Stats
+Time           : 2162.0912
+Expanded Node  : 24854
+Generated Node : 267698
+Solution Depth : 38
+
+Initial Board
+GBBB.L
+G.HCCL
+PPHINM
+.DDINM
+...JEE
+.FFJ..
+
+Step 1: D-left
+GBBB.L
+G.HCCL
+PPHINM
+DD.INM
+...JEE
+.FFJ..
+
+Step 2: H-down
+GBBB.L
+G..CCL
+PP.INM
+DDHINM
+..HJEE
+.FFJ..
+
+Step 3: C-left
+GBBB.L
+GCC..L
+PP.INM
+DDHINM
+..HJEE
+.FFJ..
+
+Step 4: P-right
+GBBB.L
+GCC..L
+.PPINM
+DDHINM
+..HJEE
+.FFJ..
+
+Step 5: G-down
+.BBB.L
+GCC..L
+GPPINM
+DDHINM
+..HJEE
+.FFJ..
+
+Step 6: B-left
+BBB..L
+GCC..L
+GPPINM
+DDHINM
+..HJEE
+.FFJ..
+
+Step 7: I-up
+BBBI.L
+GCCI.L
+GPP.NM
+DDH.NM
+..HJEE
+.FFJ..
+
+Step 8: J-up
+BBBI.L
+GCCI.L
+GPPJNM
+DDHJNM
+..H.EE
+.FF...
+
+Step 9: F-right
+BBBI.L
+GCCI.L
+GPPJNM
+DDHJNM
+..H.EE
+....FF
+
+Step 10: H-down
+BBBI.L
+GCCI.L
+GPPJNM
+DD.JNM
+..H.EE
+..H.FF
+
+Step 11: D-right
+BBBI.L
+GCCI.L
+GPPJNM
+.DDJNM
+..H.EE
+..H.FF
+
+Step 12: G-down
+BBBI.L
+.CCI.L
+.PPJNM
+.DDJNM
+G.H.EE
+G.H.FF
+
+Step 13: P-left
+BBBI.L
+.CCI.L
+PP.JNM
+.DDJNM
+G.H.EE
+G.H.FF
+
+Step 14: D-left
+BBBI.L
+.CCI.L
+PP.JNM
+DD.JNM
+G.H.EE
+G.H.FF
+
+Step 15: H-up
+BBBI.L
+.CCI.L
+PPHJNM
+DDHJNM
+G...EE
+G...FF
+
+Step 16: E-left
+BBBI.L
+.CCI.L
+PPHJNM
+DDHJNM
+GEE...
+G...FF
+
+Step 17: J-down
+BBBI.L
+.CCI.L
+PPH.NM
+DDH.NM
+GEEJ..
+G..JFF
+
+Step 18: I-down
+BBB..L
+.CC..L
+PPHINM
+DDHINM
+GEEJ..
+G..JFF
+
+Step 19: M-down
+BBB..L
+.CC..L
+PPHIN.
+DDHINM
+GEEJ.M
+G..JFF
+
+Step 20: L-down
+BBB...
+.CC..L
+PPHINL
+DDHINM
+GEEJ.M
+G..JFF
+
+Step 21: C-right
+BBB...
+...CCL
+PPHINL
+DDHINM
+GEEJ.M
+G..JFF
+
+Step 22: B-right
+...BBB
+...CCL
+PPHINL
+DDHINM
+GEEJ.M
+G..JFF
+
+Step 23: H-up
+..HBBB
+..HCCL
+PP.INL
+DD.INM
+GEEJ.M
+G..JFF
+
+Step 24: P-right
+..HBBB
+..HCCL
+.PPINL
+DD.INM
+GEEJ.M
+G..JFF
+
+Step 25: D-right
+..HBBB
+..HCCL
+.PPINL
+.DDINM
+GEEJ.M
+G..JFF
+
+Step 26: G-up
+G.HBBB
+G.HCCL
+.PPINL
+.DDINM
+.EEJ.M
+...JFF
+
+Step 27: P-left
+G.HBBB
+G.HCCL
+PP.INL
+.DDINM
+.EEJ.M
+...JFF
+
+Step 28: D-left
+G.HBBB
+G.HCCL
+PP.INL
+DD.INM
+.EEJ.M
+...JFF
+
+Step 29: E-left
+G.HBBB
+G.HCCL
+PP.INL
+DD.INM
+EE.J.M
+...JFF
+
+Step 30: H-down
+G..BBB
+G..CCL
+PP.INL
+DD.INM
+EEHJ.M
+..HJFF
+
+Step 31: P-right
+G..BBB
+G..CCL
+.PPINL
+DD.INM
+EEHJ.M
+..HJFF
+
+Step 32: G-down
+...BBB
+G..CCL
+GPPINL
+DD.INM
+EEHJ.M
+..HJFF
+
+Step 33: B-left
+BBB...
+G..CCL
+GPPINL
+DD.INM
+EEHJ.M
+..HJFF
+
+Step 34: N-down
+BBB...
+G..CCL
+GPPI.L
+DD.INM
+EEHJNM
+..HJFF
+
+Step 35: C-left
+BBB...
+GCC..L
+GPPI.L
+DD.INM
+EEHJNM
+..HJFF
+
+Step 36: I-up
+BBBI..
+GCCI.L
+GPP..L
+DD..NM
+EEHJNM
+..HJFF
+
+Step 37: L-up
+BBBI.L
+GCCI.L
+GPP...
+DD..NM
+EEHJNM
+..HJFF
+
+Step 38: P-right
+BBBI.L
+GCCI.L
+G...PP
+DD..NM
+EEHJNM
+..HJFF
+
