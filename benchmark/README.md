@@ -11,7 +11,7 @@ Run automated benchmarks on all puzzle instances in a folder and export results 
 2. Open a terminal and navigate to the directory containing the downloaded JAR.
 3. Run the following command to start the benchmarking:
 ```bash
-java -jar tucil_3_stima.jar -b <input-folder> -o <output-file.csv>
+java -jar rush-hour-solver_13523002_13523085.jar -b <input-folder> -o <output-file.csv>
 ```
 
 | Flag | Description                               |
@@ -21,7 +21,7 @@ java -jar tucil_3_stima.jar -b <input-folder> -o <output-file.csv>
 
 **Example**:
 ```bash
-java -jar tucil_3_stima.jar -b puzzles/ -o benchmarks/results.csv
+java -jar rush-hour-solver_13523002_13523085.jar -b puzzles/ -o benchmarks/results.csv
 ```
 
 This produces a CSV with the following columns:

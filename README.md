@@ -175,7 +175,7 @@ Below is a comparison of these heuristics across key characteristics:
 | Recursive Blocking      | ✔️          | High           | Medium           | Recursive obstacle dependency analysis   |
 
 > [!NOTE]
-> View the source code for the algoritms and heuristics [here](https://github.com/l0stplains/Tucil3_13523002_13523085/tree/main/src/java/tucil_3_stima/strategy)
+> View the source code for the algorithms and heuristics [here](https://github.com/l0stplains/Tucil3_13523002_13523085/tree/main/src/java/tucil_3_stima/strategy)
 
 ---
 
@@ -214,7 +214,7 @@ A user-friendly, chaotic (as it should be), and immersive JavaFX interface that 
 2. Open a terminal and navigate to the directory containing the downloaded JAR.
 3. Run the following command to start the application:
    ```bash
-   java -jar tucil_3_stima-1.0.jar
+   java -jar rush-hour-solver_13523002_13523085.jar
    ```
    Alternatively, if you have cloned the repository and want to run it using Gradle:
    ```bash
@@ -230,6 +230,7 @@ A user-friendly, chaotic (as it should be), and immersive JavaFX interface that 
 
 <div align="right">(<a href="#table-of-contents">back to top</a>)</div>  
 
+_Coming Soon_
 
 ---
 
@@ -275,7 +276,7 @@ We gratefully acknowledge:
 - Kostan Jibril at **Azalea**, for late-night sprints.
 - **Friends & Classmates**, whose spirited “just one more feature” environment kept us motivated.
 - **ThinkFun** and the Rush Hour community, for creating the original puzzle that inspired this solver.
-- And **Michael Fogleman** for the techniques described in his article which are advance the current "state of the art" for solving the game of Rush Hour which heavily inspiried us.
+- And **Michael Fogleman** for the techniques described in his article which are advance the current "state of the art" for solving the game of Rush Hour which heavily inspired us.
 
 
 ---
