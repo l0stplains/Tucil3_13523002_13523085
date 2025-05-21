@@ -96,7 +96,7 @@ public class BenchmarkRunner {
                 Long.toString(res.getNodesExpanded()),
                 Long.toString(res.getNodesGenerated()),
                 Integer.toString(res.getMaxOpenSize()),
-                String.format("%.3f", res.getDurationMillis()),
+                String.format("\"%.3f\"", res.getDurationMillis()),
                 solved ? "Yes" : "No"
         ) + "\n";
     }

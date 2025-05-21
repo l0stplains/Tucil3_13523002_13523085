@@ -2,7 +2,7 @@
 This directory is used for doing benchmarking on a custom test cases.
 
 > [!NOTE]  
-> If you are looking for the benchmarking results please refer to the [test result page](https://github.com/l0stplains/Tucil3_13523002_13523085/tree/main/test/)
+> If you are looking for the benchmarking results please refer to the [benchmark result page](https://github.com/l0stplains/Tucil3_13523002_13523085/tree/main/benchmark/result/)
 
 ## Benchmarking Mode <a name="benchmarking"></a>
 Run automated benchmarks on all puzzle instances in a folder and export results to CSV.

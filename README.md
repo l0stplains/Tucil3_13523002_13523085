@@ -228,9 +228,45 @@ A user-friendly, chaotic (as it should be), and immersive JavaFX interface that 
 
 ## Benchmark <a name="benchmark"></a>
 
-<div align="right">(<a href="#table-of-contents">back to top</a>)</div>  
+<div align="right">(<a href="#table-of-contents">back to top</a>)</div>
 
-_Coming Soon_
+Please refer to the [benchmark result page](https://github.com/l0stplains/Tucil3_13523002_13523085/tree/main/benchmark/result/) for detailed test result.
+
+
+> [!NOTE]  
+> Do your own benchmark using this [tutorial](https://github.com/l0stplains/Tucil3_13523002_13523085/tree/main/benchmark/)
+
+### Summary of Results
+
+| Strategy | Heuristic                  | Avg. Nodes Expanded | Avg. Nodes Generated | Avg. Duration (ms) |
+|----------|----------------------------|-------------:|--------------------:|-------------------:|
+| AStar | BlockingHeuristic | 16663 | 179317 | 78 |
+| AStar | DistanceHeuristic | 19293 | 210944 | 90 |
+| AStar | RecursiveBlockingHeuristic | 14814 | 160053 | 1392 |
+| AStar | ZeroHeuristic | 18414 | 200497 | 49 |
+| BeamSearch | BlockingHeuristic | 3433 | 8429 | 13 |
+| BeamSearch | DistanceHeuristic | 11234 | 28259 | 44 |
+| BeamSearch | RecursiveBlockingHeuristic | 4981 | 10488 | 486 |
+| BeamSearch | ZeroHeuristic | 6996 | 14592 | 13 |
+| GBFS | BlockingHeuristic | 8435 | 93050 | 31 |
+| GBFS | DistanceHeuristic | 43711 | 535659 | 179 |
+| GBFS | RecursiveBlockingHeuristic | 3208 | 34540 | 228 |
+| GBFS | ZeroHeuristic | 6176 | 68415 | 13 |
+| UCS | BlockingHeuristic | 18414 | 200497 | 89 |
+| UCS | DistanceHeuristic | 18414 | 200497 | 86 |
+| UCS | RecursiveBlockingHeuristic | 18414 | 200497 | 1733 |
+| UCS | ZeroHeuristic | 18414 | 200497 | 50 |
+
+
+We measured **nodes expanded**, **nodes generated**, and **avg. duration** across all algorithm + heuristic combinations. Key takeaways:
+
+* **A\* + Blocking** delivers the best balance: low expansions (\~16 663), moderate generation (\~179 317), and sub-100 ms solves, validating that a simple yet informative admissible heuristic prunes most of the search tree.
+* **Beam Search + Blocking** runs in just \~13 ms with \~3 433 expansions, illustrating how a small beam width trades off completeness/optimality for extreme speed. Good alternative for GBFS.
+* **GBFS** benefits from Blocking too (\~8 435 expansions, 31 ms) but still generates many dead-end states, confirming it is fast yet non-optimal.
+* **Distance Heuristic** consistently underperforms in GBFS and Beam (tens of thousands of expansions), proving its coarse guidance is insufficient.
+* **Recursive Blocking** reduces expansions most but spikes per-node cost (e.g. A\* \~1 392 ms), highlighting the classic heuristic-strength vs. overhead trade-off.
+
+> When using UCS, our program still calculates the heuristic cost even when it doesn't use it. This implies on the higher average time on UCS + Recursive Blocker Heuristic
 
 ---
 
